@@ -11,14 +11,6 @@ msgid "_Translation_By_"
 msgstr ""
 
 #.  Widget
-msgid " Defaults@>"
-msgstr ""
-
-#.  Tooltip for ' Defaults@>'
-msgid "Prepends machine-dependent defaults into the G-code includes."
-msgstr ""
-
-#.  Widget
 msgid "$ / cm^3"
 msgstr ""
 
@@ -64,6 +56,14 @@ msgstr ""
 
 #.  Tooltip for '&Stop'
 msgid "Stop the current slicing operation"
+msgstr ""
+
+#.  Widget
+msgid "*N"
+msgstr ""
+
+#.  Tooltip for '*N'
+msgid "The number of layers before inserting the 'N Layers' G-code (0 disables)"
 msgstr ""
 
 #.  Widget
@@ -230,6 +230,14 @@ msgstr ""
 msgid "Enables a prime at the start of a path and a retract at the end"
 msgstr ""
 
+#.  Widget
+msgid "Defaults@>"
+msgstr ""
+
+#.  Tooltip for 'Defaults@>'
+msgid "Prepends machine-dependent defaults into the G-code includes."
+msgstr ""
+
 #.  Menu Item
 msgid "Delete"
 msgstr ""
@@ -272,6 +280,14 @@ msgstr ""
 
 #.  Tooltip for 'Extrusion Width [mm]'
 msgid "Width of the extruded path (nozzle dia. is a good initial value)"
+msgstr ""
+
+#.  Widget
+msgid "Fan PWM (M106 Sn)"
+msgstr ""
+
+#.  Tooltip for 'Fan PWM (M106 Sn)'
+msgid "The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be approximated by alternating M106 & M107 commands."
 msgstr ""
 
 #.  Widget
@@ -336,14 +352,6 @@ msgstr ""
 
 #.  Tooltip for 'Gap'
 msgid "Gap [mm] between the support and the object"
-msgstr ""
-
-#.  Widget
-msgid "Has Fan PWM (M106 Sn)"
-msgstr ""
-
-#.  Tooltip for 'Has Fan PWM (M106 Sn)'
-msgid "The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be approximated by alternating M106 & M107 commands."
 msgstr ""
 
 #.  Widget
@@ -483,14 +491,6 @@ msgid "Temperature of the extruder while extruding"
 msgstr ""
 
 #.  Widget
-msgid "Mark Start/Stop"
-msgstr ""
-
-#.  Tooltip for 'Mark Start/Stop'
-msgid "Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is forced to M101/3 internally for BfB printers"
-msgstr ""
-
-#.  Widget
 msgid "Material"
 msgstr ""
 
@@ -595,6 +595,14 @@ msgid "Path Color Key"
 msgstr ""
 
 #.  Widget
+msgid "Path Start/Stop"
+msgstr ""
+
+#.  Tooltip for 'Path Start/Stop'
+msgid "Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is forced to M101/3 internally for BfB printers"
+msgstr ""
+
+#.  Widget
 msgid "Path%"
 msgstr ""
 
@@ -616,6 +624,14 @@ msgstr ""
 
 #.  Tooltip for 'Perimeter'
 msgid "Speed of the head while extruding the perimeter"
+msgstr ""
+
+#.  Widget
+msgid "Physical<LF>RAM [MB]"
+msgstr ""
+
+#.  Tooltip for 'Physical<LF>RAM [MB]'
+msgid "Total physical RAM in the system"
 msgstr ""
 
 #.  Widget
@@ -664,6 +680,14 @@ msgstr ""
 
 #.  Menu Item
 msgid "Quit KISSlicer"
+msgstr ""
+
+#.  Widget
+msgid "RAM Warning [MB]"
+msgstr ""
+
+#.  Tooltip for 'RAM Warning [MB]'
+msgid "If the slicing operation *might* exceed this threshold, a warning will be shown"
 msgstr ""
 
 #.  Widget
