@@ -17,10 +17,10 @@ msgid "_Translation_By_"
 msgstr "Русский перевод: Сергей Тараненко setar@@roboforum.ru"
 
 #. Widget
-msgid " Defaults@>"
+msgid "Defaults@>"
 msgstr "Сброс@>"
 
-#. Tooltip for ' Defaults@>'
+#. Tooltip for 'Defaults@>'
 msgid "Prepends machine-dependent defaults into the G-code includes."
 msgstr "Вставка значений по умолчанию для принтер-зависимых G-кодов"
 
@@ -65,6 +65,14 @@ msgstr "&Stop"
 #. Tooltip for '&Stop'
 msgid "Stop the current slicing operation"
 msgstr "Остановить текущий рассчёт"
+
+#.  Widget
+msgid "*N"
+msgstr "*N"
+
+#.  Tooltip for '*N'
+msgid "The number of layers before inserting the 'N Layers' G-code (0 disables)"
+msgstr "Число слоев для вставки '*N' G-кода (повторяется каждые N слоев), 0 - отключено"
 
 #. Widget
 msgid "..."
@@ -339,10 +347,10 @@ msgid "Gap [mm] between the support and the object"
 msgstr "Зазор [мм] между объектом и поддержками"
 
 #. Widget
-msgid "Has Fan PWM (M106 Sn)"
+msgid "Fan PWM (M106 Sn)"
 msgstr "Fan PWM (M106 Sn)"
 
-#. Tooltip for 'Has Fan PWM (M106 Sn)'
+#. Tooltip for 'Fan PWM (M106 Sn)'
 msgid "The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be approximated by alternating M106 & M107 commands."
 msgstr "Прошивка понимает коды управления ШИМ вентилятора (контроль скорости), если не включено то будет использоваться эмуляция ШИМ в G-коде через периодическое включение и выключение вентилятора на полную скорость (команды M106 и M107)"
 
@@ -483,10 +491,10 @@ msgid "Temperature of the extruder while extruding"
 msgstr "Базовая тепература экструзии"
 
 #.  Widget
-msgid "Mark Start/Stop"
+msgid "Path Start/Stop"
 msgstr "Аппаратный откат подачи"
 
-#.  Tooltip for 'Mark Start/Stop'
+#.  Tooltip for 'Path Start/Stop'
 msgid "Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is forced to M101/3 internally for BfB printers"
 msgstr "Некоторые прошивки используют команды M101/M103 или G10/G11 для аппаратной реализации отката подачи и пред подачи. M101/M103 используется в BfB принтерах, G10/G11 в прошивке Marlin"
 
@@ -949,3 +957,19 @@ msgstr "Z-Лифт [мм]"
 #. Tooltip for 'Z-lift [mm]'
 msgid "After a destring (if enabled), before a travel, lift the head by this height."
 msgstr "После отката подачи (если включен), перед перемещением поднимаем печатную голову на эту высоту."
+
+#.  Widget
+msgid "Physical<LF>RAM [MB]"
+msgstr "Физически<LF>ОЗУ [МБ]"
+
+#.  Tooltip for 'Physical<LF>RAM [MB]'
+msgid "Total physical RAM in the system"
+msgstr "Общее количество оперативной памяти в системе"
+
+#.  Widget
+msgid "RAM Warning [MB]"
+msgstr "Предупреждение ОЗУ [МБ]"
+
+#.  Tooltip for 'RAM Warning [MB]'
+msgid "If the slicing operation *might* exceed this threshold, a warning will be shown"
+msgstr "Если при работе будт превышен этот предел, будет выдано предупреждение"
