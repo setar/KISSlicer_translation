@@ -3,973 +3,5508 @@ msgstr ""
 "Project-Id-Version: KISSlicer\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Sergey Taranenko <setar@roboforum.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Yuriy Demyanov <cytcmit@gmail.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
 
+#. KISSlicer Translation File
+#. - version: 2 rc 3.1.6 Win32
+#. - saved:   2021-03-06 18:35:02
+#. - msgid count: 1217
+#. - Thank you for your help!!
+#. - Save this file as 'KISSlicer_[your language code].po'
+#. - Do not edit the msgid values
+#. - Fill in the msgstr values with translations of the matching msgid value
+#. - Preserve \r \n and tags starting with % or @ (e.g. '%1.4f' or '@<')
+#. - Any translation left blank will default to the original English
+#. - You can use standard gettext tools (like Poedit) to create a .po file
+#. - Please enter 'XYZ Translation by [your name(s)]'
 msgid "_Translation_By_"
-msgstr "Русский перевод: Сергей Тараненко setar@@roboforum.ru"
+msgstr "Перевод Yuriy Demyanov"
 
-#. Widget
-msgid "Defaults@>"
-msgstr "Сброс@>"
+msgid ""
+"\n"
+"\n"
+"The Tuning Wizard will linearly interpolate the Parameter chosen by the user "
+"as a function of Z.\n"
+"\n"
+"'Tune_Value at Z = 0' will be the value of the Parameter on the bottom "
+"layers.\n"
+"\n"
+"'Tune_Value at Z = top' will be the value of the Parameter on the top layers "
+"of the tallest model printed.\n"
+"\n"
+"\n"
+"Select a Tuning Parameter to see recommendations specific to that test. A "
+"rough recommended range will also be shown as (lo - hi)."
+msgstr ""
+"\n"
+"Мастер настройки линейно интерполирует\n"
+" параметр, выбранный пользователем в \n"
+"качестве функции от Z.\n"
+"«Tune_Value на уровне Z=0» будет значение \n"
+" параметра на нижнем слое.\n"
+"\n"
+"«Tune_Value на вершине» будет значение \n"
+"Параметра на верхних слоях самой \n"
+"высокой напечатанной модели. \n"
+"Выберите параметр настройки, чтобы \n"
+"увидеть рекомендации, характерные для \n"
+"этого теста. Грубый рекомендуемый \n"
+"диапазон также будет показан как (lo - hi)."
 
-#. Tooltip for 'Defaults@>'
-msgid "Prepends machine-dependent defaults into the G-code includes."
-msgstr "Вставка значений по умолчанию для принтер-зависимых G-кодов"
+msgid ""
+"\n"
+"(Note: increasing the oversample resolution will reduce memory usage)"
+msgstr ""
+"\n"
+"(Примечание: увеличение разрешения передискретизации уменьшит использование "
+"памяти)"
 
-#. Widget
-#. Tooltip for '$ / cm^3'
-msgid "Cost per cm^3, use whatever currency type you wish"
-msgstr "Стоимость см^3 материала, используйте удобную валюту."
+#, fuzzy
+msgid ""
+"\n"
+"<TUNINGVAL>\n"
+"\n"
+"This mode does not change the G-code at all, but still updates the "
+"<TUNINGVAL> G-code token so you can use it for various purposes in the "
+"'Every N Layers' G-code (and elsewhere)."
+msgstr ""
+"\n"
+"<TUNINGVAL>Этот режим не меняет G-код вообще, но все еще обновляет "
+"<TUNINGVAL> токен G-кода, так что вы можете использовать его для различных "
+"целей в G-коде 'Every N Layers' (и в других местах).</TUNINGVAL></TUNINGVAL>"
 
-#. Widget
-#. Tooltip for '$ / hour'
-msgid "Cost of running this machine for one hour"
-msgstr "Стоимость часа работы принтера , используйте удобную валюту."
+msgid ""
+"\n"
+"Destring Length [mm]\n"
+"(0 - 10)\n"
+"\n"
+"The model for this test should have multiple tall spires. Three cylinders of "
+"diameter 10 mm and 50 mm tall works well. Run the test destring values from "
+"0 mm up to the suspected maximum destring length.\n"
+"\n"
+"Destring tuning should happen after PreloadVE tuning, as a properly tuned "
+"Preload will minimize the amount of destring retraction required to get "
+"string-free prints."
+msgstr ""
+"\n"
+"Длинна Ретракта (Втягивания) (мм)\n"
+"(0 - 10)\n"
+"\n"
+"Модель для этого теста должна иметь несколько высоких шпилей. Три цилиндра "
+"диаметром 10 мм и высотой 50 мм хорошо работают. Вы запустите тестовые "
+"значения деструирования от 0 мм до предполагаемой максимальной длины "
+"выпрямивания.\n"
+"Ретракт настраивается после настройки PreloadVE, так как правильно "
+"настроенная предустановка сведет к минимуму количество циклов Ретракта, "
+"необходимого для получения отпечатков без \"сопелек\"."
 
-#. Widget
-msgid "&Open"
-msgstr "&Open"
+msgid ""
+"\n"
+"Flow Rate [mm^3/s]\n"
+"(10 - 1)\n"
+"\n"
+"Use the same model and style profile as that recommended in the Temperature "
+"test.\n"
+"\n"
+"Start with the faster flow rate at Z = 0, since it will take a long time to "
+"print the solid bottom layers at the lower flow rate.\n"
+"\n"
+"Pick the range where the surface quality looks good. Make sure the extruder "
+"doesn't skip.  Materials like TPU may have a very narrow flow rate range "
+"(both for quality and because the density is flow dependent)."
+msgstr ""
+"\n"
+"Скорость потока (мм^3/с)\n"
+"(10 - 1)\n"
+"Используйте ту же модель и профиль стиля, что и в тесте температуры.\n"
+"\n"
+"Начните с более быстрой скорости потока на уровне Z=0, так как для печати "
+"твердых нижних слоев при более низкой скорости потока потребуется много "
+"времени.\n"
+"\n"
+"Выберите диапазон, где качество поверхности выглядит хорошо. Убедитесь, что "
+"экструдер не пропускает комочки. Такие материалы, как TPU, могут иметь очень "
+"узкий диапазон скорости потока (как по качеству, так и потому, что плотность "
+"зависит от потока)."
 
-#. Tooltip for '&Open'
-msgid "Click to add models"
-msgstr "Добавить модель"
+msgid ""
+"\n"
+"Temperature [C]\n"
+"(manufacturer's recommendation)\n"
+"\n"
+"The printer profile must have the 'Warm Same Ext' and 'Cool Same Ext' G-code "
+"defined.\n"
+"\n"
+"Try a style profile with 1.5 loops in vase mode, and a skin thickness ~= 2 "
+"layers. Use the same rounded model from the PreloadVE test.\n"
+"\n"
+"Once the test is done and the part cooled, use pliers to check the inter-"
+"layer bonding strength at various Z heights.  Pick a Z value that shows a "
+"nice surface quality and good bonding."
+msgstr ""
+"\n"
+"Температура (Cº)\n"
+"(рекомендация производителя)\n"
+"\n"
+"Профиль принтера должен иметь \"Warm Same Ext\" и \"Cool Same Ext\" G-код "
+"поддерживается.\n"
+"Попробуйте профиль стиля с 1,5 петлями в режиме вазы и толщиной стенки 2 "
+"слоя. Используйте тот же округлый кубик из \n"
+"теста PreloadVE.\n"
+"После того, как тест будет сделан и деталь остынет, используйте плоскогубцы, "
+"чтобы проверить межслойную прочность связи на различных высотах. Выберите "
+"значение, которое показывает хорошее качество \n"
+"поверхности и хорошее склеивание."
 
-#. Widget
-msgid "&Save"
-msgstr "&Save"
+#, fuzzy
+msgid ""
+"                    Welcome to KISSlicer!\n"
+"How would you characterize your 3D printing experience level?"
+msgstr ""
+"                    Добро пожаловать в KISSlicer!\n"
+"Как бы вы охарактеризовали свой уровень 3D-печати?"
 
-#. Tooltip for '&Save'
-msgid "Save the G-code to a file"
-msgstr "Записать G-код в файл"
+#, fuzzy
+msgid ""
+"  TYPE  mm/s  mm^3/s\n"
+"   Top %5.1f %4.1f\n"
+" Perim %5.1f %4.1f\n"
+" Loops %5.1f %4.1f\n"
+" Solid %5.1f %4.1f\n"
+"Sparse %5.1f %4.1f"
+msgstr ""
+"  TYPE мм/с мм-3/с\n"
+"   Топ %5.1f %4.1f\n"
+" Перим %5.1f %4.1f\n"
+" Петли %5.1f %4.1f\n"
+" Твердые %5.1f %4.1f\n"
+"Редкие %5.1f %4.1f"
 
-#. Widget
-msgid "&Slice"
-msgstr "&Slice"
+msgid ""
+"  TYPE  mm/s  mm^3/s\n"
+"   Top %5.1f %4.1f-%1.1f\n"
+" Perim %5.1f %4.1f-%1.1f\n"
+" Loops %5.1f %4.1f-%1.1f\n"
+" Solid %5.1f %4.1f-%1.1f\n"
+"Sparse %5.1f %4.1f-%1.1f"
+msgstr ""
+"  TYPE мм/с мм-3/с\n"
+"   Верх %5.1f %4.1f-%1.1f\n"
+" Перим %5.1f %4.1f-%1.1f\n"
+" Петли %5.1f %4.1f-%1.1f\n"
+" Твердые %5.1f %4.1f-%1.1f\n"
+"Sparse %5.1f %4.1f-%1.1f"
 
-#. Tooltip for '&Slice'
-msgid "Generate G-code for all parts on the bed"
-msgstr "Сгенерировать G-код для всех моделей на кровати"
+msgid "# Loops"
+msgstr "Число витков перим."
 
-#. Widget
-msgid "&Stop"
-msgstr "&Stop"
+msgid "$ / hour"
+msgstr "Руб. / час"
 
-#. Tooltip for '&Stop'
-msgid "Stop the current slicing operation"
-msgstr "Остановить текущий рассчёт"
+msgid "$ for an entire spool"
+msgstr "Руб. за всю катушку"
 
-#.  Widget
-msgid "*N"
-msgstr "*N"
+msgid "$/cm^3"
+msgstr "Руб./см^3"
 
-#.  Tooltip for '*N'
-msgid "The number of layers before inserting the 'N Layers' G-code (0 disables)"
-msgstr "Число слоев для вставки '*N' G-кода (повторяется каждые N слоев), 0 - отключено"
+msgid "%"
+msgstr "%"
 
-#. Widget
-msgid "..."
-msgstr "..."
+msgid "%1.0fº"
+msgstr "%1.0fº"
 
-#. Tooltip for '...'
-msgid "Choose the Bed STL Model"
-msgstr "Выбор STL модели визуализации кровати"
+#, fuzzy
+msgid ""
+"%s\n"
+"Thank you!"
+msgstr ""
+"%s\n"
+"Спасибо!"
 
-#. Widget
-msgid "1st Layer Speed"
-msgstr "Скорость 1го слоя"
+#, fuzzy
+msgid "%x"
+msgstr "%x"
 
-#. Tooltip for '1st Layer Speed'
-msgid "Maximum speed to travel while extruding the 1st layer."
-msgstr "Максимальная скорость печати первого слоя"
+#, fuzzy
+msgid "%y"
+msgstr "%y"
 
-#. Widget
-msgid "@2> Calculate"
-msgstr "@2> Рассчитать"
+#, fuzzy
+msgid "%z"
+msgstr "%z"
 
-#. Tooltip for '@2> Calculate'
-msgid "Calculate the cost per cm^3"
-msgstr "Рассчетная стоимость"
+msgid "&Export Selected Printer Profile(s)"
+msgstr "«Экспорт выбранного профиля принтера (ов)"
 
-#. Widget
-msgid "@< Fast     Precise@>"
-msgstr "@< Быстрее | Точнее@>"
+msgid "0"
+msgstr "0"
 
-#. Tooltip for '@< Fast     Precise@>'
-msgid "Controls the print speed (using the Printer profile's fast and slow speed settings)."
-msgstr "Управляет скоростью печати (используя максимальную и минимальную скорости из настроек принтера)"
+msgid ""
+"0 means no noise texture, 100 means up to 100% of the path width extra "
+"material will be deposited.  Affects actual usage, not the data or display"
+msgstr ""
+"0 означает отсутствие текстуры шума, 100 означает, что до 100 % o f ширины "
+"пути будет нанесен дополнительный материал. Влияет на фактическое "
+"использование, а не на данные или отображение"
 
-#. Widget
-msgid "@< Off [Support]  Dense@>"
-msgstr "@< нет [поддержек] много@>"
+msgid "1 = noisiest, 0 - smoothest"
+msgstr "1 = самый шумный, 0 - самый плавный"
 
-#. Tooltip for '@< Off [Support]  Dense@>'
-msgid "Controls the density of the main support"
-msgstr "Задает плотность элементов поддержки"
+msgid ""
+"1. pick Ext, [Load Values]\n"
+"2. save & run G-code (ext off bed)\n"
+"3. after beep remove matl, let ooze\n"
+"4. measure ooze, [Store] result"
+msgstr ""
+"1. выберите экструдер, (Загрузить значения]; \n"
+"2. сохранить и запустить G-код (вне стола); \n"
+"3. после звукового сигнала удалите материал, дайте изливаться; \n"
+"4. измерить \"сопельку\", (Сохранить) результат."
 
-#. Menu Item
+msgid "1st"
+msgstr "Толщина 1-ого слоя"
+
+msgid "1st Layer Max Speed"
+msgstr "Скор. первого слоя"
+
+msgid "1st Width [mm]"
+msgstr "Ширина 1 слоя (мм)"
+
+msgid "1st Z gap [mm]"
+msgstr "Зазор от детали (мм)"
+
+msgid "3D"
+msgstr "3D"
+
+#, fuzzy
+msgid "3D Back"
+msgstr "3D назад"
+
+msgid "3D Background"
+msgstr "Задний фон рабочего пространства"
+
+msgid "3D Background color.  Black means 'do not set'"
+msgstr "3D фоновый цвет. Черный означает \"не установлено\""
+
+#, fuzzy
+msgid ""
+"3D Systems\n"
+"   (e.g. CubeX and BFB)"
+msgstr ""
+"3D-системы\n"
+"   (например, CubeX и BFB)"
+
+#, fuzzy
+msgid "3D Systems (CubeX / BFB)"
+msgstr "3D-системы (CubeX / BFB)"
+
+msgid "3D Window"
+msgstr "3D - Окно"
+
+msgid "5D - Abs E no Reset (makerbot)"
+msgstr "5D - Abs E без сброса (makerbot)"
+
+msgid "5D - Absolute E"
+msgstr "5D - Absolute E (наиболее распространенный)"
+
+msgid ""
+"5D - Absolute E\n"
+"    (most common)"
+msgstr "5D - Absolute E  (наиболее распространенный)"
+
+msgid "5D - Relative E"
+msgstr "5D - Relative E"
+
+msgid ""
+"5D - Relative E\n"
+"    (can have improved precision)"
+msgstr ""
+"5D - Relative E\n"
+"    (может улучшить точность)"
+
+msgid ""
+"5D-Abs E no Reset\n"
+"    (makerbot printers)"
+msgstr ""
+"5D-Abs E без сброса\n"
+"    (makerbot printers)"
+
+msgid ""
+"<EXT+n> <MAXZTD>\n"
+"<X> <Y> <Z> <E> <%>\n"
+"<NEXTX> <NEXTY>\n"
+"<TOPZ> <DESTRING>\n"
+"<BED> <BOX> <TEMP>\n"
+"<WARM1..12>\n"
+"<MAIN1..12>\n"
+"<LAYER> <TELAPSED>\n"
+"<TREMAIN> <TTOTAL>\n"
+"<MATL> <ACCEL>\n"
+"<PRIMEX> <PRIMEY>\n"
+"<TUNINGVAL>"
+msgstr ""
+"<EXT+n> <MAXZTD>\n"
+"<X> <Y> <Z> <E> <%>\n"
+"<NEXTX> <NEXTY>\n"
+"<TOPZ> <DESTRING>\n"
+"<BED> <BOX> <TEMP>\n"
+"<WARM1..12>\n"
+"<MAIN1..12>\n"
+"<LAYER> <TELAPSED>\n"
+"<TREMAIN> <TTOTAL>\n"
+"<MATL> <ACCEL>\n"
+"<PRIMEX> <PRIMEY>\n"
+"<TUNINGVAL>"
+
+msgid "> Loops"
+msgstr "Малые радиусы"
+
+msgid "> Perimeter"
+msgstr "Внешн. периметр"
+
+msgid ""
+"> Solid Infill &&\n"
+"> Support*"
+msgstr ""
+"Заполнение\n"
+"и поддержки"
+
+msgid ""
+"> Sparse Infill\n"
+"&& Stacked Infill"
+msgstr ""
+"Переменное\n"
+"заполнение"
+
+msgid "> Top"
+msgstr "Верхние поверхности"
+
+msgid ">>> Loops"
+msgstr "Малые радиусы"
+
+msgid ">>> Perimeter"
+msgstr "Внешн. периметр"
+
+msgid ""
+">>> Solid Infill &&\n"
+">>> Support*"
+msgstr ""
+"Заполнение\n"
+"и поддержки"
+
+msgid ""
+">>> Sparse Infill\n"
+"&& Stacked Infill"
+msgstr ""
+"Переменное\n"
+"заполнение"
+
+msgid ">>> Top"
+msgstr "Верхние поверхности"
+
+msgid ""
+"A PRO Key will be in the form (case insensitive):\n"
+"    XXXXX-your_name-XXXXX\n"
+"A Premium Key will be in the form (case sensitive):\n"
+"   <xxxx>-Your_Name-<xxxx>\n"
+msgstr ""
+"Ключ PRO будет в формате (не чувствительный к регистру):\n"
+"    XXXXX-your_name-XXXXX\n"
+"Премиум-ключ будет в формте (чувствительный к регистру):\n"
+"   <xxxx>-Your_Name- <xxxx>\n"
+
+msgid ""
+"A common value is gcode (or bfb for 3D Systems' printers).  It does not need "
+"a starting period."
+msgstr ""
+"Общим значением является gcode (или bfb для 3D принтеров). Он не нуждается в "
+"стартовом периоде."
+
+msgid ""
+"A good default is to make this the same as Extrusion Width; compared to the "
+"extrusion width: thinner reduces stress / warping, thicker improves bonding"
+msgstr ""
+"Хорошее значение по умолчанию - сделать то же самое, что и ширина экструзии "
+"(Extrusion Width); меньшее значение уменьшает напряжение / коробление, "
+"большее улучшает сцепление."
+
+msgid "A simple wizard to set any desired infill percentage."
+msgstr "Плотность заполнения в %."
+
+msgid ""
+"A value > 0 will force the prime pillar to this radius.  This is reset to 0 "
+"(auto) every time KISSlicer is started."
+msgstr ""
+"Значение > 0 включит генерацию опоры этого радиуса.  Это автоматически "
+"сбрасывается до 0 каждый раз, при перезапуске KISSlicer."
+
+#, fuzzy
+msgid "ABS / ASA"
+msgstr "ABS / ASA"
+
 msgid "About"
-msgstr "О программе"
+msgstr "О нас"
 
-#. Menu Item
+msgid "Above 75%% infill, straight sparse infill is recommended...set it?"
+msgstr ""
+"Когда плотность заполнения устанавливается выше 75%%, рекомендуется "
+"прямолинейный заполнитель...установить его?"
+
+#, fuzzy
+msgid "Above Z [mm]"
+msgstr "Выше мм"
+
+msgid ""
+"Above this Z the From EXT will no longer be used, and the To EXT will be "
+"used instead"
+msgstr ""
+"Выше этого значения по Z- From EXT больше не будет использоваться, и вместо "
+"этого будет использоваться To EXT"
+
+msgid "Acceleration of the print-head in X & Y, used for timing estimates"
+msgstr "Ускорение печати в XY, (используется для оценки общего времени печати)"
+
+#, fuzzy
+msgid "Adaptive Options"
+msgstr "Адаптивные опции"
+
+msgid "Add &Matching"
+msgstr "Добавить и сравнить"
+
+msgid "Add an offset to the output G-code's Z values"
+msgstr ""
+"Добавьте значение offset (смещение) к значениям Z выходного G-кода. Обычно "
+"применяется в случае наклейки дополнительного коврика на стол. "
+
+#, fuzzy
+msgid "Adds comments to the G-code (very very helpful!)"
+msgstr "Добавляет комментарии к G-коду (очень очень полезно!)"
+
+msgid ""
+"Adjust the surface inward (in X,Y plane).  Value should be > 0 and < "
+"Extrusion Width / 2"
+msgstr ""
+"Применяется при печати точных деталей. Задаёт отступ от поверхности внутрь "
+"(коллапсирование) (в плоскости X, Y). Значение должно быть в пределах >= 0 и "
+"< 'Ширина экструзии' / 2 ."
+
+msgid "Advanced"
+msgstr "Расширенный доступ"
+
+msgid "Advanced Extruder Options"
+msgstr "Расшир. варианты экстр."
+
+msgid "Advanced Style Options"
+msgstr "Дополнительные настройки"
+
+msgid ""
+"After a destring (if enabled), before a travel, lift the head by this height."
+msgstr ""
+"После ретракта/втягивания (destring), если он включен, перед началом печати "
+"голова поднимется на эту высоту на эту высоту."
+
+msgid ""
+"After a print finishes, if the Z is less than this value, move the Z to this "
+"value."
+msgstr ""
+"После завершения печати, если Z меньше этого значения, переместите Z на это "
+"значение."
+
+msgid "After slicing the part, KISSlicer will report the extruded cm^3"
+msgstr "После нарезки модели, KISSlicer сообщит объём экструдированого в см^3"
+
 msgid "All Models"
-msgstr "Все модели"
+msgstr "Загруженные модели"
 
-#. Menu Item
+#, fuzzy
+msgid "All Other Extruders"
+msgstr "Все остальные экструдеры"
+
+msgid "Also on Top"
+msgstr "Поддержки по модели"
+
+msgid ""
+"Also use Interface Support when support is generated on top of the model"
+msgstr "Разрешить генерацию растворяемых поддержек поверх модели"
+
 msgid "Angle"
 msgstr "Угол"
 
-#. Menu Item
+msgid "Angle [deg]"
+msgstr "Угол (град)"
+
+msgid "Angle of the Interface paths (relative to the regular support paths)"
+msgstr ""
+"Угол наклона пути удаляемой поддержки (по отношению к обычному пути "
+"поддержки)"
+
+msgid ""
+"Any jump < this threshold will not wipe (or destring on 5D), so 0 would "
+"never disable a destring/wipe"
+msgstr ""
+"При любом перемещении меньше этого порога не будет задействована функция "
+"Протереть (или Ретракт), при 0 значении Протереть/Ретракт не отключаются."
+
+msgid ""
+"Any jump > this threshold will force a wipe and destring, so a 0 would force "
+"a destring/wipe on all travels"
+msgstr ""
+"При любом перемещении выше этого порога будет задействована функция "
+"Протереть и Ретракт, при 0 значении Протереть/Ретракт не отключаются."
+
+msgid ""
+"Any surface of the model more than X degrees off vertical will get support."
+msgstr ""
+"Любая поверхность модели, отклонённая от вертикали более [X] градусов, "
+"получит поддержку."
+
+msgid "Approx Avg Val"
+msgstr "Приблизительно Avg Val"
+
+msgid ""
+"Approximate Viscosity\n"
+"from Melt Flow Index"
+msgstr ""
+"Приблизительная вязкость\n"
+"из Индекса текучести расплава"
+
+#, fuzzy
+msgid "Approximates the average output value"
+msgstr "Приблизительное среднее значение вывода"
+
+msgid "Arc"
+msgstr "По дуге"
+
+#, fuzzy
+msgid "Arc Support (G2/G3)"
+msgstr "Поддержка дуги (G2/G3)"
+
+msgid ""
+"Arc the Z-lift path, very good for deltas.  Only works when the Travel paths "
+"mode is set to Simple."
+msgstr ""
+"Арка Z-лифт путь, очень хорошо для дельт.  Работает только тогда, когда "
+"режим пути путешествия установлен на простой."
+
+msgid "Assign All to All"
+msgstr "Присвоить всем проектам"
+
+#, fuzzy
+msgid "Associated Profiles"
+msgstr "Ассоциированные профили"
+
+msgid ""
+"At the end of the prime, move the nozzle quickly to one side and back.  This "
+"is intended to be used on printers that can not beep."
+msgstr ""
+"В конце печати быстро подвигать соплом туда и обратно.  Это предназначено "
+"для использования на принтерах, которые не оборудованы зуммером."
+
 msgid "Auto-Rotate For Packing"
-msgstr "Авто-вращение для компановки"
+msgstr "Автоматический поворот модели"
 
-#. Widget
-msgid "Axis"
-msgstr "Оси"
+msgid "Available print depth of the bed."
+msgstr "Длинна стола в мм по оси Y"
 
-#. Tooltip for 'Axis'
-msgid "E is standard, Mach3 uses A B C"
-msgstr "Обычно E, Mach3 использует A B C"
+msgid "Available print width of the bed."
+msgstr "Ширина стола в мм по оси Х"
 
-#. Menu Item
+msgid "Avoid Edges"
+msgstr "Избегать кромку"
+
+#, fuzzy
+msgid "Axis 1"
+msgstr "Ось 1"
+
+#, fuzzy
+msgid "Axis 10"
+msgstr "Ось 10"
+
+#, fuzzy
+msgid "Axis 11"
+msgstr "Ось 11"
+
+#, fuzzy
+msgid "Axis 12"
+msgstr "Ось 12"
+
+#, fuzzy
+msgid "Axis 2"
+msgstr "Ось 2"
+
+#, fuzzy
+msgid "Axis 3"
+msgstr "Ось 3"
+
+#, fuzzy
+msgid "Axis 4"
+msgstr "Ось 4"
+
+#, fuzzy
+msgid "Axis 5"
+msgstr "Ось 5"
+
+#, fuzzy
+msgid "Axis 6"
+msgstr "Ось 6"
+
+#, fuzzy
+msgid "Axis 7"
+msgstr "Ось 7"
+
+#, fuzzy
+msgid "Axis 8"
+msgstr "Ось 8"
+
+#, fuzzy
+msgid "Axis 9"
+msgstr "Ось 9"
+
+msgid "Back"
+msgstr "Назад"
+
 msgid "Background"
 msgstr "Фон"
 
-#. Widget
-msgid "Bed"
-msgstr "Кровать"
+#, fuzzy
+msgid "Background color.  Black means 'do not set'"
+msgstr "Фоновый цвет.  Черный означает \"не устанавливай\""
 
-#. Tooltip for 'Bed'
-msgid "If you have a heated bed, you can use the <BED> token in the G-code includes"
-msgstr "Если у вас кровать с подогревом можете использовать ключ <BED> для вставки темпаратуры из профиля в ваш G-код"
+msgid "Balanced"
+msgstr "Сбалансированное"
 
-#. Menu Item
-msgid "Bed Level && Z"
-msgstr "Уровень кровати и Z"
+msgid "Base Period 2^N"
+msgstr "Базовый период 2^N"
 
-#. Widget
+msgid ""
+"Base volume of material that needs to be purged when switching to this "
+"material on a N-1 printer."
+msgstr ""
+"Определённый объем материала, который необходимо слить при переходе на этот "
+"материал на принтере N-1."
+
+msgid "Basics"
+msgstr "Основы"
+
+msgid "Bed Center X [mm]"
+msgstr "Центр стола X мм"
+
+msgid "Bed Center Y [mm]"
+msgstr "Центр стола по Y мм"
+
 msgid "Bed Roughness [mm]"
-msgstr "Неровность кровати [мм]"
+msgstr "Компенс. стола (мм)"
 
-#. Tooltip for 'Bed Roughness [mm]'
-msgid "Bed Z_max - Z_min: 1st layer thickness is fattened to compensate"
-msgstr Величина нелинейности стола (Zmax - Zmin), 1й слой будет выше на это значение для выравнивания"
-
-#. Widget
 msgid "Bed STL Model"
-msgstr "Mодель стола"
+msgstr "STL модель стола"
 
-#. Tooltip for 'Bed STL Model'
-msgid "Chose a STL model to represent the printer's bed (make sure the origin coincides with where the printer would deposit plastic at 0,0)"
-msgstr "Выберите STL модель кровати для визуализации (убедитесь что координатный ноль модели совпадает с нулем калибровки принтера)"
+msgid "Bed Size X [mm]"
+msgstr "Размер стола X (мм)"
 
-#. Widget
-msgid "Bed Size [mm]  X"
-msgstr "Размер кровати [мм] X"
+msgid "Bed Size Y [mm]"
+msgstr "Размер стола Y (мм)"
 
-#. Tooltip for 'Bed Size [mm]  X'
-msgid "Available print width of the bed."
-msgstr "Доступные для печати размеры"
+msgid "Bed Size Z [mm]"
+msgstr "Высота по Z мм"
 
-#. Widget
+msgid "Bed Temperature [C]"
+msgstr "Температура стола (Cº)"
+
+msgid "Bed Z_max - Z_min: 1st layer thickness is fattened to compensate"
+msgstr ""
+"Увеличить высоту первого слоя на это значение для компенсации неровности "
+"стола. Рекомендуется 0,05"
+
+msgid "Bed [C]"
+msgstr "Стол (Cº)"
+
+msgid "Bed is Round"
+msgstr "Стол круглый"
+
+msgid ""
+"Before moving to a new region, back-tracks over the most recent path or "
+"continues over the loop by this distance."
+msgstr ""
+"Перед переходом на новый слой, вернуться по последнему пути на это "
+"расстояние."
+
+msgid "Best Z [mm]"
+msgstr "Высота удачного участка по Z (мм)"
+
+#, fuzzy
+msgid "Blackbelt-style printer"
+msgstr "Принтер в стиле Блэкбелта"
+
+msgid ""
+"Blade edge:\n"
+"sharp crease"
+msgstr ""
+"Тонкое ребро:\n"
+"острые складки"
+
+msgid "Bleed Factor"
+msgstr "Текучесть"
+
+msgid "Blue"
+msgstr "Синий"
+
+msgid "Bond"
+msgstr "Согласов. путей"
+
+msgid "Both"
+msgstr "Both"
+
+msgid "Bottom Stepover"
+msgstr "Перекрыт.нависания"
+
+msgid ""
+"Brim\n"
+"    (touches part, keeps it from lifting)"
+msgstr ""
+"Кант\n"
+"    (касается детали, удерживая ее от отрыва)"
+
+msgid "Brim / Skirt"
+msgstr "Кант / Юбка"
+
+msgid "Bumpy"
+msgstr "Бугристый"
+
+msgid "Calc HeatT1"
+msgstr "Калькулятор нагрева T1"
+
+msgid "Calc HeatT10"
+msgstr "Калькулятор нагрева T10"
+
+msgid "Calc HeatT11"
+msgstr "Калькулятор нагрева T11"
+
+msgid "Calc HeatT12"
+msgstr "Калькулятор нагрева T12"
+
+msgid "Calc HeatT2"
+msgstr "Калькулятор нагрева T2"
+
+msgid "Calc HeatT3"
+msgstr "Калькулятор нагрева T3"
+
+msgid "Calc HeatT4"
+msgstr "Калькулятор нагрева T4"
+
+msgid "Calc HeatT5"
+msgstr "Калькулятор нагрева T5"
+
+msgid "Calc HeatT6"
+msgstr "Калькулятор нагрева T6"
+
+msgid "Calc HeatT7"
+msgstr "Калькулятор нагрева T7"
+
+msgid "Calc HeatT8"
+msgstr "Калькулятор нагрева T8"
+
+msgid "Calc HeatT9"
+msgstr "Калькулятор нагрева T9"
+
+#, fuzzy
+msgid "Calculate the Heat Time Coefficient"
+msgstr "Рассчитайте коэффициент времени нагрева"
+
+msgid "Calculate the cost per cm^3"
+msgstr "Рассчитать стоимость за см^3"
+
+msgid ""
+"Can not open files of type '%s'\n"
+"(%s)"
+msgstr ""
+"Нельзя открыть файлы типа '%s'\n"
+"(%s)"
+
+#, fuzzy
+msgid "Can this firmware handle Arc commands"
+msgstr "Может ли эта прошивка обрабатывать команды дуги"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid ""
+"Cancel\n"
+"Cost"
+msgstr "Отмена"
+
+msgid ""
+"Cancel\n"
+"Material"
+msgstr ""
+"Отмена\n"
+"Материала"
+
+#, fuzzy
+msgid ""
+"Cancel\n"
+"Printer"
+msgstr ""
+"Отмена\n"
+"Принтера"
+
+#, fuzzy
+msgid ""
+"Cancel\n"
+"Style"
+msgstr ""
+"Отмена\n"
+"Стиль"
+
+#, fuzzy
+msgid ""
+"Cancel\n"
+"Support"
+msgstr ""
+"Отмена\n"
+"Поддержки"
+
+msgid ""
+"Cancel\n"
+"VE"
+msgstr ""
+"Отмена\n"
+"VE"
+
+msgid ""
+"Cancel\n"
+"Warm-Up"
+msgstr "Отмена"
+
+msgid "Cancel Slice"
+msgstr "Отмена"
+
+msgid "Cancel Slicing"
+msgstr "Отмена расчёта"
+
+#, fuzzy
+msgid "Cancel VE Wizard"
+msgstr "Отмена VE Мастера"
+
+msgid "Cellular"
+msgstr "Сотовое"
+
 msgid "Center"
 msgstr "Центр"
 
-#. Tooltip for 'Center'
 msgid "Center all models on the bed"
-msgstr "Центр всех моделей на кровати"
+msgstr "Центрировать все модели на столе, относительного общего центра"
 
-#. Widget
+msgid "Change Registration Key"
+msgstr "Сменить ключ регистрации"
+
+#, fuzzy
+msgid "Check if this material gets printed in a heated chamber"
+msgstr "Проверьте, печатается ли этот материал в камере с подогревом"
+
+msgid "Choose and Restore Reference Settings"
+msgstr "Выбрать и восстановить настройки"
+
+msgid "Choose the Bed STL Model"
+msgstr "Выберите  STL модель стола"
+
+msgid ""
+"Choose the Prime Pillar location (place nearest the extruder warm-up "
+"location)"
+msgstr ""
+"Выберите расположение Prime Pillar (ближайшего место прочистки экструдера)"
+
+msgid ""
+"Chose a STL model to represent the printer's bed (make sure the origin "
+"coincides with where the printer would deposit plastic at 0,0)"
+msgstr ""
+"Выберите STL модель стола принтера (убедитесь, что исходная точка модели "
+"совпадает с точкой 0,0)."
+
+#, fuzzy
+msgid "Clearing '[X] Force' default settings above current level"
+msgstr "Очистка параметров по умолчанию 'X' Force выше текущего уровня"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid ""
+"Closes this window without creating the profile.  You can also press [Esc]"
+msgstr ""
+"Закрывает это окно без создания профиля. Вы также можете нажать на «Esc»"
+
+msgid "Coarse"
+msgstr "Хлипко"
+
+msgid "Coefficient for estimating warm time: seconds ~= HT * C * C"
+msgstr "Коэффициент для оценки времени нагрева: секунды ~= HT * Cº * с"
+
+msgid "Coefficient for estimating warm time: seconds ~= HT * C^2"
+msgstr "Коэффициент для оценки времени нагрева: секунды ~= HT * Cº * с"
+
+msgid "Collapse all settings windows."
+msgstr "Свернуть все окна настроек ."
+
 msgid "Color"
-msgstr "Цвет"
+msgstr "Цвет отображения прутка"
 
-#. Tooltip for 'Color'
-msgid "Select the color of this filament"
-msgstr "Цвет материала"
-
-#. Menu Item
 msgid "Color Scheme"
 msgstr "Цветовая схема"
 
-#. Widget
+msgid "Color Scheme Presets"
+msgstr "Использовать цветовую схему для каждого принтера"
+
+msgid "Compute Cost"
+msgstr "Вычисляемая стоимость"
+
+msgid ""
+"Compute Initial\n"
+" ViscoElasticity"
+msgstr ""
+"Вычислить первоначальный\n"
+" Вязкоупругость"
+
+msgid ""
+"Compute an initial value for PreloadVE.  It should be further refined using "
+"the Tuning Wizard."
+msgstr ""
+"Вычислите начальное значение для PreloadVE. Оно должно быть подобрано с "
+"помощью мастера настройки."
+
+msgid "Compute the Cost"
+msgstr "Расчитать"
+
+msgid "Compute the Warm-Up"
+msgstr "Рассчитать прогрев"
+
+msgid "Compute the Warm-Up factor"
+msgstr "Рассчитать коэфф. прогрева"
+
+msgid "Compute the cost per volume"
+msgstr "Вычисление общего объема"
+
+#, fuzzy
+msgid "Compute the initial PreloadVE value."
+msgstr "Вычислите начальное значение PreloadVE."
+
+msgid ""
+"Computed\n"
+"PreloadVE [µs]"
+msgstr ""
+"Вычисляемый\n"
+"PreloadVE [µs]"
+
+msgid "Confirm and Slice"
+msgstr "Подтвердить "
+
+#, fuzzy
+msgid "Continue Slicing"
+msgstr "Продолжить нарезку"
+
+#, fuzzy
+msgid "Continue, and disable this warning for the rest of the session"
+msgstr "Продолжить и отключить это предупреждение до конца сеанса"
+
+msgid ""
+"Controls how much the solid and sparse infill overlap the innermost loop (0 "
+"for just touching, 2.0 for maximum overlap...too much will look bad on solid "
+"prints, or near flat surfaces)"
+msgstr ""
+"Управляет контактом между стенкой и заполнением 0,2 (0 для простого касания, "
+"2,0 для максимального перекрытия, если слишком много - будет плохо "
+"смотреться на сплошных отпечатках или около гладких поверхностей)"
+
+msgid "Controls the density of the main support"
+msgstr "Задать плотность основных поддержек"
+
+msgid ""
+"Controls the print speed (blending between the Printer profile's fast and "
+"slow speed settings)."
+msgstr ""
+"Управляет скоростью печати между быстро но грубо (fast) или точно но "
+"медленно (precision)."
+
+#, fuzzy
+msgid "Convert Preload Settings"
+msgstr "Преобразование настроек предварительной загрузки"
+
 msgid "Cool"
-msgstr "Обдув"
+msgstr "Крутой"
 
-#. Tooltip for 'Cool'
-msgid "If slowing a layer to reach 'Min Layer [s]', make sure the fan is at least at this Duty Cycle %"
-msgstr "Скорость вентилятора (в %) при достигнутом замедлении до минимального времени печати слоя"
+msgid ""
+"Cool\n"
+"Same\n"
+"Ext"
+msgstr ""
+"Классно\n"
+"Прежний\n"
+"Избыточно"
 
-#. Widget
-msgid "Copy<LF>Profile"
-msgstr "Скопировать<LF>профиль"
+msgid ""
+"Cool &&\n"
+"Retire\n"
+"Old Ext"
+msgstr ""
+"Классно\n"
+"Прежний\n"
+"Избыточно"
 
-#. Tooltip for 'Copy<LF>Profile'
+msgid "Cool [C]"
+msgstr "Температура [Cº]"
+
+msgid "Cool [mm^3/s]"
+msgstr "Макс. Cool [мм^3/c]"
+
+msgid "Cool-Purge [mm^3]"
+msgstr "Прогонка (мм^3)"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Copy Ext #1 to Others"
+msgstr "Копировать парам. Ext #1"
+
+msgid "Copy all settings from extruder 1 into all other extruders"
+msgstr "Копирование всех настроек экструдера 1 во все остальные экструдеры"
+
+msgid "Copy of "
+msgstr "Копировать "
+
 msgid "Copy this profile into a new one"
 msgstr "Скопировать этот профиль в новый"
 
-#. Widget
+msgid "Corners"
+msgstr "Поместить шов в угол"
+
+msgid "Cost Calc"
+msgstr "Калькулятор Стоимости"
+
+#, fuzzy
+msgid "Cost of running this machine for one hour"
+msgstr "Стоимость работы этой машины в течение одного часа"
+
+msgid "Cost per cm^3, use whatever currency type you wish"
+msgstr "Стоимость за см^3, использовать любой тип валюты вы хотите"
+
+msgid "Could not open the file '%s'"
+msgstr "Невозможно открыть файл '%s'"
+
 msgid "Count"
-msgstr "Кол-во"
+msgstr "Копировать модель"
 
-#. Tooltip for 'Count'
-msgid "How many to print"
-msgstr "Сколько напечатать"
+#, fuzzy
+msgid ""
+"Create\n"
+"Material"
+msgstr ""
+"Создать\n"
+"Материал"
 
-#. Widget
-msgid "Crowning Threshold [mm]"
-msgstr "Порог цепочек [мм]"
+msgid ""
+"Create\n"
+"Printer"
+msgstr ""
+"Создать\n"
+"Принтер"
 
-#. Tooltip for 'Crowning Threshold [mm]'
-msgid "Crowning tries to fill in small gaps and thin walls.  Crowning paths must be longer than this to be kept.  Negative values disable crowning. 1mm is a good starting value."
-msgstr "Цепочки (Crowning) используется для заполнения малых разрывов и тонких стенок. Элементы подлежащие сцепке выстраиваются в длинную траекторию, насколько это возможно. Отрицательные значения выключают сцепку. 1мм хорошее стартовое значение."
+#, fuzzy
+msgid ""
+"Create\n"
+"Style"
+msgstr ""
+"Создать\n"
+"Стиль"
 
-#. Widget
-msgid "De-String"
-msgstr "Откат/подача"
+#, fuzzy
+msgid ""
+"Create\n"
+"Support"
+msgstr ""
+"Создать\n"
+"Поддержки"
 
-#. Tooltip for 'De-String'
-msgid "Enables a prime at the start of a path and a retract at the end"
-msgstr "Включает подачу (prime) в начале и откат (destring) в конце траектории"
+msgid "Create Profile Wizards"
+msgstr "4 мастера создания профилей (те, что при старте программы)"
 
-#. Menu Item
+msgid "Creates the new Material profile"
+msgstr "Создать новый профиль Материала"
+
+msgid "Creates the new Printer profile"
+msgstr "Создать новый профиль Принтера"
+
+msgid "Creates the new Style profile"
+msgstr "Создать новый профиль Стиля"
+
+msgid "Creates the new Support profile"
+msgstr "Создает новый профиль Поддержки"
+
+#, fuzzy
+msgid "Crown Path"
+msgstr "Путь короны"
+
+msgid "Crown [mm]"
+msgstr "Заполн.зазоры менее"
+
+msgid ""
+"Crowning tries to fill in small gaps and thin walls.  Crowning paths must be "
+"longer than this to be kept.  Negative values disable crowning. 1mm is a "
+"good starting value."
+msgstr ""
+"KISSlicer будет пытаться заполнить зазоры и тонкие стенки меньше этого "
+"значения. Отрицательные значения отключают функцию. [1] мм является хорошим "
+"стартовым значением."
+
+msgid "Custom Syntax  <TOKEN>=[G-code]"
+msgstr "Пользовательский  <TOKEN>=[G-code]"
+
+msgid "Dark"
+msgstr "Темный"
+
+msgid "Default Extruder for..."
+msgstr "Назначение экструдеров"
+
+msgid "Defaults"
+msgstr "по дефолту"
+
 msgid "Delete"
 msgstr "Удалить"
 
-#. Widget
-msgid "Delete<LF>Profile"
-msgstr "Удалить<LF>профиль"
+msgid "Delete %s Profile '%s'?"
+msgstr "Удалить %s Профиль '%s'?"
 
-#. Tooltip for 'Delete<LF>Profile'
-msgid "Delete the current profil"
+#, fuzzy
+msgid "Delete the current profile"
 msgstr "Удалить текущий профиль"
 
-#. Widget
+msgid "Dense"
+msgstr "Часто"
+
+msgid ""
+"Density of the Sparse Infill and Stacked Sparse Infill (ratio is 1/"
+"whole_number)"
+msgstr ""
+"Плотность заполнения. Hollow - без заполнения, но с укрепляющими вставками "
+"по углам, Vase - печатается только стенка периметра."
+
+#, fuzzy
+msgid "Density of the material [g/cm^3]"
+msgstr "Плотность материала (г/см)"
+
+#, fuzzy
+msgid "Depth of the print bed in mm"
+msgstr "Глубина печати кровати в мм"
+
+msgid "Depth scale of the seam crossover"
+msgstr ""
+"Длинна кончиков крестика, идущих вдоль внешней траектории (внутри объекта) "
+"для маскировки стыка, значение в пределах от 0.00 до 1.00 "
+
+#, fuzzy
+msgid "Descriptor"
+msgstr "Дескриптор"
+
+msgid "Destring"
+msgstr "Ретракт/ Втягивание прутка"
+
+msgid "Destring [mm]"
+msgstr "Ретракт (мм)"
+
+msgid "Destring/Wipe/Jump Path"
+msgstr "Ретракт/Протрите/Прыжок Путь"
+
+#, fuzzy
+msgid "Diagonal Non-Overlap (Cartesian printers)"
+msgstr "Диагональные неконтулятные (декартовые принтеры)"
+
 msgid "Diameter [mm]"
-msgstr "Диаметр [мм]"
+msgstr "Диаметр прутка [mm]"
 
-#. Tooltip for 'Diameter [mm]'
-msgid "Precise diameter of the filament"
-msgstr "Точный (измерянный) диаметр прута материала"
+msgid "Diameter of the filament to be characterized"
+msgstr ""
+"Диаметр прутка\n"
+", который будет тестироваться"
 
-#. Menu Item
+#, fuzzy
+msgid "Diameter of the nozzle used in the test"
+msgstr "Диаметр сопла, используемого в тесте"
+
+msgid "Diameter of the ooze"
+msgstr "Диаметр \"сопельки\""
+
+#, fuzzy
 msgid "Disable 3D View on Slice"
-msgstr "Не визуализировать при рассчёте"
+msgstr "Отключить 3D-вид на фрагменте"
 
-#. Menu Item
+#, fuzzy
+msgid "Disable Bookend Destring"
+msgstr "Отключить Bookend Destring"
+
+msgid ""
+"Disable this page for the rest of the session.  This is useful if you never "
+"make mistakes."
+msgstr ""
+"Отключите этот диалог до конца сеанса.  Это полезно, если вы никогда не "
+"ошибается."
+
+msgid "Disabled"
+msgstr "Откл."
+
+msgid "Display Options"
+msgstr "Настройка раб. пространства"
+
+#, fuzzy
+msgid "Display Previous Layer"
+msgstr "Отображение предыдущего слоя"
+
+msgid "Display Travel / Ironing Paths"
+msgstr "Показывать траектории холостых перемещений и глажки"
+
+msgid ""
+"Distance between the drive mechanism and the nozzle in [mm]. ('Bowden tube "
+"length')"
+msgstr ""
+"Расстояние между механизмом привода и соплом в мм. (Длина трубки Боудена')"
+
+msgid "Do not mark (None)"
+msgstr "Не отмечать (Нет)"
+
+#, fuzzy
+msgid "Do not update the PreloadVE value."
+msgstr "Не обновляйте значение PreloadVE."
+
+#, fuzzy
+msgid "Do not update the Warm-Up Factor"
+msgstr "Не обновляйте фактор Warm-Up"
+
+msgid "Do not update the cost per volume"
+msgstr "Не обновляйте стоимость за изделие"
+
+msgid "Do you wish to overwrite all four current G-code includes?"
+msgstr "Не отмечайте, если хотите перезаписать все четыре текущих G-кода"
+
+msgid "Draw all layers below the selected layer (CTRL+L)"
+msgstr "Нарисуйте все слои ниже выбранного слоя (CTRL+L)"
+
+msgid "Drive Length"
+msgstr "Длинна Боудена"
+
+#, fuzzy
+msgid "Drive Length [mm]"
+msgstr "Длина привода (мм)"
+
+msgid "DrvLen1"
+msgstr "Длинна Боудена 1"
+
+msgid "DrvLen10"
+msgstr "Длинна Боудена 10"
+
+msgid "DrvLen11"
+msgstr "Длинна Боудена 11"
+
+msgid "DrvLen12"
+msgstr "Длинна Боудена 12"
+
+msgid "DrvLen2"
+msgstr "Длинна Боудена 2"
+
+msgid "DrvLen3"
+msgstr "Длинна Боудена 3"
+
+msgid "DrvLen4"
+msgstr "Длинна Боудена 4"
+
+msgid "DrvLen5"
+msgstr "Длинна Боудена 5"
+
+msgid "DrvLen6"
+msgstr "Длинна Боудена 6"
+
+msgid "DrvLen7"
+msgstr "Длинна Боудена 7"
+
+msgid "DrvLen8"
+msgstr "Длинна Боудена 8"
+
+msgid "DrvLen9"
+msgstr "Длинна Боудена 9"
+
+#, fuzzy
+msgid "Dynamic (Premium)"
+msgstr "Динамический (Премиум)"
+
+#, fuzzy
+msgid "E is standard, Mach3 uses A B C..."
+msgstr "E является стандартным, Mach3 использует B C ..."
+
+msgid "Early"
+msgstr "Предварительно"
+
+#, fuzzy
+msgid "Edge Errors"
+msgstr "Ошибки края"
+
+#, fuzzy
+msgid "Elasticity [Pa]"
+msgstr "Эластичность (Pa)"
+
+msgid "Enclosure [C]"
+msgstr "Камера (Cº)"
+
+#, fuzzy
 msgid "Enter Product Key"
-msgstr "Введите лицензионный ключ"
+msgstr "Введите ключ продукта"
 
-#. Menu Item
-msgid "Export Slice Debug SDF"
-msgstr "Экспорт SDF (Slice Debug)"
+msgid "Enter Registration Key"
+msgstr "Введите ключ регистрации"
 
-#. Menu Item
-msgid "Extruder Flow"
-msgstr "Поток экструзии"
+#, fuzzy
+msgid ""
+"Enter material left (in [meters]) to find the optimum threshold Z.  The "
+"print must be already sliced."
+msgstr ""
+"Введите материал слева, чтобы найти оптимальный порог.  Отпечаток должен "
+"быть уже нарезаны."
 
-#. Widget
+msgid "Enter the desired count (was %i):"
+msgstr "Введите нужное количество (сейчас %i шт.)"
+
+#, fuzzy
+msgid "Enter the desired rotation in degrees (was %i):"
+msgstr "Введите желаемое вращение в градусах (было %i):"
+
+msgid "Enter the desired vertical count:"
+msgstr "Введите нужное количество копий (шт.)"
+
+msgid "Enter the desired vertical stride (height = %1.2f):"
+msgstr "Введите шаг копирования (сейчас высота модели = %1.2f)"
+
+msgid "Enter the scaling factor:"
+msgstr "Введите коэффициент масштабирования:"
+
+msgid ""
+"Enter the values, choose a name for the\n"
+"Material Profile then click [Create]"
+msgstr ""
+"Введите значения и выберите имя\n"
+"для Профиля Материала"
+
+msgid ""
+"Enter the values, choose a name for the\n"
+"Printer Profile then click [Create]"
+msgstr ""
+"Введите значения и выберите имя\n"
+" для Профиля Принтера"
+
+msgid ""
+"Enter the values, choose a name for the\n"
+"Style Profile then click [Create]"
+msgstr ""
+"Введите значения и выберите имя\n"
+" для Профиля Стиля"
+
+msgid ""
+"Enter the values, choose a name for the\n"
+"Support Profile then click [Create]"
+msgstr ""
+"Введите значения и выберите имя\n"
+" для Профиля Поддержки"
+
+msgid ""
+"Error: failed to save '%s'.  Please check file permissions and make sure the "
+"name has no illegal characters."
+msgstr ""
+"Ошибка: не удалось сохранить '%s'.  Пожалуйста, проверьте разрешения файлов "
+"и убедитесь, что имя не имеет недопустимых символов."
+
+msgid "Euler Angles [degrees]"
+msgstr "Углы Эйлера (град.)"
+
+msgid ""
+"Exact value if you have calipers.  Typical values are 1.75, 2.85, and 3.0 mm"
+msgstr ""
+"Точное значение, если у вас есть штангенциркуль.  Типичные значения 1,75, "
+"2,85 и 3,0 мм"
+
+msgid "Expand all settings windows."
+msgstr "Раскрыть все окна настроек."
+
+msgid "Expand tree to"
+msgstr "Развернуть до"
+
+msgid ""
+"Expands the bottom layer by this distance (using Dia / ExtrusionWidth extra "
+"loops).  This helps the part adhere to the bed.  If Brim is enabled the "
+"loops on the first layer will always print from outside to inside."
+msgstr ""
+"Расширяет нижний слой, на это расстояние (с помощью дополнительных витков). "
+"Это помогает лучше приклеить деталь к столу. Если кант включен, порядок "
+"витков на первом слое будет всегда снаружи внутрь."
+
+msgid ""
+"Experimentally determine the\n"
+"ViscoElasticity\n"
+"NOTE: This is an initial value.\n"
+"Refine it in the Tuning Wizard."
+msgstr ""
+"Экспериментально определить\n"
+"Вязкоупругость\n"
+"ПРИМЕЧАНИЕ: Это начальное значение.\n"
+"Уточните его в Тюнинг-Мастере."
+
+msgid "Export Printer(s) and associated profiles"
+msgstr "Экспорт настроек принтера и связанных профилей."
+
+#, fuzzy
+msgid "Ext"
+msgstr "Ext"
+
+#, fuzzy
+msgid "Ext #1"
+msgstr "Ext #1"
+
+#, fuzzy
+msgid "Ext #10"
+msgstr "Ext #10"
+
+#, fuzzy
+msgid "Ext #11"
+msgstr "Ext #11"
+
+#, fuzzy
+msgid "Ext #12"
+msgstr "Ext #12"
+
+#, fuzzy
+msgid "Ext #2"
+msgstr "Ext #2"
+
+msgid "Ext #3"
+msgstr "Ext #3"
+
+#, fuzzy
+msgid "Ext #4"
+msgstr "Ext #4"
+
+#, fuzzy
+msgid "Ext #5"
+msgstr "Ext #5"
+
+#, fuzzy
+msgid "Ext #6"
+msgstr "Ext #6"
+
+#, fuzzy
+msgid "Ext #7"
+msgstr "Ext #7"
+
+#, fuzzy
+msgid "Ext #8"
+msgstr "Ext #8"
+
+#, fuzzy
+msgid "Ext #9"
+msgstr "Ext #9"
+
+msgid "Ext Clearance [mm]"
+msgstr "Зазор Ext по Z (мм)"
+
+#, fuzzy
+msgid "Ext used"
+msgstr "Ext используется"
+
+#, fuzzy
+msgid ""
+"Ext. Priority\n"
+"(per model)"
+msgstr ""
+"Ext. Приоритет\n"
+"(на модель)"
+
+#, fuzzy
+msgid "Extra Space (delta printers)"
+msgstr "Дополнительное пространство (дельта-принтеры)"
+
+#, fuzzy
+msgid "Extruder #"
+msgstr "Экструдер #"
+
+msgid "Extruder %i"
+msgstr "Экструдер %i"
+
+#, fuzzy
+msgid "Extruder 1 Material"
+msgstr "Экструдер 1 Материал"
+
+#, fuzzy
+msgid "Extruder 10 Material"
+msgstr "Экструдер 10 Материал"
+
+#, fuzzy
+msgid "Extruder 11 Material"
+msgstr "Экструдер 11 Материал"
+
+#, fuzzy
+msgid "Extruder 12 Material"
+msgstr "Экструдер 12 Материал"
+
+#, fuzzy
+msgid "Extruder 2 Material"
+msgstr "Экструдер 2 Материал"
+
+#, fuzzy
+msgid "Extruder 3 Material"
+msgstr "Экструдер 3 Материал"
+
+#, fuzzy
+msgid "Extruder 4 Material"
+msgstr "Экструдер 4 Материал"
+
+#, fuzzy
+msgid "Extruder 5 Material"
+msgstr "Экструдер 5 Материал"
+
+#, fuzzy
+msgid "Extruder 6 Material"
+msgstr "Экструдер 6 Материал"
+
+#, fuzzy
+msgid "Extruder 7 Material"
+msgstr "Экструдер 7 Материал"
+
+#, fuzzy
+msgid "Extruder 8 Material"
+msgstr "Экструдер 8 Материал"
+
+#, fuzzy
+msgid "Extruder 9 Material"
+msgstr "Экструдер 9 Материал"
+
+msgid "Extruder Hardware"
+msgstr "Параметры экструдеров"
+
+msgid "Extruder Info [mm] for Preload"
+msgstr "Парам. экструдера(мм)"
+
+msgid "Extruder Mapping"
+msgstr "Выбор материала"
+
+msgid "Extruder Ordering Optimization"
+msgstr "Оптим. выбора экстр."
+
+#, fuzzy
+msgid "Extruder Parameters"
+msgstr "Параметры экструдера"
+
+#, fuzzy
+msgid "Extruder for printing objects"
+msgstr "Экструдер для печати объектов"
+
+#, fuzzy
+msgid "Extruder for printing the main (lower) support"
+msgstr "Экструдер для печати основной (нижней) поддержки"
+
+#, fuzzy
+msgid "Extruder for printing the raft"
+msgstr "Экструдер для печати плота"
+
+msgid "Extruder for printing the top of the support just under the model"
+msgstr "Экструдер для печати в верхней части поддержки внутри в модели"
+
+msgid "Extruder temperature [C]"
+msgstr "Температура Экструдера (Cº)"
+
+#, fuzzy
+msgid "Extruders"
+msgstr "Экструдеров"
+
+msgid "Extrusion Control"
+msgstr "Параметры периметра"
+
+#, fuzzy
+msgid "Extrusion Time Map"
+msgstr "Карта времени экструзии"
+
 msgid "Extrusion Width [mm]"
-msgstr "Ширина экструзии [мм]"
+msgstr "Ширина экструз. [мм]"
 
-#. Tooltip for 'Extrusion Width [mm]'
-msgid "Width of the extruded path (nozzle dia. is a good initial value)"
-msgstr "Ширина нитки экструзии в траектории (диаметр сопла - хорошее начальное значение, уменьшайте для \"нахлёста\" или увеличивайте для ускорения заполнения)"
+msgid "Extrusion Width of the Interface paths"
+msgstr "Ширина экструзии удаляемой поддержки"
 
-#. Widget
+msgid "Extrusion Width of the Lower layer of the raft"
+msgstr "Экструзионная Ширина нижнего слоя плота"
+
+msgid "Extrusion Width of the Upper layer of the raft"
+msgstr "Экструзионная Ширина верхнего слоя плота"
+
+msgid "Extrusion width of the interface paths on the 1st layer only, in [mm]."
+msgstr "Ширина экструзии удаляемого поддержки на 1-м слое, в [мм]."
+
+msgid "Fallback Extruder"
+msgstr "Возвращение экструдера"
+
+msgid "Fan / Cool"
+msgstr "Вентилятор / Охлаждение"
+
+msgid "Fan Off"
+msgstr "Вентилятор Выкл."
+
+msgid "Fan On"
+msgstr "Вентилятор Вкл."
+
 msgid "Fan Z [mm]"
-msgstr "Z обдув [мм]"
+msgstr "Порог вкл. по Z (мм)"
 
-#. Tooltip for 'Fan Z [mm]'
-msgid "The fan will only be enabled once the head is this distance from the bed. (Note: KS compensates for Z-offset)"
-msgstr "Обдув начнет работать не раньше этой высоты от кровати (внимание: будет добавлена величина \"неровность кровати\")"
+msgid ""
+"Fan can do PWM\n"
+"(e.g. 'M106 Snnn')"
+msgstr ""
+"Вентилятор управляется по PWM\n"
+"(например, 'M106 Snnn')"
 
-#. Menu Item
+msgid "Fast"
+msgstr "Быстро"
+
+msgid "Fast             Precise"
+msgstr "Быстро Точно"
+
+msgid ""
+"Fastest speed of the head while extruding solid infill and support paths"
+msgstr "Макс. скорость печати заполнения и поддержек"
+
+msgid "Fastest speed of the head while extruding sparse infill"
+msgstr "Макс. скорость печати разреженного заполнения (sparse infill)"
+
+msgid "Fastest speed of the head while extruding the loops"
+msgstr "Макс. скорость при печати мелких радиусов"
+
+msgid "Fastest speed of the head while extruding the perimeter"
+msgstr "Макс. скорость печати периметра"
+
+msgid "Fastest speed of the head while extruding the top surfaces"
+msgstr "Макс. скорость печати верхних поверхностей"
+
+msgid "Filament Diameter [mm]"
+msgstr "Диаметр прутка (мм)"
+
 msgid "File"
 msgstr "Файл"
 
-#. Widget
 msgid "File Extension"
-msgstr "Расширение<LF>файла"
+msgstr "Расширение файла"
 
-#. Tooltip for 'File Extension'
-msgid "Common values are bfb or gcode"
-msgstr "Обычно значения gcode, g или bfb"
+msgid "File Handling"
+msgstr "Обработка файлов"
 
-#. Widget
+msgid "Fillet"
+msgstr "Скруглить кант"
+
+msgid "Final Z >="
+msgstr "Финальная выс. по Z"
+
+msgid "Fine"
+msgstr "Много"
+
+msgid "Firmware"
+msgstr "Прошивка принтера"
+
+#, fuzzy
 msgid "Firmware Type"
 msgstr "Тип прошивки"
 
-#. Tooltip for 'Firmware Type'
-msgid "What type of firmware does this printer use?"
-msgstr "Какой тип прошивки использует ваш принтер? (Marlin, Sprinter = 5D - Absolute E)"
+#, fuzzy
+msgid "Fix the mistakes"
+msgstr "Исправить ошибки"
 
-#. Widget
-msgid "First Layer"
-msgstr "1й слой"
+msgid "Fixed Order (most cooling)"
+msgstr "Фиксированный порядок (максимальное охлаждение)"
 
-#. Tooltip for 'First Layer'
-msgid "Temperature of the extruder while extruding the first layer onto the bed.  Warm it up a bit for better stick."
-msgstr "Температура экструдера при печати первого слоя, немного увеличьте для лучшего сцепления"
+msgid "Flip upside-down"
+msgstr "Перевернуть модель вверх дном"
 
-#. Widget
+#, fuzzy
+msgid "Flow Adjust"
+msgstr "Регулировка потока"
+
+msgid "Flow Rate [mm^3/s]"
+msgstr "Скорость потока [мм^3/c]"
+
 msgid "Flow Tweak"
-msgstr "Поток"
+msgstr "Коррекция потока"
 
-#. Tooltip for 'Flow Tweak'
-msgid "The nominal flowrate is calculated based on path and extruder settings, but this can compensate for small material differences"
-msgstr "Номинальное значение потока расчитывается автоматически, однако можно его немного изменять для компенсации разницы материалов"
+#, fuzzy
+msgid ""
+"Flow rate of the material during the test (should be in the middle of the "
+"working range for the material and extruder under test)."
+msgstr ""
+"Скорость потока материала во время теста (должна быть в середине рабочего "
+"диапазона для материала и экструдера в тесте)."
 
-#. Menu Item
+msgid "For most delta printers, affects  display and model packing"
+msgstr "Для большинства дельта-принтеров влияет на отображение модели."
+
+msgid "For overhangs, the flow rate that the fan can fully cool"
+msgstr ""
+"Ограничение скорости потока для свесов, которую вентилятор может полностью "
+"охладить."
+
+msgid "Force Advanced Settings"
+msgstr "Расширенные Настройки"
+
+#, fuzzy
+msgid "Force Path Angle"
+msgstr "Force Path Angle"
+
+msgid "Force Prime Pillar Radius [mm]"
+msgstr "Радиус колонны (мм)"
+
+msgid ""
+"Force all models to share the same layer divisions.  In general you do NOT "
+"want this, unless printing multi-extruder prints on a single nozzle."
+msgstr ""
+"Синхронизировать слои во всех моделях. Обычно это не требуется, пока мульти-"
+"экструдерная печать ведется одним соплом (требуется для одновременной печати "
+"несколькими головами)"
+
+msgid "Force any settings above the 'Settings Level' to use defaults"
+msgstr ""
+"Настройки превышающие сложность,<LF>сбросить на значения 'по умолчанию'"
+
+msgid ""
+"Forces solid paths to sweep in only one direction.  This is very "
+"inefficient, but may look better on surfaces with complex outlines."
+msgstr ""
+"При печати верхней поверхности заполнение ведётся строго в одном "
+"направлении. Улучшает качество поверхности, увеличивает время. Рекомендуется "
+"использовать на поверхностях со сложными очертаниями."
+
+#, fuzzy
+msgid "Fore"
+msgstr "Передний план"
+
 msgid "Foreground"
 msgstr "Передний план"
 
-#. Widget
-msgid "Gain"
-msgstr "Усиление"
+#, fuzzy
+msgid "Foreground color.  Black means 'do not set'"
+msgstr "Цвет переднего плана.  Черный означает \"не устанавливай\""
 
-#. Tooltip for 'Gain'
-msgid "Usually leave this at 1.  You can change it to account for new gear ratios or such"
-msgstr "Обычно оставляйте 1, можно изменить для компенсации при смене передаточного числа шестерен или аналогичных факторах меняющих зананное в прошивке число шагов на 1 мм прутка"
+msgid "Foreign Slow %"
+msgstr "Внешнее замедл. %"
 
-#. Widget
-msgid "Gap"
-msgstr "Зазор"
+msgid "From EXT"
+msgstr "Начинающий"
 
-#. Tooltip for 'Gap'
-msgid "Gap [mm] between the support and the object"
-msgstr "Зазор [мм] между объектом и поддержками"
+msgid "Full"
+msgstr "Full вкл"
 
-#. Widget
-msgid "Fan PWM (M106 Sn)"
-msgstr "Fan PWM (M106 Sn)"
+msgid ""
+"Full\n"
+"  Preload Arcs - G2/3\n"
+"  ConstVel Arcs - G2/3"
+msgstr ""
+"Полная\n"
+"  Preload Arcs - G2/3\n"
+"  Const Velocity Arcs - G2/3"
 
-#. Tooltip for 'Fan PWM (M106 Sn)'
-msgid "The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be approximated by alternating M106 & M107 commands."
-msgstr "Прошивка понимает коды управления ШИМ вентилятора (контроль скорости), если не включено то будет использоваться эмуляция ШИМ в G-коде через периодическое включение и выключение вентилятора на полную скорость (команды M106 и M107)"
+#, fuzzy
+msgid "G-code to turn of the fan, typically M107 but MakerBot uses M127"
+msgstr ""
+"G-код для поворота вентилятора, как правило, M107, но MakerBot использует "
+"M127"
 
-#. Widget
+#, fuzzy
+msgid "G-code to turn on the fan, typically M106 but MakerBot uses M126"
+msgstr ""
+"G-код, чтобы включить вентилятор, как правило, M106, но MakerBot использует "
+"M126"
+
+#, fuzzy
+msgid "G10/1"
+msgstr "G10/1"
+
+msgid "G4 Dwell P is in seconds"
+msgstr "G4 Dwell P в секундах"
+
+msgid "Gain 1"
+msgstr "Коэфф. подачи 1"
+
+msgid "Gain 10"
+msgstr "Коэфф. подачи 10"
+
+msgid "Gain 11"
+msgstr "Коэфф. подачи 11"
+
+msgid "Gain 12"
+msgstr "Коэфф. подачи 12"
+
+msgid "Gain 2"
+msgstr "Коэфф. подачи 2"
+
+msgid "Gain 3"
+msgstr "Коэфф. подачи 3"
+
+msgid "Gain 4"
+msgstr "Коэфф. подачи 4"
+
+msgid "Gain 5"
+msgstr "Коэфф. подачи 5"
+
+msgid "Gain 6"
+msgstr "Коэфф. подачи 6"
+
+msgid "Gain 7"
+msgstr "Коэфф. подачи 7"
+
+msgid "Gain 8"
+msgstr "Коэфф. подачи 8"
+
+msgid "Gain 9"
+msgstr "Коэфф. подачи 9"
+
+msgid "Gap [mm]"
+msgstr "Зазор от детали (мм)"
+
+msgid "Gap on loops: 0 is the theoretical ideal (with preload tuned)."
+msgstr ""
+"Зазор между перегибами петель траектории, уходящих в модель для маскировки "
+"шва [0.5]"
+
+#, fuzzy
+msgid "Generate G-code for all parts on the bed"
+msgstr "Создание G-кода для всех частей на кровати"
+
+msgid "Grain"
+msgstr "Зерно"
+
+msgid "Green shows repeated texture"
+msgstr "Зеленый цвет показывает повторяющуюся текстуру"
+
+msgid "Grid"
+msgstr "Сетка"
+
+#, fuzzy
+msgid "Gyroid (Premium)"
+msgstr "Гироид (Премиум)"
+
+msgid "HIPS"
+msgstr "HIPS"
+
+msgid "Hardware"
+msgstr "Параметры принтера"
+
+msgid "HeatT1"
+msgstr "Коэфф. нагрева Т1"
+
+msgid "HeatT10"
+msgstr "Коэфф. нагрева Т10"
+
+msgid "HeatT11"
+msgstr "Коэфф. нагрева Т11"
+
+msgid "HeatT12"
+msgstr "Коэфф. нагрева Т12"
+
+msgid "HeatT2"
+msgstr "Коэфф. нагрева Т2"
+
+msgid "HeatT3"
+msgstr "Коэфф. нагрева Т3"
+
+#, fuzzy
+msgid "HeatT4"
+msgstr "ТеплоТ4"
+
+#, fuzzy
+msgid "HeatT5"
+msgstr "ТеплоТ5"
+
+#, fuzzy
+msgid "HeatT6"
+msgstr "ТеплоТ6"
+
+#, fuzzy
+msgid "HeatT7"
+msgstr "ТеплоТ7"
+
+#, fuzzy
+msgid "HeatT8"
+msgstr "ТеплоТ8"
+
+#, fuzzy
+msgid "HeatT9"
+msgstr "ТеплоТ9"
+
+msgid "Heated Chamber (affects fan)"
+msgstr "Термокамера (влияет на работу вентилятора)"
+
 msgid "Height"
 msgstr "Высота"
 
-#. Tooltip for 'Height'
-msgid "Scale so the max height is this"
-msgstr "Масштабировать максимальную высоту"
+msgid "Height [mm]"
+msgstr "Высота канта (мм)"
 
-#. Menu Item
-msgid "Help"
-msgstr "Помошь"
+#, fuzzy
+msgid "Height of the build volume in mm"
+msgstr "Высота объема сборки в мм"
 
-#. Menu Item
+#, fuzzy
+msgid "Height of the model with the best surface"
+msgstr "Высота модели с лучшей поверхностью"
+
+#, fuzzy
+msgid "Help / Info"
+msgstr "Помощь / Информация"
+
+msgid ""
+"Help the part bond to the raft's interface by matching the 1st layer's "
+"paths.  This is only a good idea when the interface material does not bond "
+"well to the part."
+msgstr ""
+"Улучшить прилипание модели к удаляемому материалу подложки путем "
+"согласования путей 1-го слоя. Эта идея хороша, только когда материал "
+"удаляемой поддержки плохо пристает к модели."
+
+msgid "Hide settings windows."
+msgstr "Скрыть окна настроек."
+
+msgid ""
+"Horizontal Gap between the interface and the object in [mm] or in [% of "
+"Extrusion Width]"
+msgstr ""
+"Горизонтальный зазор между поддержкой и объектом в [мм] или в [% от ширины "
+"экструзии]"
+
+msgid ""
+"Horizontal Gap between the support and the object in [mm] or in [% of "
+"Extrusion Width]"
+msgstr ""
+"Горизонтальный зазор между поддержкой и объектом в [мм] или в [% от ширины "
+"экструзии]"
+
+msgid "How fast to preload the extruder [mm/s]"
+msgstr "Скорость предзагрузки экструдера [мм/с]"
+
+msgid "How fast to retract / prime for destring under 5D firmware in [mm/s]"
+msgstr "Скорость втягивания \"мм / с\""
+
+msgid "How likely is this color to bleed into a subsequent transparent color?"
+msgstr "Насколько вероятно, что этот цвет перетечет в следующий цвет?"
+
+msgid ""
+"How long to wait for the ooze to finish?  120s for most materials, longer "
+"for TPU or Nylon-like materials."
+msgstr ""
+"Как долго ждать, пока истечение \"сопельки\" закончится? 120s для "
+"большинства материалов, дольше для TPU или нейлоновых материалов."
+
+msgid ""
+"How many G-code nodes (points along a path) can the board process per "
+"second?  0 disables the limit, otherwise paths will be slowed as needed.  "
+"For Serial links try baud / 1600"
+msgstr ""
+"Сколько узлов G-кода (точек вдоль пути) может обрабатываться стойкой в "
+"секунду?  0 отключает лимит, в противном случае скорость печати будет "
+"замедляться по мере необходимости.  Для серийных ссылок попробуйте baud / "
+"1600"
+
+msgid ""
+"How many mm to suck back after ending a path (uses M227 on BfB printers)"
+msgstr ""
+"Сколько мм всосать обратно после окончания пути (использует M227 на "
+"принтерах BfB)"
+
+msgid ""
+"How many steps per mm in X & Y.  This number is complex for Delta printers, "
+"but is used to ensure that paths don't have segments smaller than a "
+"threshold (2 steps)."
+msgstr ""
+"Сколько шагов на мм по осям X и Y. Это число является сложным для принтеров "
+"Delta, но используется для обеспечения того, чтобы пути не имели сегментов "
+"меньше порогового значения (2 шага)."
+
+#, fuzzy
+msgid "How many to print"
+msgstr "Сколько печатать"
+
+msgid ""
+"How much cooler should the Cool-Purge be run, if Cool-Purge [mm^3] is "
+"positive? 10 [C] is a good starting point."
+msgstr ""
+"Насколько кулер должен быть запущен Cool-Purge, если Cool-Purge (мм^3) "
+"является положительным? 10 «C» является хорошей отправной точкой."
+
+#, fuzzy
+msgid "How much did the whole spool cost...no need to use USD"
+msgstr "Сколько стоила вся катушка... нет необходимости использовать USD"
+
+msgid "How much each path should overlap the previous layer on the topside."
+msgstr ""
+"На сколько перекрывать низлежащие витки при печати верхней поверхности "
+"(контроль провала крыши внутрь)"
+
+msgid ""
+"How much each path should overlap the previous layer on the underside.  "
+"Should be approximately 1/2 the extrusion width to not require support "
+"material. (Material dependent.)"
+msgstr ""
+"На сколько нависающий путь должен перекрывать нижележащий слой. Ожидается "
+"примерно 1/2 ширины экструзии, чтобы не создавать поддержки. (Контроль "
+"провала крайних нависающих витков, Зависит от материала)."
+
+msgid ""
+"How much filament to drive...the extrusion needs to get to steady state."
+msgstr ""
+"Сколько филамента нужно прогнать, чтобы экструзия вышла в устойчивое "
+"состояние."
+
+msgid "How much will the model shrink in  X after cooling"
+msgstr "Насколько усядет модель по X после охлаждения"
+
+msgid ""
+"How much will the model shrink in Y after cooling (usually the same value as "
+"%x, but may differ based on fan geometry)"
+msgstr ""
+"Насколько модель усядет, уменьшится по оси Y после охлаждения (обычно то же "
+"значение, что и Х, но может отличаться в зависимости от геометрии "
+"воздуховода вентилятора)"
+
+msgid ""
+"How much will the model shrink in height after cooling (Usually smaller than "
+"in X and Y)"
+msgstr ""
+"Насколько модель уменьшится в высоту по Z после охлаждения (обычно меньше, "
+"чем по X и Y)"
+
+msgid "How thick to make the brim."
+msgstr "Высота канта. (когда значение [0] - печатается один слой)"
+
+msgid ""
+"If KISSlicer detects possible\n"
+"problems with a mesh, the\n"
+"triangles or edges will be color-\n"
+"coded to signify the problem type."
+msgstr ""
+"Если KISSlicer обнаружит\n"
+"проблемы с сеткой STL, то\n"
+"полигоны или края будут цветн.\n"
+"в соотв. с типом проблемы."
+
+msgid "If a layer would have been quicker than this, the layer is slowed down"
+msgstr "Порог включения вентилятора (после печати указанного количества слоёв)"
+
+msgid ""
+"If checked KISSlicer will not do a Destring Prime after selecting a new "
+"extruder, and will not do a Destring Retract before deselecting an "
+"extruder.  This is useful for N:1 systems that will be managing filament "
+"loading for all extruders into a single nozzle anyway."
+msgstr ""
+"Если этот флажок установлен, KISSlicer не будет выполнять Destring Prime "
+"после выбора нового экструдера и не будет выполнять Destring Retract до "
+"отмены выбора экструдера. Это полезно для систем N: 1, которые в любом "
+"случае будут управлять загрузкой филамента для всех экструдеров в одно сопло."
+
+msgid "If checked KISSlicer will not put a solid skin on the base."
+msgstr ""
+"Если этот флажок установлен, KISSlicer не будет печатать нижнюю поверхность "
+"детали прилегающую к столу."
+
+msgid ""
+"If checked, enables an equation parser for the G-code tokens.  Make sure you "
+"don't have any < or > characters in the comments as KISSlicer will try to "
+"parse the inside as an equation.\n"
+"Available operators:\n"
+"+(addition) -(subtraction) *(multiplication) /(division) ^(power) "
+"&(modulus)\n"
+"Example: G1 X<X+Z*(PRIMEX-X)/TOPZ>"
+msgstr ""
+"Если этот флажок установлен, то включается анализатор уравнений для токенов "
+"G-кода. Убедитесь, что у вас нет никаких символов < или > в комментариях, "
+"так как KISSlicer попытается разобрать внутреннюю часть как уравнение.\n"
+"Доступные операторы:\n"
+"+(addition) -(subtraction) *(multiplication) /(division) ^(power) "
+"&(modulus)\n"
+"Пример: G1 X<X+Z*(PRIMEX-X)/TOPZ>"
+
+msgid ""
+"If checked, only perimeters which are not enclosed in another perimeter are "
+"textured.  This is trying to be a 'outside only' setting, but has "
+"limitations."
+msgstr ""
+"Если этот флажок установлен, будут текстурированы только те периметры, "
+"которые не включены в другой периметр. Это попытка быть настройкой «только "
+"извне», но имеет ограничения."
+
+msgid "If non-zero, KISSlicer will offset the wipe paths inward by this."
+msgstr ""
+"[0] (мм) Если не равно нулю, при завершении печати последнего слоя, \n"
+"KISSlicer сместит экструдер на эту величину вдоль поверхности для вытирания "
+"\"сопельки\".\n"
+"Действует как отрицательное, так и положительное значение. Подбирается "
+"опытным путём."
+
+msgid ""
+"If slowing a layer to reach 'Min Layer [s]', make sure the fan is at least "
+"at this Duty Cycle %"
+msgstr ""
+"Если замедление слоя достигает установленного в \"Min Layer [s]\", "
+"убедитесь, что вентилятор работает в этом рабочем цикле (Duty Cycle) %"
+
+msgid ""
+"If the slicing operation *might* exceed this threshold, a warning will be "
+"shown"
+msgstr ""
+"Если операция нарезки (might) превысит этот порог, будет показано "
+"предупреждение"
+
+msgid ""
+"If this is > 0 the Brim is pushed outward by Gap, turning it into a Skirt"
+msgstr ""
+"Значение больше 0 определяет зазор между кантом и моделью для лучшего "
+"отделения. Рекомендуется [0.05]"
+
+msgid ""
+"If you have a heated bed, you can use the <BED> token in the G-code includes"
+msgstr ""
+"Если у вас есть стол с подогревом, вы можете <BED> использовать маркер в G-"
+"коде, включает в себя</BED>"
+
+msgid ""
+"If you have a heated enclosure, you can use the <BOX> token in the G-code "
+"includes"
+msgstr ""
+"Если у вас есть обогреваемый корпус, вы можете использовать токен <BOX> в G-"
+"коде."
+
+msgid "If you know the MFI, KISSlicer will (roughly) approximate a viscosity."
+msgstr ""
+"Если вы знаете MFI, KISSlicer будет более достоверно использовать в расчётах "
+"вязкость."
+
+#, fuzzy
+msgid "Image Texture Preview"
+msgstr "Предварительный просмотр текстуры изображения"
+
+msgid "Image-Per-Layer (e.g. DLP / SLA)"
+msgstr "Изображени на слойr (например, DLP / SLA)"
+
+msgid "Import Image && Extrude"
+msgstr "Импорт картинки"
+
+msgid "Improve Quality"
+msgstr "Настройка качества"
+
+msgid "In Extruder"
+msgstr "Экструдер"
+
+msgid ""
+"In case of overlapping meshes, mapped to different extruders, this defines "
+"the extruders' priority.  Press [Set] to update"
+msgstr ""
+"В случае перекрытия сеток, назначенных разным экструдерам, это определяет их "
+"приоритет. Нажмите [Set], чтобы обновить"
+
+#, fuzzy
 msgid "Inch -> mm"
 msgstr "Дюйм -> мм"
 
-#. Widget
 msgid "Include Comments"
-msgstr "Комментарии"
+msgstr "Вкл. комментарии"
 
-#. Tooltip for 'Include Comments'
-msgid "Adds comments to the G-code (very very helpful!)"
-msgstr "Вставить комментарии в G-код (для профи помогает лучшему пониманию)"
-
-#. Widget
+#, fuzzy
 msgid "Infill Density"
 msgstr "Плотность заполнения"
 
-#. Tooltip for 'Infill Density'
-msgid "Density of the sparse infill (ratio is 1/whole_number)"
-msgstr "Плотность внутреннего заполнения"
+msgid "Infill Ext Width [mm]"
+msgstr "Ширина заполн. [мм]"
 
-#. Widget
-msgid "Infill Extrusion Width [mm]"
-msgstr "Ширина сплошного<LF>заполнения [мм]"
-
-#. Tooltip for 'Infill Extrusion Width [mm]'
-msgid "Compared to the extrusion width: thinner reduces stress / warping, thicker improves bonding"
-msgstr "По сравнению с шириной экструзии : тоньше снижает напряжение и деформации, толще улучшает связь между соседними нитями"
-
-#. Widget
 msgid "Infill Style"
-msgstr "Стиль заполнения"
+msgstr "Стиль Заполнения"
 
-#. Tooltip for 'Infill Style'
-msgid "Select what kind of sparse infill you want"
-msgstr "Выберите тип внутреннего заполнения"
+msgid "Infill: %1.1f%%  "
+msgstr "Заполнение:%1.1f%% "
 
-#. Widget
-msgid "Inflate<LF>Raft"
-msgstr "Расширить<LF>подложку"
+msgid "Infill: Hollow"
+msgstr "Заполнение: Hollow"
 
-#. Tooltip for 'Inflate<LF>Raft'
-msgid "Inflate the raft (or skirt) by this many [mm] in all directions to stick better to the bed"
-msgstr "Расширить подложку или юбку на заданное количество [мм] во всех направлениях для лучшего прилипания к кровати"
+msgid "Infill: Vase  "
+msgstr "Заполнение: Vase "
 
-#. Widget
-msgid "Inflate<LF>Support"
-msgstr "Расширить<LF>поддержку"
+msgid "Inflate Raft && Prime Gap"
+msgstr "Раздуть Рафт"
 
-#. Tooltip for 'Inflate<LF>Support'
-msgid "Inflate the support by this many [mm] in all directions (it can help strengthen undercut support)"
-msgstr "Расширить элементы поддержки на заданное кол-во [мм] во всех направлениях (это укрепляет структуру поддержек)"
+msgid "Inflate Support [mm]"
+msgstr "Раздуть подд. (мм)"
 
-#. Widget
-msgid "Inset  Surface [mm]"
-msgstr "Сжатие поверхности [мм]"
+msgid ""
+"Inflate the raft (or skirt) by this many [mm] in all directions to stick "
+"better to the bed"
+msgstr ""
+"Надуть плот (или юбку) таким количеством «мм» во всех направлениях,\n"
+" чтобы лучше прилипнуть к кровати"
 
-#. Tooltip for 'Inset  Surface [mm]'
-msgid "Adjust the surface inward (in X,Y plane)"
-msgstr "Сдвигает плоскости поверхности внутрь модели, для точного соответствия наружным размерам."
+msgid ""
+"Inflate the support by this many [mm] in all directions (it can help "
+"strengthen undercut support)"
+msgstr ""
+"Раздуть поддержку во всех направлениях (мм) (это может помочь укрепить "
+"поддержку)"
 
-#. Widget
+msgid "Init"
+msgstr "Расчитать"
+
+msgid "Inset Surface [mm]"
+msgstr "Коллапсирование(мм)"
+
 msgid "Inside"
 msgstr "Внутри"
 
-#. Tooltip for 'Inside'
-msgid "While extruding everything else set the fan to this Duty Cycle %"
-msgstr "Скорость обдува  % при экструзии всего остального."
+msgid "Interface"
+msgstr "Interface"
 
-#. Widget
-msgid "Keep-Warm"
-msgstr "Преднагрев"
+msgid "Interface Ext"
+msgstr "Внутр. поддержки"
 
-#. Tooltip for 'Keep-Warm'
-msgid "Set head to this temp when not extruding...less energy and ooze ~65% of the main temp is a good rule of thumb"
-msgstr "Температура неактивного экструдера (для мультиэкструдорных принтеров), ~65% от рабочей температуры"
+msgid "Interior Extruder"
+msgstr "Используемый Экструдер"
 
-#. Menu Item
+msgid "Intermediate"
+msgstr "Средний уровень"
+
+#, fuzzy
+msgid ""
+"Invalid Key!\n"
+"\n"
+"%s"
+msgstr ""
+"Недействительный ключ!\n"
+"\n"
+"%s"
+
+msgid ""
+"Invoke a post-process script on <FILE>.\n"
+"You can optionally use the token <KSPATH>."
+msgstr ""
+"Вызов сценария после процесса на <FILE>.\n"
+"Вы можете дополнительно использовать токен <KSPATH>"
+
+msgid "Iron"
+msgstr "Утюжить верх детали"
+
+#, fuzzy
+msgid "Ironing Speed"
+msgstr "Скорость глажки"
+
+#, fuzzy
+msgid "Is this a Blackbelt D Printer?"
+msgstr "Это принтер Blackbelt D?"
+
+msgid "Jitterº"
+msgstr "Угол разброса шва º"
+
+msgid "Join the Perimeter to the first loop inside it."
+msgstr ""
+"Join-Loop - новая техника для скрытия швов.\n"
+"Заворачивает начало и конец витка крестиком, параметры которого регулируются "
+"двумя движками ___X___ [Глубина стыка -Seam Dept 0.7 и Зазор стыка -Seam Gap "
+"0.5]:\n"
+"Seam - печатает внутри периметра на пару миллиметров начало и конец витка "
+"после крестика;\n"
+"Full - сходу печатает второй виток стенки, продолжая крестик."
+
+msgid "Join-Loop"
+msgstr "Стык крестиком"
+
+msgid "Joint"
+msgstr "Синхр. во всех мод."
+
+msgid ""
+"KISSlicer treats the center of the bed as 0,0 but many printers do not.  "
+"Enter the X coordinate of the center of the bed (KISSlicer will offset the "
+"output G-code)"
+msgstr ""
+"KISSlicer рассматривает центр стола как 0,0, но многие принтеры этого не "
+"делают.  Введите координаты X центра стола (KISSlicer компенсирует выход G-"
+"кода)"
+
+msgid ""
+"KISSlicer treats the center of the bed as 0,0 but many printers do not.  "
+"Enter the Y coordinate of the center of the bed (KISSlicer will offset the "
+"output G-code)"
+msgstr ""
+"KISSlicer рассматривает центр стола как 0,0, но во многих принтерах это не "
+"так. Введите координату Y центра стола (KISSlicer сделает смещение G-кода)"
+
+#, fuzzy
+msgid ""
+"KISSlicer's internal model representation will have at least this resolution"
+msgstr ""
+"Внутреннее представление модели KISSlicer будет иметь по крайней мере это "
+"разрешение"
+
+msgid "Keep Warm [C]"
+msgstr "В простое (Cº)"
+
+msgid "Key Registered"
+msgstr "Ключ зарегистрирован"
+
 msgid "Languages"
 msgstr "Языки"
 
-#. Widget
-msgid "Layer Thickness [mm]"
-msgstr "Высота слоя [мм]"
+msgid "Large Parts"
+msgstr "Крупногабаритные детали"
 
-#. Tooltip for 'Layer Thickness [mm]'
-msgid "The thickness of each slice ('ply') of plastic extruded"
-msgstr "Высота одного слоя при печати, в общем случае задает качество изделия в целом."
+#, fuzzy
+msgid "Large Parts use a less-dense support"
+msgstr "Большие части используют менее плотную поддержку"
 
-#. Menu Item
+msgid "Latch"
+msgstr "Зацепить с поддерж."
+
+msgid ""
+"Latch the brim if checked (the brim is captured with interface or raft "
+"paths).  Make sure the brim is at least 2 loops wide and at least 2 layers "
+"thick."
+msgstr ""
+"Если отмечено - кант будет зацеплен с удаляемой поддержкой или подложкой. "
+"Убедитесь, что кант имеет ширину по крайней мере 2 витка и минимум 2 слоя "
+"высоты."
+
+msgid "Layer 1 [C]"
+msgstr "Первый слой (Cº)"
+
+msgid "Layer Control"
+msgstr "Толщина слоя"
+
+msgid "Layer Thickness"
+msgstr "Толщина слоя мин."
+
+#, fuzzy
+msgid ""
+"Layers are rounded to integer multiples of Z steps.  For Delta printers just "
+"leave at 0."
+msgstr ""
+"Слои округляются до интегративных кратных шагов.  Для принтеров Delta просто "
+"оставьте на 0."
+
+#, fuzzy
+msgid ""
+"Leave unchecked if P uses milliseconds.  Seems CubeX firmware might require "
+"this set."
+msgstr ""
+"Оставьте без контроля, если P использует миллисекунды.  Кажется, CubeX "
+"прошивки может потребоваться этот набор."
+
+msgid "Length of the ooze"
+msgstr "Длинна \"сопельки\""
+
+msgid "Length to Extrude [mm]"
+msgstr "Длина экструзии"
+
+msgid "License"
+msgstr "Лицензия"
+
+msgid "Limit Increase / Layer"
+msgstr "Приращ. скор к 1 сл."
+
+msgid ""
+"Limit the Extruder to not deliver material above this volumetric flow rate "
+"(path thickness * width * head_speed) by slowing down both the head speed "
+"and the flow rate if necessary."
+msgstr ""
+"Ограничьте пределы скорость экструзии, Kisslicer будет автоматически "
+"корректировать как скорость головы, так и скорость подачи прутка."
+
+#, fuzzy
+msgid ""
+"Limit the Extruder to not deliver material below this volumetric flow rate "
+"(path thickness * width * head_speed) by speeding up both the head speed and "
+"the flow rate if necessary."
+msgstr ""
+"Ограничьте Extruder, чтобы не доставить материал ниже этой скорости потока "
+"(толщина пути и ширина head_speed) путем ускорения как скорости головы, так "
+"и скорости потока, если это необходимо."
+
+msgid "Link Material"
+msgstr "Соед.с проф.Принт"
+
+msgid "Link Style"
+msgstr "Соед.с проф.Принт"
+
+msgid "Link Support"
+msgstr "Соед.с проф.Принт"
+
+#, fuzzy
+msgid "Linked Materials"
+msgstr "Связанные материалы"
+
+#, fuzzy
+msgid "Linked Styles"
+msgstr "Связанные стили"
+
+#, fuzzy
+msgid "Linked Supports"
+msgstr "Связанные опоры"
+
+msgid "Load Image"
+msgstr "Загрузить изображение"
+
+msgid "Load Project / G-code Settings"
+msgstr "Загрузить проект / Загрузить G-код"
+
+#, fuzzy
+msgid "Load Values"
+msgstr "Значения нагрузки"
+
+#, fuzzy
 msgid "Load a Language File"
-msgstr "Загрузить файл перевода"
+msgstr "Загрузка языкового файла"
 
-#. Widget
+#, fuzzy
+msgid "Load multiple STLs into a single model"
+msgstr "Загрузка нескольких STL в единую модель"
+
+#, fuzzy
+msgid ""
+"Lock\n"
+"Paths"
+msgstr ""
+"Блокировки\n"
+"Пути"
+
+#, fuzzy
+msgid "Lock the most recent paths to preserve style. (PRO only)"
+msgstr "Блокировка самых последних путей для сохранения стиля. (только PRO)"
+
 msgid "Loop / Solid Infill Overlap"
-msgstr "Перекрытие контур/заполнение"
+msgstr "Выбираем Перекрытие"
 
-#. Tooltip for 'Loop / Solid Infill Overlap'
-msgid "Controls how close the solid infill gets to the innermost loop (1.0 for maximum overlap)"
-msgstr "Задает как сильно заходит сплошное заполенение на внутренний контурный виток (1.0 для максимального перекрытия)"
+msgid "Loop Order"
+msgstr "Очерёдность печати"
 
-#. Widget
+#, fuzzy
+msgid "Loop Path"
+msgstr "Путь петли"
+
+msgid "Loop1 > Perim"
+msgstr "2-й виток > Периметр"
+
 msgid "Loops"
-msgstr "Контур"
+msgstr "Циклы"
 
-#. Tooltip for 'Loops'
-msgid "While extruding Loops, Perimeter, and Crowning set the fan to this Duty Cycle %"
-msgstr "Скорость обдува % при печати периметра, контурных витков и цепочек."
+msgid "Lower Mesh in Z"
+msgstr "Утопить модель в стол (мм)"
 
-#. Widget
-msgid "Loops go from Inside to Perimeter"
-msgstr "Укладка контура изнутри к периметру"
+msgid "M101/3"
+msgstr "M101/3"
 
-#. Tooltip for 'Loops go from Inside to Perimeter'
-msgid "Perim->in gives better final dimensions, enabling this gives better overhangs."
-msgstr "Выключение дает лучшие наружние размеры, включение - улучшает построение отрицательных уклонов модели (внешний контур на проваливается вниз а цепляется за внутренние)"
+#, fuzzy
+msgid ""
+"MULTI-EXTRUDER - Different extruders can be selected for each major function "
+"(Object, Raft, Support, object-support Interface) on the [Ext Map] settings "
+"tab, and for each object or sub-mesh in the Mesh-to-Extruder Map ('All "
+"Models' menu, or right-click on object tab).\n"
+"\n"
+"LOCK PATHS - Checking 'Lock Paths' on a model's tab will retain its paths "
+"even when changing Styles or updating a setting in the Style profile, "
+"letting models be sliced with different Styles for the same print.\n"
+"\n"
+"STACKED LAYERS - Stacking accumulates support and sparse infill paths, only "
+"printing them every N layers for a faster print.  Currently Stacking is "
+"disabled when Stepover-controlled (adaptive) layers are used.\n"
+"\n"
+"OVERSAMPLE RESOLUTION - The models' geometry is stored internally in an "
+"oversampled data structure.  The finer this number the smaller details can "
+"be resolved, at the cost of slower slicing and increased RAM usage."
+msgstr ""
+"MULTI-EXTRUDER - Различные экструдеры могут быть выбраны для каждой основной "
+"функции (Объект, Рафт, Поддержка, интерфейс поддержки объектов) на вкладке "
+"настроек «Ext Map», а также для каждого объекта или подсетки в карте сетки к "
+"экструдеру (меню «Все модели» или правое нажатие на вкладку объекта).\n"
+"\n"
+"LOCK PATHS - Проверка \"Lock Paths\" на вкладке модели сохранит свои пути "
+"даже при изменении стилей или обновлении параметра в профиле стиля, позволяя "
+"моделям быть нарезанными разными стилями для одного и того же печати.\n"
+"\n"
+"STACKED LAYERS - Укладка аккумулирует поддержку и редкие пути заполнения, "
+"только печатая их каждые слои N для более быстрого печати.  В настоящее "
+"время укладка отключена при использовании управляемых Stepover (адаптивных) "
+"слоев.\n"
+"\n"
+"OVERSAMPLE RESOLUTION - Геометрия моделей хранится внутренне в чрезмерной "
+"структуре данных.  Чем тоньше это число, тем меньше деталей может быть "
+"решена, за счет замедления нарезки и увеличения использования оперативной "
+"памяти."
 
-#. Widget
-msgid "Main"
-msgstr "База"
+msgid "Main XY gap"
+msgstr "Зазор по XY (мм)"
 
-#. Tooltip for 'Main'
-msgid "Temperature of the extruder while extruding"
-msgstr "Базовая тепература экструзии"
+msgid "Main [C]"
+msgstr "Рабочая (Cº)"
 
-#.  Widget
-msgid "Path Start/Stop"
-msgstr "Аппаратный откат подачи"
+msgid "Make Solid"
+msgstr "Сплошные поддержки"
 
-#.  Tooltip for 'Path Start/Stop'
-msgid "Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is forced to M101/3 internally for BfB printers"
-msgstr "Некоторые прошивки используют команды M101/M103 или G10/G11 для аппаратной реализации отката подачи и пред подачи. M101/M103 используется в BfB принтерах, G10/G11 в прошивке Marlin"
+msgid ""
+"Make all the interface section solid if checked.  (50% dense if unchecked.)"
+msgstr ""
+"Если установлено - сделать все удаляемые поддержки сплошными. (50% "
+"плотности, если не выбрано)."
 
-#. Widget
+msgid "Many Parts"
+msgstr "Башня очистки"
+
+msgid "Many parts can share a single Prime Pillar"
+msgstr "Для всех моделей можно иметь один премьер-столп (башня очистки)"
+
+#, fuzzy
+msgid "Map the hollow spaces as 'Void'"
+msgstr "Карта полых пространств, как \"Пустота\""
+
+msgid "Mark Path Start/Stop"
+msgstr "Старт/Стоп"
+
+msgid ""
+"Marks if this Material Profile is associated with the currently selected "
+"Print Profile"
+msgstr ""
+"Отмечает, связан ли этот Профиль Материала с текущим выбранным профилем "
+"печати."
+
+msgid ""
+"Marks if this Style Profile is associated with the currently selected Print "
+"Profile"
+msgstr ""
+"Отмечает, связан ли этот Профиль Стиля с текущим выбранным профилем печати."
+
+msgid ""
+"Marks if this Support Profile is associated with the currently selected "
+"Print Profile"
+msgstr ""
+"Отметки, если этот Профиль Поддержки связан с выбранным в настоящее время "
+"профилем печати"
+
+msgid "Mass of the ooze that was extruderd after the extruder stopped."
+msgstr ""
+"Масса \"сопелек\" , которая была экструдирована после остановки экструдера."
+
 msgid "Material"
 msgstr "Материал"
 
-#. Tooltip for 'Material'
+#, fuzzy
+msgid ""
+"Material\n"
+"Family"
+msgstr "Пруток"
+
+msgid "Material Change Warning (if > 1 extruder)"
+msgstr "Предупреждение о смене материала (если > 1 экструдера)"
+
+msgid "Material G-code Editor"
+msgstr "Редактор параметров Материала в G-коде"
+
+msgid "Material G-code Token <MATL>"
+msgstr "Токен материала в G-коде <MATL>"
+
+msgid "Material G-code Window"
+msgstr "Окно G-кода Материала"
+
+msgid "Material Name"
+msgstr "Профиль Материала"
+
+#, fuzzy
+msgid "Material Name Hint"
+msgstr "Подсказка названия материала"
+
+msgid "Material Profile Name"
+msgstr "Введите имя Профиля Материала"
+
+msgid "Material Profile Wizard"
+msgstr "Мастер Профиля Материала"
+
+msgid "Material Wizard"
+msgstr "Мастер параметров Материала"
+
+#, fuzzy
+msgid "Material loaded into extruder 1"
+msgstr "Материал, загруженный в экструдер 1"
+
+#, fuzzy
+msgid "Material loaded into extruder 10"
+msgstr "Материал, загруженный в экструдер 10"
+
+#, fuzzy
+msgid "Material loaded into extruder 11"
+msgstr "Материал, загруженный в экструдер 11"
+
+#, fuzzy
+msgid "Material loaded into extruder 12"
+msgstr "Материал, загруженный в экструдер 12"
+
+#, fuzzy
+msgid "Material loaded into extruder 2"
+msgstr "Материал, загруженный в экструдер 2"
+
+#, fuzzy
 msgid "Material loaded into extruder 3"
-msgstr "Материал в экструдере 3"
+msgstr "Материал, загруженный в экструдер 3"
 
-#. Widget
+#, fuzzy
+msgid "Material loaded into extruder 4"
+msgstr "Материал, загруженный в экструдер 4"
+
+#, fuzzy
+msgid "Material loaded into extruder 5"
+msgstr "Материал, загруженный в экструдер 5"
+
+#, fuzzy
+msgid "Material loaded into extruder 6"
+msgstr "Материал, загруженный в экструдер 6"
+
+#, fuzzy
+msgid "Material loaded into extruder 7"
+msgstr "Материал, загруженный в экструдер 7"
+
+#, fuzzy
+msgid "Material loaded into extruder 8"
+msgstr "Материал, загруженный в экструдер 8"
+
+#, fuzzy
+msgid "Material loaded into extruder 9"
+msgstr "Материал, загруженный в экструдер 9"
+
+#, fuzzy
+msgid "Materials in Each Extruder"
+msgstr "Материалы в каждом экструдере"
+
+msgid "Max Layer Thickness"
+msgstr "Макс. толщина слоя"
+
+#, fuzzy
+msgid "Max Nodes / s"
+msgstr "Макс Узлы / s"
+
 msgid "Max [mm^3/s]"
-msgstr "Max [мм^3/c]"
+msgstr "Макс. скор. [мм^3/c]"
 
-#. Tooltip for 'Max [mm^3/s]'
-msgid "Limit the Extruder to not deliver material above this volumetric flow rate (path thickness * width * head_speed)"
-msgstr "Максимальный объём выдавливаемого материала (ограничение для предотвращения срыва насечки прута)"
+#, fuzzy
+msgid "Maximum height of a print"
+msgstr "Максимальная высота печати"
 
-#. Widget
+msgid "Maximum speed to travel while extruding the 1st layer."
+msgstr "Максимальная скорость экструзии первого слоя."
+
+msgid "Maximum speed to travel while extruding the bottom raft layer"
+msgstr "Максимальная скорость печати нижнего слоя подложки (Рафта)"
+
+msgid "Maximum speed to travel while extruding the top raft layer"
+msgstr "Максимальная скорость печати верхнего слоя подложки (Рафта)"
+
+msgid ""
+"Maximum thickness of each slice ('ply') of plastic extruded when trying to "
+"match Stepover control.  Values <= Layer Thickness will disable adaptive "
+"layers."
+msgstr ""
+"Задаёт максимальную толщину слоя для использовании оптимизации Stepover "
+"Control - самая крутая фича (динамическое изменение толщины слоя по Z).\n"
+"-на вертикальных стенках толщина будет максимальная, на сильно наклонных "
+"минимальная;\n"
+"-будет пытаться подгонять Z чтобы добиться гладкой поверхности;"
+
+msgid "Menu"
+msgstr "Меню"
+
+#, fuzzy
+msgid "Mesh Error Key"
+msgstr "Ключ ошибки сетки"
+
+msgid "Mid-Path"
+msgstr "Середина пути"
+
 msgid "Min Jump[mm]"
-msgstr "Min Прыжок [мм] "
+msgstr "Макс. порог (мм)"
 
-#. Tooltip for 'Min Jump[mm]'
-msgid "Any jump < this threshold will not wipe (or destring on 5D)"
-msgstr "Прыжок меньше этой дистанции не будет использовать очистку (или откату подачи в 5D прошивках)"
-
-#. Widget
 msgid "Min Layer [s]"
-msgstr "Мин."
+msgstr "Порог вкл. (от слоёв)"
 
-#. Tooltip for 'Min Layer [s]'
-msgid "If a layer would have been quicker than this, the layer is slowed down"
-msgstr "Если нормальная скорость дает время меньше заданного, то печать слоя будет замедленна"
+msgid ""
+"Min Segment\n"
+"Length [mm]"
+msgstr ""
+"Мин Сегмент\n"
+"Длина (мм)"
 
-#. Widget
 msgid "Min [mm^3/s]"
-msgstr "Min [мм^3/с]"
+msgstr "Мин. скор. (мм^3/с)"
 
-#. Tooltip for 'Min [mm^3/s]'
-msgid "Limit the Extruder to not deliver material below this volumetric flow rate (path thickness * width * head_speed)"
-msgstr "Минимальный объём выдаваемый экструдером. Для экструдеров на базе шаговых двигателей этот параметр равен нулю. Нужен для экструдеров на базе редукторных приводов с  DC моторами (минимальная скорость вращения)"
+msgid "Minimum thickness of the first slice."
+msgstr "Максимальная высота первого слоя. (может быть меньше)"
 
-#. Widget
+msgid "Minutes to reach temp."
+msgstr "Минуты,чтобы достичь её."
+
+msgid "Mirror X axis"
+msgstr "Развернуть зеркально по оси X "
+
+msgid "Mirror Y axis"
+msgstr "Развернуть зеркально по оси Y"
+
+msgid "Mirror Z axis"
+msgstr "Развернуть зеркально по оси Z"
+
+msgid "Misc"
+msgstr "Разное"
+
+msgid "Miscellaneous Settings"
+msgstr "Прочие настройки"
+
+msgid "Mode"
+msgstr "Режим оболочки "
+
+msgid ""
+"Model Tab Order\n"
+"    (all objects at the same time, unsorted)"
+msgstr ""
+"Порядок по указанию\n"
+"    (все объекты одновременно, несортированные)"
+
 msgid "Models"
 msgstr "Модели"
 
-#. Tooltip for 'Models'
-msgid "Shows only the 3D models"
-msgstr "Показать только 3D модели"
+msgid "Monotonic Sweep"
+msgstr "Поверхн в одном напр"
 
-#. Widget
-msgid "Models+Paths"
-msgstr "Модель+Путь"
+msgid ""
+"More than 2 tris\n"
+"share this edge"
+msgstr ""
+"Более 2 полигон.\n"
+"разд. это ребро"
 
-#. Tooltip for 'Models+Paths'
-msgid "Shows the models as transparent, with a layer's paths inside"
-msgstr "Показать модели прозрачными и внутри путь укладки"
+msgid "Multiple Object Print Order"
+msgstr "Печать нескольких объектов"
 
-#. Widget
+msgid ""
+"N [*]\n"
+"Layers"
+msgstr ""
+"N [*]\n"
+"Слои"
+
+#, fuzzy
+msgid "N:1"
+msgstr "N:1"
+
+msgid "No"
+msgstr "Нет"
+
+#, fuzzy
+msgid "No G-code saved yet."
+msgstr "G-код пока не сохранен."
+
+msgid "No Prime Structure"
+msgstr "Откл. "
+
+msgid "No Support"
+msgstr "Без поддержек"
+
+#, fuzzy
+msgid "No filename was given."
+msgstr "Имя файла не было дано."
+
+msgid "No models to save."
+msgstr "Нет моделей для записи"
+
+msgid "No paths to save."
+msgstr "Отсутствует путь для сохранения."
+
+msgid ""
+"No sheath will be generated above this height [mm].  Make < 0 to disable the "
+"limit.  Press Enter to preview the level."
+msgstr ""
+"Оболочка опоры будет генерироваться до этой высоты.  Сделайте < 0, чтобы "
+"отключить лимит.  Нажмите Введите, чтобы просмотреть уровень."
+
+msgid ""
+"No support will be generated above this height [mm].  Make < 0 to disable "
+"the limit.  Press Enter to preview the level."
+msgstr ""
+"Опора выше этой высоты [мм] не будет генерироваться. Выберите 0, чтобы "
+"отключить ограничение. Нажмите Enter, чтобы просмотреть уровень."
+
+msgid "No valid filename(s) specified"
+msgstr "Файл не выбран"
+
+#, fuzzy
+msgid "No, just prepend"
+msgstr "Нет, просто притворись"
+
+msgid "No, leave the current settings"
+msgstr "Нет, оставить текущие настройки"
+
+#, fuzzy
+msgid "Noise -- Blend -- Image"
+msgstr "Шум -- Смесь -- Изображение"
+
+#, fuzzy
+msgid "Noise Preview"
+msgstr "Шум Предварительный просмотр"
+
+msgid "Nominal angle of the seam relative to the unrotated orientation."
+msgstr "Номинальный угол ориентации шва."
+
+msgid "None"
+msgstr "Нет"
+
+msgid ""
+"None\n"
+"    (neither skirt nor brim)"
+msgstr ""
+"Отключено\n"
+"    (ни юбка, ни край)"
+
+#, fuzzy
+msgid ""
+"None\n"
+"  Preload Arcs - G1\n"
+"  ConstVel Arcs - G1"
+msgstr ""
+"Ни один\n"
+"  Preload Arcs - G1\n"
+"  ConstVel Arcs - G1"
+
+msgid "Note: the current Printer Profile has been pre-selected"
+msgstr "Примечание: текущий Профиль Принтера был предварительно выбран"
+
+msgid "Notes"
+msgstr "Заметки"
+
+msgid "NozDia1"
+msgstr "Диаметр экстр.1"
+
+msgid "NozDia10"
+msgstr "Диаметр экстр.10"
+
+msgid "NozDia11"
+msgstr "Диаметр экстр.11"
+
+msgid "NozDia12"
+msgstr "Диаметр экстр.12"
+
+msgid "NozDia2"
+msgstr "Диаметр экстр. 2"
+
+msgid "NozDia3"
+msgstr "Диаметр экстр. 3"
+
+msgid "NozDia4"
+msgstr "Диаметр экстр. 4"
+
+msgid "NozDia5"
+msgstr "Диаметр экстр. 5"
+
+msgid "NozDia6"
+msgstr "Диаметр экстр. 6"
+
+msgid "NozDia7"
+msgstr "Диаметр экстр. 7"
+
+msgid "NozDia8"
+msgstr "Диаметр экстр. 8"
+
+msgid "NozDia9"
+msgstr "Диаметр экстр. 9"
+
+msgid "NozLen1"
+msgstr "Длинна канала 1"
+
+msgid "NozLen10"
+msgstr "Длинна канала 10"
+
+msgid "NozLen11"
+msgstr "Длинна канала 11"
+
+msgid "NozLen12"
+msgstr "Длинна канала 12"
+
+msgid "NozLen2"
+msgstr "Длинна канала 2"
+
+msgid "NozLen3"
+msgstr "Длинна канала 3"
+
+msgid "NozLen4"
+msgstr "Длинна канала 4"
+
+msgid "NozLen5"
+msgstr "Длина канала 5"
+
+msgid "NozLen6"
+msgstr "Длина канала 6"
+
+msgid "NozLen7"
+msgstr "Длина канала 7"
+
+msgid "NozLen8"
+msgstr "Длина канала 8"
+
+msgid "NozLen9"
+msgstr "Длина канала 9"
+
+msgid "Nozzle 1 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №1 (мм)"
+
+msgid "Nozzle 10 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №10 (мм)"
+
+msgid "Nozzle 11 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №11 (мм)"
+
+msgid "Nozzle 12 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №12 (мм)"
+
+msgid "Nozzle 2 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №2 (мм)"
+
+msgid "Nozzle 3 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №3 (мм)"
+
+msgid "Nozzle 4 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №4 (мм)"
+
+msgid "Nozzle 5 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №5 (мм)"
+
+msgid "Nozzle 6 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №6 (мм)"
+
+msgid "Nozzle 7 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №7 (мм)"
+
+msgid "Nozzle 8 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №8 (мм)"
+
+msgid "Nozzle 9 diameter in [mm]."
+msgstr "Диаметр сопла экструдера №9 (мм)"
+
+msgid "Nozzle Bore Length"
+msgstr "Длина канала сопла"
+
+msgid "Nozzle Dia [mm]"
+msgstr "Диаметр сопла(мм)"
+
+#, fuzzy
+msgid "Nozzle Diameter [mm]"
+msgstr "Диаметр сопла (мм)"
+
+msgid ""
+"Nozzle Diameter [mm]\n"
+"(used for extrusion width)"
+msgstr ""
+"Диаметр сопла (мм), используется\n"
+"для расчёта экструзионной ширины"
+
+#, fuzzy
+msgid "Nozzle Length [mm]"
+msgstr "Длина сопла (мм)"
+
+msgid ""
+"Nozzle throat length in [mm].  (Most older style nozzles will be ~= twice "
+"the nozzle diameter, newer ones may be down around 1.3 x)"
+msgstr ""
+"Длина узкой части сопла в мм.  (большинство старых сопел будет примерно "
+"равно двум диаметрам, новые могут быть длинной 1,3 х)"
+
+#, fuzzy
 msgid "Number of Extruders"
-msgstr "Число экструдеров"
+msgstr "Количество экструдеров"
 
-#. Tooltip for 'Number of Extruders'
-msgid "The number of Extruders on this printer"
-msgstr "Количество экструдеров у этого принтера"
+#, fuzzy
+msgid "Number of steps per mm, used in scaling acceleration...not used anymore"
+msgstr ""
+"Количество шагов на мм, используемое при масштабировании ускорения... больше "
+"не используется"
 
-#. Widget
-msgid "Number of Loops"
-msgstr "Число витков."
+#, fuzzy
+msgid ""
+"Number of threads used to slice the model...must be between 1 and the number "
+"of cores.  Reduce this to lessen the CPU load, for example to fix USB "
+"connection issues when printing while slicing"
+msgstr ""
+"Количество потоков, используемых для нарезки модели... должно быть от 1 до "
+"количества ядер.  Уменьшите это, чтобы уменьшить нагрузку процессора, "
+"например, чтобы исправить проблемы с подключением USB при печати во время "
+"нарезки"
 
-#. Tooltip for 'Number of Loops'
-msgid "The number of path loops around the perimeter"
-msgstr "Число витков периметра"
+#, fuzzy
+msgid "Nylon"
+msgstr "Нейлон"
 
-#. Widget
-msgid "Object Extruder"
-msgstr "Экструдер изделия"
+msgid "OK"
+msgstr "OK"
 
-#. Tooltip for 'Object Extruder'
-msgid "Extruder for printing objects"
-msgstr "Экструдер пачатающий изделие"
+msgid "OK, and disable this warning"
+msgstr "Подтвердить, и отключить это предупреждение"
 
-#. Widget
-msgid "Offset [mm]  X"
-msgstr "Смещение [мм]  X"
+msgid "Object Ext"
+msgstr "Печать Объектов"
 
-#. Tooltip for 'Offset [mm]  X'
-msgid "Add constant offset to the output G-code (can correct for firmware)"
-msgstr "Добавляет постоянное смещение в вывод G-code (для корректировки прошивки)"
+msgid "Object Packing Quality"
+msgstr "Качество упаковки"
 
-#. Menu Item
-msgid "Open STL Model"
-msgstr "Открыть STL модель"
+msgid "Octagonal"
+msgstr "Восьмиугольники"
 
-#. Widget
-msgid "Oversample Resolution [mm]"
-msgstr "Внутренее разрешение модели [мм]"
+#, fuzzy
+msgid "Octave Gain"
+msgstr "Октава Гейна"
 
-#. Tooltip for 'Oversample Resolution [mm]'
-msgid "KISSlicer's internal model representation will have at least this resolution"
-msgstr "Внутрення модель KISSlicer`а будет иметь разрешение не хуже заданного значения."
+msgid "Off"
+msgstr "Выкл"
 
-#. Menu Item
+msgid "Off [Support: %s] On"
+msgstr "выкл. [Поддержки: %s] вкл."
+
+msgid "Off [Support]  Dense"
+msgstr "выкл. [Поддержка] Плотн."
+
+msgid ""
+"Only 1 triangle\n"
+"shares this edge"
+msgstr ""
+"Только 1 полигон\n"
+"разд. этот край"
+
+msgid ""
+"Only Enclosing\n"
+"Perimeters"
+msgstr ""
+"Только замкнутые\n"
+"Периметры"
+
+msgid "Ooze Density [g/cm^3]"
+msgstr "Ooze Density (g/cm^3)"
+
+msgid "Ooze Diameter [mm]"
+msgstr "Ooze Diameter (мм)"
+
+msgid "Ooze Length [mm]"
+msgstr "Ooze Length"
+
+#, fuzzy
+msgid "Ooze Mass [g]"
+msgstr "Ooze Mass [g]"
+
+msgid "Open Base"
+msgstr "Дно не печатать"
+
+msgid "Open STL Model(s)"
+msgstr "Импорт модели STL"
+
+msgid "Opening the QuickStart PDF failed."
+msgstr "Открытие PDF-версии «Быстрый старт» не выполнен."
+
+#, fuzzy
+msgid "Optional / Advanced Settings"
+msgstr "Дополнительные / Расширенные настройки"
+
+msgid "Orange"
+msgstr "Оранжевый"
+
+#, fuzzy
+msgid "Origin in the Center"
+msgstr "Отсчёт коорд. в Центре"
+
+msgid "Other"
+msgstr "Другое"
+
+msgid ""
+"Oversample\n"
+"Resolution [mm]"
+msgstr ""
+"Передискретизация\n"
+"Разрешение (мм)"
+
+msgid "PET-G"
+msgstr "PET-G"
+
+msgid "PLA"
+msgstr "PLA"
+
+msgid "Packing Options"
+msgstr "Порядок печати"
+
+#, fuzzy
+msgid "Parameter to Tune"
+msgstr "Параметр для настройки"
+
+msgid "Parameter-Specific Help"
+msgstr "Параметро-зависимая подсказка"
+
+msgid ""
+"Partial\n"
+"  Preload Arcs - G1\n"
+"  ConstVel Arcs - G2/3"
+msgstr ""
+"Частичное\n"
+"  Preload Arcs - G1\n"
+"  ConstVel Arcs - G2/3"
+
+msgid ""
+"Path 'Fast' Speeds\n"
+"(Lower quality)"
+msgstr "Макс. значение скорости"
+
+msgid ""
+"Path 'Precise' Speeds\n"
+"(Slower)"
+msgstr "Мин. значение скорости"
+
 msgid "Path Color Key"
-msgstr "Легенда типов пути"
+msgstr "Цвет присвоенный траектории"
 
-#. Widget
-msgid "Path%"
-msgstr "Путь%"
+#, fuzzy
+msgid "Path Color Scheme"
+msgstr "Цветовая схема пути"
 
-#. Tooltip for 'Path%'
-msgid "Show the layer's paths in process"
-msgstr "Показывает путь слоя в процессе"
+msgid ""
+"Pause\n"
+"&& Res"
+msgstr ""
+"Пауза\n"
+"&& Res"
 
-#. Widget
-msgid "Paths"
-msgstr "Путь"
+msgid "Pause [s]"
+msgstr "Пауза(ы)"
 
-#. Tooltip for 'Paths'
-msgid "Shows only a single layer's paths, with an orthogonal projection"
-msgstr "Отображать только один слой в ортогональной проекции (сверху)"
+msgid "Pause after Void"
+msgstr "Пауза печати"
 
-#. Widget
-msgid "Perimeter"
-msgstr "Периметр"
+msgid "Pause after Z"
+msgstr "Пауза после Z"
 
-#. Tooltip for 'Perimeter'
-msgid "Speed of the head while extruding the perimeter"
-msgstr "Скорость печати периметра"
+msgid "Pause after Z: manual entry"
+msgstr "Пауза после Z: ввод вручную"
 
-#. Widget
+msgid ""
+"Pause after printing the top layer containing a Void sub-mesh.  This allows "
+"for inserting objects mid print."
+msgstr ""
+"Пауза после печати части детали, имеющую полость.  Это позволяет вставить "
+"объекты внутрь и продолжить печать."
+
+msgid ""
+"Pause after these Z heights (relative to the model Z, not the G-code Z).  "
+"Per-session only, the info is not saved.  Values are whitespace or newline "
+"delimited."
+msgstr ""
+"Сделайте паузу после этих высот Z (относительно модели Z, а не G-кода Z). За "
+"сеанс, информация не сохраняется. Значения разделяются пробелами или новой "
+"строкой."
+
+msgid "Perimeter 1st"
+msgstr "Первым Периметр"
+
+msgid ""
+"Perimeter 1st gives the best dimensions, but worst outward slope. Loop1 then "
+"Perim is a good compromise between dimensional accuracy and overhangs.  "
+"Perimeter Last will do the best with outward slopes, but has the least "
+"dimensional accuracy."
+msgstr ""
+"'Первым Периметр' дает лучшие размеры, но худшую нависающую стенку. '2-й "
+"виток > Периметр' является хорошим компромиссом между точностью размеров и "
+"навесами. 'Периметр Последним' сделает лучшие нависающие стенки, но имеет "
+"наименьшую размерную точность."
+
+msgid "Perimeter Last"
+msgstr "Периметр последним"
+
+#, fuzzy
+msgid "Perimeter Path"
+msgstr "Путь периметра"
+
+#, fuzzy
+msgid "Perspective View"
+msgstr "Перспективный вид"
+
+msgid "Physical RAM [MB]"
+msgstr "Оперативная память (MB)"
+
+#, fuzzy
+msgid ""
+"Physical scale to apply the image texture.  The texture application "
+"resolution is extrusion width / 2."
+msgstr ""
+"Физическая шкала для применения текстуры изображения.  Разрешение приложения "
+"текстуры является экструзионой шириной / 2."
+
+#, fuzzy
+msgid "Physical scale to apply the texture"
+msgstr "Физическая шкала для применения текстуры"
+
+msgid "Pick how the objects are packed when printing sequentially."
+msgstr "Выберите способ укладки объектов при последовательной печати."
+
+msgid "Picks the extruder ordering scheme"
+msgstr "Выбирает схему использования экструдеров"
+
+msgid "Pillar"
+msgstr "Точки"
+
+msgid "Pillar Location"
+msgstr "Где столб на столе"
+
+msgid "Pillar Path"
+msgstr "Местоположение столба"
+
+msgid "Place X"
+msgstr "Местоположение по X"
+
+msgid "Place Y"
+msgstr "Местоположение по Y"
+
+msgid "Place the seam on a corner, when available"
+msgstr "Поместите шов в угол, если возможно."
+
+msgid "Placement on Bed"
+msgstr "Размещение на рабочем столе"
+
+msgid "Please Verify New or Modified Profiles"
+msgstr "Пожалуйста, проверьте новые или измененные профили"
+
+#, fuzzy
+msgid "Please allow the G-code export to finish before exiting."
+msgstr "Пожалуйста, позвольте экспорту G-кода закончить перед выходом."
+
+#, fuzzy
+msgid "Please allow the slicing to finish before exiting."
+msgstr "Пожалуйста, позвольте нарезке закончить перед выходом."
+
+msgid ""
+"Please make sure to select a Printer Profile from the settings tabs below.\n"
+"Happy Slicing!"
+msgstr ""
+"Пожалуйста, не забудьте выбрать Профиль Принтера из таблиц настроек ниже.\n"
+"Счастливый нарезки!!!"
+
+msgid "Please select a valid printer."
+msgstr "Пожалуйста, выберите действительный принтер."
+
+#, fuzzy
+msgid "Please select a valid style."
+msgstr "Пожалуйста, выберите действительный стиль."
+
+msgid ""
+"Post\n"
+"fix"
+msgstr ""
+"Пост\n"
+"фикс"
+
 msgid "Post-Process"
-msgstr "Скрипт пост обработки"
+msgstr "Пост-процессор"
 
-#. Tooltip for 'Post-Process'
-msgid "Invoke a post process script on <FILE>"
-msgstr "Запустить скрипт пост обработки из <FILE>"
+msgid ""
+"Pre\n"
+"fix"
+msgstr ""
+"Пре-\n"
+"фикс"
 
-#. Menu Item
+msgid ""
+"Pre-\n"
+"heat"
+msgstr ""
+"Предварит.\n"
+"Нагрев"
+
+msgid "Precise"
+msgstr "Точный"
+
+msgid "Precise diameter of the filament"
+msgstr "Точный диаметр прутка"
+
 msgid "Preferences"
 msgstr "Настройки"
 
-#. Menu Item
+msgid "Preheat"
+msgstr "Разогрев"
+
+msgid "Preload"
+msgstr "Предзагрузка"
+
+msgid ""
+"Preload ViscoElasticity, in units of [microseconds], computed as:\n"
+"1e6 [microseconds/s] * Viscosity [Pa*s] / Elasticity [Pa]"
+msgstr ""
+"Предварительная загрузка ViscoElasticity, в единицах «микросекунд», "
+"вычисляется как:\n"
+"1e6 [микросекунды/с] *Viscosity [Pa*s]/ Эластичность [Pa]"
+
+msgid "Preload in [mm] at a flow rate of 1 mm^3/s"
+msgstr "Предварительная загрузка в мм при скорости потока 1 мм^3/с"
+
+msgid ""
+"PreloadVE Coefficient [microseconds]\n"
+"(0 - 2x Experimental Wizard value)\n"
+"\n"
+"The printer profile *must* have valid values under [Printer]->[Extruder "
+"Hardware] for NozDia, NozLen, and DrvLen.\n"
+"\n"
+"The model is a 25 mm cube with rounded vertical corners. The Style has 2 "
+"loops (perim 1st), 0 skin, 20% infill, 0 Seam Depth and Gap, Join-Loop Off, "
+"and fixed layer thickness ~= NozDia / 2.\n"
+"\n"
+"There should be no Prime Pillar or Wall. Destring is disabled for this "
+"test.\n"
+"\n"
+"The ideal PreloadVE value will be slightly different for thin vs thick "
+"layers, so tune it in the center of your desired layer thickness range."
+msgstr ""
+"Коэффициент preloadVE (микросекунды)\n"
+"(0 - 2x Экспериментальное значение Мастера)\n"
+"Профиль принтера должен иметь действительные значения в соответствии с "
+"«Printer»-> «Extruder Hardware» для NozDia, NozLen и DrvLen.\n"
+"Модель представляет 25-мм куб с закругленными вертикальными углами. "
+"Количество витков выставить на 2, Толщина стенки 0, Заполнение 20%, Стык "
+"крестиком - выкл, а Глубину стыка и Зазор выставить в 0, Высота слоя - "
+"половина диаметра сопла, Толщина макс. слоя 0.\n"
+"Не должно быть ни премьер-столба, ни стены. Дестринг отключен для этого "
+"теста.\n"
+"Идеальное значение PreloadVE будет немного отличаться для тонких и толстых "
+"слоев, так что настроить его в центре желаемого диапазона толщины слоя."
+
+msgid "PreloadVE [µs]"
+msgstr ""
+"Вычисляемый\n"
+"PreloadVE [µs]"
+
+msgid "Prepends machine-dependent defaults into the G-code includes."
+msgstr "Добавляет машинно-зависимые значения по умолчанию в G-код."
+
 msgid "Preview On Open STL"
-msgstr "Эскиз открываемого STL"
+msgstr "Просмотр открытого STL"
 
-#. Widget
-msgid "Prime"
-msgstr "Выдача"
+msgid "Prime && Purge"
+msgstr "Столбы и стены"
 
-#. Tooltip for 'Prime'
-msgid "How many mm to prime before starting a path (uses M227 on BfB printers)"
-msgstr "Сколько мм материала быдет выдавлено перед началом пути (использует M227 на BfB принтерах)"
+msgid "Prime / Purge Structure"
+msgstr "Выбор структуры поддержек"
 
-#. Widget
-msgid "Prime Pillar"
-msgstr "Столб очистки"
+msgid "Prime Pillar Path"
+msgstr "Местоположение столба"
 
-#. Tooltip for 'Prime Pillar'
-msgid "Select where to place the wipe pillar, if desired."
-msgstr "Выберите расположение столба очистки"
+msgid "Print Temperature [C]"
+msgstr "Температура печати (Cº)"
 
-#. Widget
+msgid "Print Type - % Infill (other features)"
+msgstr "Выберите тип печати - % заполнения (Infill )"
+
 msgid "Printer"
 msgstr "Принтер"
 
-#. Tooltip for 'Printer'
-msgid "Selected Printer profile"
-msgstr "Выбор профиля принтера"
+msgid ""
+"Printer Color\n"
+"Scheme & Hint"
+msgstr ""
+"Цветовая схема  принтера,\n"
+"отдельно для каждого"
 
-#. Menu Item
-msgid "Quickstart Guide"
-msgstr "Краткое руководство"
+#, fuzzy
+msgid "Printer G-code Editor"
+msgstr "Редактор G-кода принтера"
 
-#. Menu Item
+#, fuzzy
+msgid "Printer G-code Window"
+msgstr "Окно принтера G-кода"
+
+msgid "Printer Name"
+msgstr "Профиль Принтера"
+
+#, fuzzy
+msgid "Printer Name Hint"
+msgstr "Подсказка имени принтера"
+
+msgid "Printer Profile Name"
+msgstr "Имя Профиля Принтера"
+
+msgid "Printer Profile Wizard"
+msgstr "Мастер Профиля Принтера"
+
+msgid "Printer Speeds"
+msgstr "Остальные параметры скор."
+
+msgid "Printer Wizard"
+msgstr "Мастер параметров Принтера"
+
+msgid "Printer's Bed Dimensions [mm]"
+msgstr "Размеры стола принтера (мм)"
+
+#, fuzzy
+msgid "Printer's Firmware Type"
+msgstr "Тип прошивки принтера"
+
+msgid "Production"
+msgstr "Минимальный доступ"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Project"
+msgstr "Проект"
+
+#, fuzzy
+msgid "Purge  "
+msgstr "Очистить  "
+
+msgid "Purge Ext Width Gain"
+msgstr "Purge Ext Width Gain"
+
+msgid ""
+"Purge Octagon\n"
+"  (per-Matl purge vol)"
+msgstr ""
+"Purge Octagon\n"
+"  (per-Matl объём прочистки)"
+
+#, fuzzy
+msgid "Purge Path"
+msgstr "Путь очистки"
+
+msgid "Purge Volume [mm^3]"
+msgstr "Прогонка (мм^3)"
+
+#, fuzzy
+msgid "Pushes the values toward the extremes"
+msgstr "Толкает значения к крайностям"
+
+msgid "Quick Restore Reference Settings"
+msgstr "Быстрое восстановление настроек"
+
+#, fuzzy
 msgid "Quit KISSlicer"
-msgstr "Выход"
+msgstr "Выйти из KISSlicer"
 
-#. Widget
-msgid "Raft"
-msgstr "Подложка"
+msgid "RAM && Threads"
+msgstr " Потоки процессора и RAM"
 
-#. Tooltip for 'Raft'
-msgid "Select the style of raft desired, if any"
-msgstr "Выберите стиль подложки"
+msgid "RAM [MB] Warning"
+msgstr "Порог превышения RAM"
 
-#. Widget
-msgid "Raft Extruder"
-msgstr "Экструдер подложки"
+msgid "Radius [mm]"
+msgstr "Ширина канта (мм)"
 
-#. Tooltip for 'Raft Extruder'
-msgid "Extruder for printing the raft"
-msgstr "Экструдер для печати подложки"
+msgid "Raft Ext"
+msgstr "Печать Рафта"
 
-#. Widget
-msgid "Reset"
-msgstr "Сброс"
+msgid "Raft Int Layers"
+msgstr "Слои Рафта"
 
-#. Tooltip for 'Reset'
-msgid "Reset the veiw to be centered on the build bed"
-msgstr "Сброс точки обзора на центр кровати"
+msgid "Raft Options"
+msgstr "Варианты Рафта"
 
-#. Menu Item
-msgid "Reset to Default"
-msgstr "Восстановить по умолчанию"
+msgid "Raft Path"
+msgstr "Путь Рафта"
 
-#. Menu Item
+msgid "Raft Speed"
+msgstr "Скор. печати Рафта"
+
+msgid "Raft Type"
+msgstr "Тип Рафта"
+
+msgid ""
+"Rafts are used to either overcome bed irregularities, or to improve adhesion "
+"when printing with a material that does not adhere well to the bed."
+msgstr ""
+"Плот используются либо для устранения неровностей кровати, либо для "
+"улучшения адгезии при печати материалом, который плохо держится на кровати."
+
+msgid "Random"
+msgstr "Случайно"
+
+msgid "Randomly spread the start-point of each loop over this angle"
+msgstr ""
+"Случайным образом распределяет начальную точку каждого слоя в пределах этого "
+"угла (при Randomly ставим 360)"
+
+msgid ""
+"Red triangles:\n"
+"face inward"
+msgstr ""
+"Красные полиг.\n"
+"грань вовнутрь"
+
+msgid "Reference G-code.  This may need tweaking for your printer."
+msgstr ""
+"Справочный G-код. Это может потребовать дополнительной настройки для "
+"принтера."
+
+msgid "Reload from file(s)"
+msgstr "Перезагрузить модель"
+
+msgid "Remove"
+msgstr "Удалить все загруженные"
+
+msgid "Remove (all copies of) this model from the build"
+msgstr "Удалите (все копии) этой модели из проекта"
+
+msgid "Rename"
+msgstr "Переимен."
+
+#, fuzzy
+msgid "Rename this profile"
+msgstr "Переименовать этот профиль"
+
+#, fuzzy
+msgid "Replace extruder based on if a path type is..."
+msgstr "Замените экструдер на основе типа пути..."
+
+msgid "Reset the veiw to be Aligned with the X axis"
+msgstr "Сбросьте вид, чтобы он был выровнен по оси X"
+
+msgid "Reset the veiw to be Aligned with the Y axis"
+msgstr "Сбросьте вид, чтобы он был выровнен по оси Y"
+
+#, fuzzy
+msgid "Reset the view to be centered on the build bed"
+msgstr "Сброс представления, который будет сосредоточен на кровати сборки"
+
+#, fuzzy
+msgid "Restore original orientation"
+msgstr "Восстановление первоначальной ориентации"
+
+msgid "Restrict Advanced Settings"
+msgstr "Установка пароля на расширенные настройки"
+
+#, fuzzy
+msgid "Results from Dimensions"
+msgstr "Результаты измерений"
+
+#, fuzzy
+msgid "Results from Mass"
+msgstr "Результаты массы"
+
+msgid "Reuse Latest (least time)"
+msgstr "Повторное использование (наименьшее время)"
+
+#, fuzzy
 msgid "Revert to English"
-msgstr "Revert to English"
+msgstr "Вернуться к английскому языку"
 
-#. Menu Item
 msgid "Revert to original height"
-msgstr "Восстановить исходные размеры"
+msgstr "Вернуться к исходному размеру"
 
-#. Menu Item
+msgid ""
+"Right now, if Strength\n"
+"is non-0, all perimeters\n"
+"will have this noise\n"
+"pattern on them."
+msgstr ""
+"Прямо сейчас, если сила\n"
+"не равно-0, все периметры\n"
+"будет иметь этот шум\n"
+"шаблон на них."
+
+msgid "Rim Speed (Deltas)"
+msgstr "Скор.кольца(Дельты)"
+
+msgid "Rotate"
+msgstr "Повернуть"
+
+msgid "Rotate About X"
+msgstr " вокруг оси  X "
+
+msgid "Rotate About Y"
+msgstr " вокруг оси  Y"
+
+msgid "Rotate About Z"
+msgstr " вокруг оси  Z"
+
+msgid ""
+"Rotate the part around the vertical axis\n"
+"(Set degrees directly or use buttons)"
+msgstr ""
+"Поворот вокруг вертикальной оси\n"
+"(Введите число в градусах непосредственно или используйте кнопки. Шаг кнопок "
+"15º)"
+
+msgid "Rough"
+msgstr "Редко"
+
+msgid "Round"
+msgstr "Круглый"
+
+msgid "Round the brim if checked."
+msgstr "Скруглить края канта, если установлено."
+
+msgid "Rounded"
+msgstr "Волновая сетка"
+
+msgid "Run All 4 Profile Wizards"
+msgstr "Запустить все 4 Мастера создания профиля"
+
+msgid "Run the extruder back over top surfaces in fine non-extruding paths"
+msgstr ""
+"Утюжит верхнюю поверхность, с небольшим выходом за габариты модели. Работает "
+"как Sweep, так и Group"
+
+msgid ""
+"Running the post process command:\n"
+"\n"
+"%s\n"
+"\n"
+"Failed, returning %i"
+msgstr ""
+"Запуск постпроцессора:\n"
+"\n"
+"%s\n"
+"\n"
+"Не удалось, возвращаюсь %i"
+
+#, fuzzy
+msgid "STL save failed."
+msgstr "STL сохранить не удалось."
+
+#, fuzzy
+msgid "STL saved."
+msgstr "STL сохранены."
+
+msgid "Safe"
+msgstr "В простое"
+
+#, fuzzy
+msgid ""
+"Same Material as Object\n"
+"     (Single Extruder)"
+msgstr ""
+"Тот же материал, что и объект\n"
+"     (Единый экструдер)"
+
+#, fuzzy
+msgid ""
+"Same Material as Object tries to reduce adhesion by minimizing contact area\n"
+"Soluble Support generates a flat solid surface of a different material for "
+"best surface quality."
+msgstr ""
+"Тот же материал, что и объект, пытается уменьшить адгезию, минимизируя "
+"контактную область\n"
+"Растворимая поддержка создает плоскую твердую поверхность другого материала "
+"для лучшего качества поверхности."
+
 msgid "Save Packed STL"
-msgstr "Записать скомпанованный STL"
+msgstr "Сохранить в один STL"
 
-#. Menu Item
+msgid "Save Project As"
+msgstr "Сохранить проект как"
+
 msgid "Save Reference Language File"
-msgstr "Записать шаблон для перевода"
+msgstr "Экспорт исходного файла справочного языка"
 
-#. Menu Item
+#, fuzzy
+msgid "Save Test G-code"
+msgstr "Сохранить тестовый G-код"
+
+msgid "Save canceled."
+msgstr "Сохранение отменено"
+
+msgid "Save failed."
+msgstr "Не удалось сохранить"
+
+#, fuzzy
+msgid "Save the G-code to a file"
+msgstr "Сохраните G-код в файле"
+
+#, fuzzy
+msgid ""
+"Saved '%s'.  You can use standard\n"
+"gettext tools (like Poedit) to generate a .po file."
+msgstr ""
+"Сохраненные \"%s\".  Вы можете использовать стандартные\n"
+"gettext инструменты (например, Poedit) для создания файла .po."
+
+msgid "Scale"
+msgstr "Масштабировать "
+
+msgid "Scale && Rotate"
+msgstr "Применить"
+
+msgid "Scale X"
+msgstr " по оси X"
+
+msgid "Scale X/Y/Z"
+msgstr "Масштаб X/Y/Z"
+
+msgid "Scale Y"
+msgstr " по оси Y"
+
+msgid "Scale Z"
+msgstr " по оси Z"
+
+#, fuzzy
+msgid "Scale [mm]"
+msgstr "Масштабная шкала (мм)"
+
+#, fuzzy
+msgid "Scale and Rotate"
+msgstr "Масштабирование и вращение"
+
 msgid "Scale by X"
-msgstr "Масштаб по X"
+msgstr "Масштабировать все загруженные"
 
-#. Widget
+msgid "Scale so the max height is this"
+msgstr "Масштабировать до получения указанной высоты"
+
+msgid "Seam"
+msgstr "Seam вкл"
+
+msgid "Seam Angle"
+msgstr "Местоположение шва"
+
+msgid "Seam Depth"
+msgstr "Глубина стыка"
+
+msgid "Seam Gap"
+msgstr "Зазор стыка"
+
+msgid "Seam Hiding"
+msgstr "Скрытие Шва"
+
+#, fuzzy
+msgid ""
+"Select\n"
+"&All"
+msgstr ""
+"Выберите\n"
+"«Все"
+
+#, fuzzy
+msgid ""
+"Select\n"
+"&None"
+msgstr ""
+"Выберите\n"
+"«Нет"
+
+msgid ""
+"Select\n"
+"New Ext\n"
+"&& Warm"
+msgstr ""
+"Выберите\n"
+"Новый экстр.т\n"
+"и Темпиратуру"
+
+msgid "Select Bed STL"
+msgstr "Выберите STL-модель стола"
+
+msgid "Select Mesh(s), then Set Extruder"
+msgstr "Выберите сетку(и)"
+
+msgid "Select Printer Profile(s) to Export"
+msgstr "Выберите профиль принтера(ы) для экспорта"
+
+#, fuzzy
+msgid "Select if all objects are printed simultaneously."
+msgstr "Выберите, если все объекты печатаются одновременно."
+
+#, fuzzy
+msgid "Select the (closest) material family"
+msgstr "Выберите (ближайшее) семейство материалов"
+
+#, fuzzy
+msgid "Select the 3D visualization mode."
+msgstr "Выберите режим 3D визуализации."
+
+msgid "Select the color of this filament"
+msgstr "Выберите цвет отображения настраиваемого материала"
+
+#, fuzzy
+msgid "Select the colorization mode to use in the path preview."
+msgstr ""
+"Выберите режим окраски для использования в предварительном просмотре пути."
+
+#, fuzzy
+msgid "Select the extruder to be set."
+msgstr "Выберите экструдер для набора."
+
+#, fuzzy
+msgid "Select the firmware type.  Absolute E is probably the most common."
+msgstr ""
+"Выберите тип прошивки.  Абсолютный E, вероятно, является наиболее "
+"распространенным."
+
+msgid ""
+"Select the name to save the profile.  It will turn red if the profile name "
+"is invalid or already in use."
+msgstr ""
+"Выберите уникальное имя и сохраните профиль.  Окошко подсветится красным, "
+"если имя профиля является недействительным или уже используется."
+
+msgid "Select the style of raft desired, if any"
+msgstr "Выберите стиль подложки (Рафта), если требуется"
+
+msgid "Select what kind of sparse infill you want"
+msgstr "Выберите тип заполнения"
+
+msgid "Select which extruder(s) have  this new material loaded."
+msgstr "Выберите, какие экструдеры загружают этот новый материал."
+
+msgid ""
+"Select your experience level...setings more advanced than this will be "
+"disabled"
+msgstr ""
+"Выберите свой уровень опыта... настройки более продвинутые, чем этот, будут "
+"отключены"
+
+msgid "Selected Material profile"
+msgstr "Выбранный профиль Материала"
+
+msgid "Selected Printer profile"
+msgstr "Выбранный профиль Принтера"
+
+msgid "Selected Style profile"
+msgstr "Выберите профиль стиля"
+
+msgid "Selected Support profile"
+msgstr "Выбранный профиль Поддержки"
+
+msgid ""
+"Sequential\n"
+"    (one object at a time, short to tall)"
+msgstr ""
+"Последовательное\n"
+" (один объект за один раз, от низкого до высокого)"
+
+msgid "Sequential Pack Style"
+msgstr "Последовательная печать"
+
+msgid "Set"
+msgstr "Установить"
+
+msgid "Set % Infill"
+msgstr "Установить % заполнения"
+
+#, fuzzy
+msgid "Set Extruder"
+msgstr "Установить экструдер"
+
+msgid "Set Z via mat'l left"
+msgstr "Устан. - огр. по Z"
+
+msgid ""
+"Set head to this temp when not extruding...less energy and ooze ~65% of the "
+"main temp is a good rule of thumb"
+msgstr ""
+"Установите головку на эту температуру, когда нет экструзии. Рекомендуется ~ "
+"65 % oт основной температуры."
+
+#, fuzzy
+msgid "Set in"
+msgstr "Установить в"
+
+#, fuzzy
+msgid "Set selected sub-meshes to Extruder 1"
+msgstr "Установите выбранные подсетки для Экструдера 1"
+
+msgid "Set selected sub-meshes to the Default Extruder"
+msgstr "Назначить выбранные под-сетки на экструдер по умолчанию"
+
+msgid "Set selected sub-meshes to void (empty)"
+msgstr "Аннулировать  выбранные под-сетки (опустошить)"
+
+#, fuzzy
+msgid "Set the interior extruder, per-model, not per-sub-mesh."
+msgstr "Установите внутренний экструдер, в модели, а не на подсети."
+
+#, fuzzy
+msgid "Set to &Default"
+msgstr "Установить на «По умолчанию»"
+
+#, fuzzy
+msgid "Set to &Extruder"
+msgstr "Установить на «Экструдер»"
+
+#, fuzzy
+msgid "Set to &Void"
+msgstr "Установить на «Пустота»"
+
+msgid ""
+"Sets initial temp,\n"
+"fans, PreloadVE"
+msgstr "Шаблоны настроек"
+
+msgid ""
+"Sets the multiple of the extrusion width when printing the Purge Octagon, "
+"making the flowrate higher for the same head speed."
+msgstr ""
+"Устанавливает кратную ширине экструзии при печати Purge Octagon, увеличивая "
+"расход при той же скорости головки."
+
 msgid "Settings Level"
-msgstr "Уровень настроек"
+msgstr "Доступ к настройкам"
 
-#. Tooltip for 'Settings Level'
-msgid "Select your experience level...setings more advanced than this will be disabled"
-msgstr "Выберите ваш уровень опыта, настройки более сложные чем этот уровень будут установлены по умолчанию."
+msgid "Shake"
+msgstr "Встряска"
 
-#. Widget
-msgid "Sheath Main<LF>Support"
-msgstr "Ленточная поддержка"
+msgid "Sharpen"
+msgstr "Резкость"
 
-#. Tooltip for 'Sheath Main<LF>Support'
-msgid "Sheathed Support has a perimeter around the sparse support base.  This strengthes the base support, but is very hard to remove if support is *inside* a complex model."
-msgstr "Стержневая поддержка получит ленточное объединение снизу. Это увеличит ее прочность, но может мешать удалению изнутри сложной модели."
+msgid "Sheathe"
+msgstr "Доп. оболочка опор"
 
-#. Widget
-msgid "Sheathe<LF>Z-Roof [mm])"
-msgstr "Z-предел [мм]<LF>лент"
+#, fuzzy
+msgid ""
+"Sheathed Support has a perimeter around the sparse support base.  This "
+"strengthes the base support, but is very hard to remove if support is "
+"*inside* a complex model."
+msgstr ""
+"Дополнительная оболочка вокруг основания обособленных участков опор в один "
+"пиксель (для прочности). \"Sparse\" и \"Both\" добавляют оболочку на "
+"выбранную высоту в мм. Роль параметра \"interface\" пока не ясна."
 
-#. Tooltip for 'Sheathe<LF>Z-Roof [mm])'
-msgid "No sheathe will be generated above this height [mm].  Make < 0 to disable the limit."
-msgstr "Не генерировать ленточную поддержку выше этой высоты [мм]. Отрицательное значение убирает предел"
+#, fuzzy
+msgid ""
+"Short Pillar\n"
+"  (to last ext change)"
+msgstr ""
+"Short Pillar\n"
+"  (to last ext change)"
 
-#. Widget
-msgid "Show Settings"
-msgstr "Параметры"
+msgid ""
+"Short Wall\n"
+"  (to last ext change)"
+msgstr ""
+"Генерируется двойная стена\n"
+"  (вокруг модели на высоту опор)"
 
-#. Tooltip for 'Show Settings'
-msgid "Show the settings tabs"
-msgstr "Показать панель параметров печати"
+#, fuzzy
+msgid "Show Command Line Options"
+msgstr "Показать параметры командной строки"
 
-#. Widget
+#, fuzzy
+msgid "Show Extruder Map Window"
+msgstr "Показать окно карты экструдера"
+
+#, fuzzy
+msgid "Show Extrusion Time Map"
+msgstr "Показать карту времени экструзии"
+
+msgid "Show Mesh Error Key"
+msgstr "Показать коллизии сетки STL модели"
+
+msgid "Show Path Color Key"
+msgstr "Показать цвета, присвоенные траекториям"
+
+#, fuzzy
+msgid "Show Quickstart Guide"
+msgstr "Показать руководство по быстрому старту"
+
+msgid "Show Summary Text"
+msgstr "Отображать краткую информацию поверх рабочего поля"
+
+msgid "Show mesh-to-extruder map"
+msgstr "Показать карту сетки экструдера"
+
+msgid "Show paths in 3D"
+msgstr "Показывать маршрут в 3D"
+
+#, fuzzy
+msgid "Show the layer's paths in process"
+msgstr "Показать пути слоя в процессе"
+
+msgid ""
+"Show this extruder map when a\n"
+"model tile is selected."
+msgstr ""
+"Показать эту карту, когда\n"
+"выбрана модель плитки."
+
+msgid ""
+"Show this key automatically\n"
+"if a model has errors."
+msgstr ""
+"Показывать эту панель -\n"
+"если у модели есть ошибки."
+
+#, fuzzy
+msgid "Show this time map whenever G-code is saved."
+msgstr "Покажите карту времени всякий раз, когда сохраняется G-код."
+
+msgid "Shrink"
+msgstr "Коррекция Усадки"
+
+msgid "Simple"
+msgstr "Траекторию не показывать"
+
+msgid ""
+"Simultaneous\n"
+"    (all objects at the same time, sorted)"
+msgstr ""
+"Одновременное\n"
+"    (все объекты печатаются одновременно)"
+
+msgid ""
+"Single Pillar\n"
+"  (All the way up)"
+msgstr ""
+"Один столб\n"
+"  (На всю высоту модели)"
+
+msgid "Single part's reported cm^3"
+msgstr "Расход на деталь (cm^3)"
+
+msgid "Single part's weight"
+msgstr "Вес детали"
+
+msgid "Size 2^N"
+msgstr "Размер 2^N"
+
+#, fuzzy
+msgid "Size of the hole in the tip of the nozzle"
+msgstr "Размер отверстия в кончике сопла"
+
+msgid ""
+"Size: %1.1f x %1.1f x %1.1f [mm]\n"
+"Area: %1.1f [cm^2]\n"
+"Volume %1.1f [cm^3]\n"
+"\n"
+"Right-click for more functions"
+msgstr ""
+"Габариты: %1.1f x %1.1f x %1.1f (мм)\n"
+"Площадь: %1.1f (см^2)\n"
+"Объем: %1.1f (см^3)\n"
+"\n"
+"Кликните правой кнопкой мыши для получения\n"
+" дополнительных функций трансформации модели"
+
 msgid "Skin Thickness [mm]"
-msgstr "Толщина стенок [мм]"
+msgstr "Толщина стенки [mm]"
 
-#. Tooltip for 'Skin Thickness [mm]'
-msgid "Will make the solid skin of the model this thick"
-msgstr "Если недостаточно толщины витков будет добавлено сплошное заполнение. Так же используется для вычисления числа сплошных слоев"
+msgid "Skip (don't ask again)"
+msgstr "Подтв. и неспрашивать"
 
-#. Menu Item
+#, fuzzy
+msgid "Skirt"
+msgstr "Юбка"
+
+msgid ""
+"Skirt\n"
+"    (not attached to the part)"
+msgstr ""
+"Юбка\n"
+"    (не прикреплен к модели)"
+
+#, fuzzy
+msgid ""
+"Skirt\n"
+"  (1st layer only)"
+msgstr ""
+"Юбка\n"
+"  (только 1-й слой)"
+
+msgid "Skirt or Brim"
+msgstr "Юбка или кайма"
+
+msgid ""
+"Skirt primes the extruder on the first layer by placing a path around the "
+"entire object.  Brim adds a lip of plastic to the base layer of the part, "
+"helping hold it to the bed (reduce warp)."
+msgstr ""
+"Юбка /Брим добавляет кайму пластика к базовому слою части, помогая держать "
+"ее на кровати (уменьшить деформацию)."
+
 msgid "Slice && Save (get filename before slice)"
-msgstr "Slice && Save (Задать имя перед слайсингом)"
+msgstr "При сохранении G-кода будет автоматически сгенерировано имя файла"
 
-#. Widget
-msgid "Solid Infill<LF>and Support"
-msgstr "Сплошное заполнение <LF>и поддержки"
+msgid "Slicing Canceled"
+msgstr "Отмена нарезки"
 
-#. Tooltip for 'Solid Infill<LF>and Support'
-msgid "Speed of the head while extruding solid infill and support paths"
-msgstr "Скорость печати сплошного заполнения и поддержек"
+#, fuzzy
+msgid "Slicing Threads"
+msgstr "Нарезка потоков"
 
-#. Widget
+msgid ""
+"Slowest speed of the head while extruding solid infill and support paths"
+msgstr "Миним. скорость печати заполнения и поддержек"
+
+msgid "Slowest speed of the head while extruding sparse infill"
+msgstr "Миним. скорость печати разреженного заполнения (sparse infill)"
+
+#, fuzzy
+msgid "Slowest speed of the head while extruding the loops"
+msgstr "Миним. скорость при печати маленьких радиусов"
+
+msgid "Slowest speed of the head while extruding the perimeter"
+msgstr "Миним. скорость при печати периметра"
+
+msgid "Slowest speed of the head while extruding the top surfaces"
+msgstr "Миним. скорость печати верхних поверхностей"
+
+#, fuzzy
+msgid "Slows the last X [mm] of the last path on an island to Perimeter speed."
+msgstr "Замедляет последние X [mm] пути до скорости периметра."
+
+msgid "Solid Path"
+msgstr "Сплошное заполнение"
+
+#, fuzzy
+msgid ""
+"Soluble / Breakaway Support\n"
+"     (Multi-Extruder, PRO)"
+msgstr ""
+"Растворимая / Отколовшаяся поддержка\n"
+"     (Мульти-Экструдер, PRO)"
+
+#, fuzzy
+msgid ""
+"Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is "
+"forced to M101/3 internally for BfB printers"
+msgstr ""
+"Некоторые типы прошивки используют M101/3 или G10/1 для того чтобы вызвать "
+"destring.  Примечание: это вынужден M101/3 внутренне для принтеров BfB"
+
+msgid ""
+"Some printers drop segments shorter than a threshold.  This will allow "
+"KISSlicer to output a path using printable segments.  A good starting value "
+"is the XY step resolution * 2."
+msgstr ""
+"Некоторые принтеры отбрасывают сегменты короче порогового значения. "
+"Указанное значение позволит KISSlicer пересчитать путь с учётом этой "
+"особенности. Хорошим начальным значением является разрешение шага по XY * 2. "
+"(мм)"
+
+#, fuzzy
+msgid ""
+"Some sub-meshes were inside out. This can happen\n"
+"when there is a hollow space ('void') inside the\n"
+"part, or it can be a mistake.  Should KISSlicer:"
+msgstr ""
+"Некоторые подсетки были наизнанко. Это может произойти\n"
+"когда есть пустое пространство ('пустота') внутри\n"
+"часть, или это может быть ошибкой.  Если KISSlicer:"
+
+msgid "Spacing for Interface paths"
+msgstr "Шаг траектории удаляемой поддержки"
+
+#, fuzzy
+msgid ""
+"Spacing on the Lower layer of the raft.  The actual stride will be rounded "
+"to the nearest integer multiple of the extrusion width."
+msgstr ""
+"Расстояние по нижнему слою плота.  Фактический шаг будет округлен до "
+"ближайшего интегратора, кратное ширины экструзии."
+
+msgid ""
+"Spacing on the Upper layer of the raft.  The actual stride will be rounded "
+"to the nearest integer multiple of the extrusion width."
+msgstr ""
+"Шаг по верхнему слою Рафта. Фактический шаг будет округлен до ближайшего "
+"значения, кратное ширине экструзии."
+
+msgid "Sparse"
+msgstr "Sparse"
+
 msgid "Sparse Infill"
-msgstr "Внутренее заполнение"
+msgstr "Разреженное заполнение"
 
-#. Tooltip for 'Sparse Infill'
-msgid "Speed of the head while extruding sparse infill"
-msgstr "Скорость печати внутреннего заполнения"
+#, fuzzy
+msgid "Sparse Infill Path"
+msgstr "Путь разреженного заполнения"
 
-#. Widget
-msgid "Speed [mm/s]"
-msgstr "Скорость [мм/с]"
+msgid ""
+"Sparse Infill and Support are extruded every N layers (making them Stacked "
+"Sparse Infill and Stacked Support...PRO only)"
+msgstr ""
+"Разреженное заполнение. Каждые N слоёв не будет печататься заполнение и "
+"поддержки, это экономит время. Отключается чудная настройка подстановкой 1. "
+"Не применимо для динамически меняющейся высоты слоя. (только для версии PRO)"
 
-#. Tooltip for 'Speed [mm/s]'
-msgid "How fast to retract / prime for destring under 5D firmware."
-msgstr "Скорость для отката/выдачи для прошивок 5D"
+msgid "Specify how the head should travel between extruding paths"
+msgstr ""
+"Отображает траекторию холостых перемещений.\n"
+"Simple  - траектория не показывается;\n"
+"Stay Inside - траектория отображается;\n"
+"Avoid Edges - траектория отображается."
 
-#. Widget
+#, fuzzy
+msgid "Speed Settings"
+msgstr "Настройки скорости"
+
+msgid "Speed Units"
+msgstr "Единицы скорости"
+
+msgid "Speed of the head while not extruding."
+msgstr "Скорость перемещения головы без экструзии."
+
+msgid ""
+"Speed when Ironing, should be slow enough to remelt the surface a little bit."
+msgstr ""
+"Скорость глажки, должны быть достаточно медленной, для лучшего качества "
+"поверхности."
+
+msgid "Stack vertically"
+msgstr "Копировать модель по вертикали (по Z)"
+
 msgid "Stacked Layers"
-msgstr "Объединение слоев"
+msgstr "Редкое заполнение"
 
-#. Tooltip for 'Stacked Layers'
-msgid "Sparse Infill and Support are extruded every N layers  (PRO only)"
-msgstr "Печатать внуренее заполнение и элементы поддержки каждые N слоев, уменьшает время печати на малых толщинах слоя ( доступно только для версии PRO)."
+#, fuzzy
+msgid "Stacked Sparse Infill Path"
+msgstr "Сложенный редкий путь заполнения"
 
-#. Widget
+msgid "Stay Inside"
+msgstr "Stay Inside - отображается"
+
+msgid "Stop the current saving operation"
+msgstr "Прервать текущую запись"
+
+#, fuzzy
+msgid "Stop the current slicing operation"
+msgstr "Остановить текущую операцию нарезки"
+
+#, fuzzy
+msgid ""
+"Store\n"
+"ViscoElasticity"
+msgstr ""
+"Магазин\n"
+"ВискоЭластичность"
+
+#, fuzzy
+msgid "Store whatever notes you wish"
+msgstr "Храните любые заметки, которые вы хотите"
+
+msgid "Straight"
+msgstr "Прямолинейное"
+
+#, fuzzy
+msgid ""
+"Strength\n"
+"(% Extra Material)"
+msgstr ""
+"Силы\n"
+"(% Extra Материал)"
+
+msgid "Stride [mm]"
+msgstr "Шаг (мм)"
+
 msgid "Style"
 msgstr "Стиль"
 
-#. Tooltip for 'Style'
-msgid "Selected Style profile"
-msgstr "Выбран профиль стиля"
+msgid "Style Name"
+msgstr "Профиль Стиля"
 
-#. Widget
-msgid "Suck"
-msgstr "Откат"
+#, fuzzy
+msgid "Style Profile Name"
+msgstr "Имя профиля стиля"
 
-#. Tooltip for 'Suck'
-msgid "How many mm to suck back after ending a path (uses M227 on BfB printers)"
-msgstr "Сколько мм прута будет откачено назад после завершения пути (использует M227 на BfB принтерах)"
+msgid "Style Profile Wizard"
+msgstr "Мастер Стиля (плотность заполнения и диаметр сопла)"
 
-#. Widget
+msgid "Style Wizard"
+msgstr "Мастер Стиля (плотность заполнения и диаметр сопла)"
+
+msgid "SublimeLayers"
+msgstr "Sublime Layers"
+
 msgid "Support"
-msgstr "Стиль <LF>поддержки"
+msgstr "Поддержка"
 
-#. Tooltip for 'Support'
-msgid "Selected Support profile"
-msgstr "Выбран профиль поддержки"
+msgid "Support (may Stack) Path"
+msgstr "Траектория удаляемой поддержки"
 
-#. Widget
-msgid "Support<LF>Z-Roof [mm])"
-msgstr "Z-предел<LF>поддержек [мм]"
+msgid "Support / Object Interface"
+msgstr "Параметры подержек"
 
-#. Tooltip for 'Support<LF>Z-Roof [mm])'
-msgid "No support will be generated above this height [mm].  Make < 0 to disable the limit."
-msgstr "Не генерировать поддержку выше заданного значения. Установка отрицательного значения убирает ограничение"
+msgid "Support Ext"
+msgstr "Печать поддержек"
 
-#. Widget
-msgid "Support Angle"
-msgstr "Угол поддержки"
+msgid "Support Interface Path"
+msgstr "Путь удаляемой поддержки"
 
-#. Tooltip for 'Support Angle'
-msgid "Any surface of the model more than X degrees off vertical will get support."
-msgstr "Любая поверхность имеющая угол от вертикали больше заданного получит структуру поддержки"
+msgid "Support Name"
+msgstr "Профиль Поддержки"
 
-#. Widget
-msgid "Support Main Ext"
-msgstr "Экструдер<LF>основной поддержки"
+#, fuzzy
+msgid "Support Profile Name"
+msgstr "Имя профиля поддержки"
 
-#. Tooltip for 'Support Main Ext'
-msgid "Extruder for printing the lower support"
-msgstr "Экструдер для печати нижней части поддержки"
+msgid "Support Profile Wizard"
+msgstr "Мастер Профиля Поддержек"
 
-#. Widget
-msgid "Support-Obj<LF>Interface Ext"
-msgstr "Экструдер<LF>шапки поддержки"
+msgid "Support Triggers"
+msgstr "Стратегия поддержек"
 
-#. Tooltip for 'Support-Obj<LF>Interface Ext'
-msgid "Extruder for printing the top of the support"
-msgstr "Экструдер для печати верхней части поддержки прилегающей к объекту (например водорастворимым пластиком PVA )"
+#, fuzzy
+msgid "Support Type"
+msgstr "Тип поддержки"
 
-#. Widget
+msgid "Support Wizard"
+msgstr "Мастер Поддержек"
+
+msgid "Surface Texture Wizard"
+msgstr "Мастер создания текстуры из изображения"
+
+#, fuzzy
+msgid ""
+"Surface texture can be a blend of both the noise texture and a user-loaded "
+"image texture."
+msgstr ""
+"Текстура поверхности может быть смесью как текстуры шума, так и текстуры "
+"изображения, загруженного пользователем."
+
+msgid "TPU / TPE"
+msgstr "TPU / TPE"
+
+msgid "Temperature"
+msgstr "Температура"
+
+msgid "Temperature [C]"
+msgstr "Температура (Cº)"
+
+#, fuzzy
+msgid "Temperature for extruding"
+msgstr "Температура экструдирования"
+
+#, fuzzy
+msgid "Temperature for extrusion."
+msgstr "Температура экструзии."
+
+#, fuzzy
+msgid ""
+"Temperature for the heated bed.  The value will not affect anything if the "
+"printer does not have a heated bed."
+msgstr ""
+"Температура для нагретой кровати.  Значение ничего не повлияет, если принтер "
+"не имеет подогревом кровати."
+
+#, fuzzy
+msgid "Temperature of the extruder while extruding"
+msgstr "Температура экструдера во время экструдирования"
+
+#, fuzzy
+msgid ""
+"Temperature of the extruder while extruding the first layer onto the bed.  "
+"Warm it up a bit for better stick."
+msgstr ""
+"Температура экструдера при экструдии первого слоя на кровати.  Разогреть его "
+"немного для лучшей палкой."
+
+#, fuzzy
+msgid "Temperature you set for the extruder to reach"
+msgstr "Температура, установленная для экструдера, чтобы достичь"
+
+#, fuzzy
+msgid "Test G-code"
+msgstr "Тест G-код"
+
+msgid "Test Parameters"
+msgstr "Параметры тестирования"
+
+#, fuzzy
+msgid "Text to Match"
+msgstr "Текст к матчу"
+
+#, fuzzy
+msgid ""
+"Text to find in the printer profile names, all words must be present, but "
+"case and word order don't matter."
+msgstr ""
+"Текст, чтобы найти в принтере имена профиля, все слова должны "
+"присутствовать, но случай и порядок слов не имеет значения."
+
+#, fuzzy
+msgid "Text visible in the 3D Preview"
+msgstr "Текст, видимый в 3D-превью"
+
+msgid "The 1st layer max speed limit will increase by this amount every layer"
+msgstr ""
+"Ограничение скорости 1-ого слоя будет увеличиваться на эту сумму каждый слой"
+
+msgid ""
+"The Interface support transitions on multiples of this (useful for non-flat "
+"supported overhangs)."
+msgstr ""
+"Переходы на удаляемой поддержке кратны этому (полезно для не гладких "
+"поддерживаемых навесах)."
+
+#, fuzzy
+msgid ""
+"The Key is too short.\n"
+"\n"
+"%s"
+msgstr ""
+"Ключ слишком короток.\n"
+"\n"
+"%s"
+
+msgid ""
+"The Prime Skirt / Wall adds a small wall around each part, good for cooling "
+"small parts, priming extruders every layer (especially for multi-head "
+"prints), and for sequential printing."
+msgstr ""
+"Prime Skirt / Wall - добавляет небольшую стену вокруг каждой детали, хорошо "
+"подходит для охлаждения мелких деталей, заливки больших площадей главным "
+"экструдером (для многоголовых отпечатков) и для последовательной печати."
+
+msgid ""
+"The Z resolution of the printer in [mm].  (Used for assigning layer "
+"thicknesses)"
+msgstr "Разрешение принтера в мм. (Используется для присвоения толщины слоя)"
+
+msgid ""
+"The Z value of the layer to display.  Right-click to select the G-code or "
+"the Model Z."
+msgstr ""
+"Значение слоя для отображения. Нажмите правой кнопкой мыши, чтобы выбрать G-"
+"код или модель."
+
+msgid ""
+"The desired layer thickness range is %1.3f to %1.3f.\n"
+"Actual layer thicknesses are:\n"
+"   Min:   %f\n"
+"   Avg:   %f\n"
+"   Max:   %f\n"
+"   StDev: %f\n"
+"This usually happens when flat horizontal surfaces\n"
+"are too close in Z for KISSlicer to place properly-\n"
+"sized layers between them.  If the min and max will\n"
+"print OK then click [Continue], otherwise [Cancel]\n"
+"then try changing the adaptive layer thicknesses a\n"
+"little and re-slice."
+msgstr ""
+"Диапазон толщины нужного слоя от %1.3f  до %1.3f.\n"
+"Фактическая толщина слоя:\n"
+"   Мин: %f\n"
+"   Avg: %f\n"
+"   Макс: %f\n"
+"   StDev: %f\n"
+"Обычно это происходит, когда плоские горизонтальные поверхности\n"
+"слишком близко по Z для KISSlicer, чтобы разместить правильно-\n"
+"размерных слоев между ними. Если мин и макс будет печатиться\n"
+"удовлетворительно - нажмите кнопку «Продолжить», в противном случае "
+"«Отменить»\n"
+"затем попробуйте изменить толщину адаптивного слоя\n"
+"и повторно нарезать."
+
+msgid "The extruder that will run out of filament"
+msgstr "Экструдер, в котором закончится пруток"
+
+#, fuzzy
+msgid ""
+"The fan will only be enabled once the head is this distance from the bed. "
+"(Note: KS compensates for Z-offset, and you can make this negative to turn "
+"on the fan during the raft)"
+msgstr ""
+"Вентилятор будет включен только после того, как голова на этом расстоянии от "
+"кровати. (Примечание: KS компенсирует q-offset, и вы можете сделать этот "
+"негатив, чтобы включить вентилятор во время плота)"
+
+#, fuzzy
+msgid ""
+"The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be "
+"approximated by alternating FanOn & FanOff commands."
+msgstr ""
+"Прошивка принимает коды управления Fan PWM.  Если не остановить, Вентилятор "
+"PWM будет приближена путем чередования команд FanOn и FanOff."
+
+#, fuzzy
+msgid "The following INI files are not present (using defaults):"
+msgstr "Следующие файлы INI не присутствуют (с использованием по умолчанию):"
+
+#, fuzzy
+msgid ""
+"The length between the drive wheel and the tip of the nozzle.  Direct drive "
+"extruders may be around 50 mm, while Bowden drive extruders can be easily "
+"500 mm"
+msgstr ""
+"Длина между приводом колеса и кончиком сопла.  Прямой привод экструдаторы "
+"могут быть около 50 мм, в то время как Bowden привод экструдаторы могут быть "
+"легко 500 мм"
+
+msgid "The length of the bore hole (at the nozzle diameter)"
+msgstr "Длинна канала кончика сопла"
+
+#, fuzzy
+msgid ""
+"The material's viscoelasticity\n"
+"is the ratio of the viscosity to\n"
+"elasticity.  The units work out\n"
+"to be seconds.  We use [µs].\n"
+"\n"
+"NOTE: This is an initial value.\n"
+"Refine it in the Tuning Wizard."
+msgstr ""
+"Вязкость материала\n"
+"является отношение вязкости к\n"
+"Эластичность.  Подразделения отработать\n"
+"быть секунд.  Мы используем ..\n"
+"\n"
+"ПРИМЕЧАНИЕ: Это начальное значение.\n"
+"Уточните его в Тюнинг-Волшебнике."
+
+#, fuzzy
+msgid ""
+"The model(s) could not be sliced with current settings.\n"
+"Most likely the walls are thinner than the extrusion width."
+msgstr ""
+"Модель (ы) не может быть нарезаны текущими настройками.\n"
+"Скорее всего, стены тоньше, чем ширина экструзии."
+
+msgid ""
+"The nominal flowrate is calculated based on path and extruder settings, but "
+"this can compensate for small material differences"
+msgstr ""
+"(Flow Tweak) Рабочая скорость потока (экструзии) автоматически "
+"рассчитывается на основе параметров траектории и экструдера. Введённая "
+"коррекция (0.8-2) может компенсировать небольшие заводские отклонения "
+"диаметра филамента или использоваться в режиме Vasa (печать в один "
+"слой)вплоть до (2)."
+
+#, fuzzy
+msgid ""
+"The nozzle used determines the best extrusion width and the layer "
+"thicknesses that the printer can reliably print."
+msgstr ""
+"Используемое сопла определяет лучшую ширину экструзии и толщину слоя, "
+"которые принтер может надежно печатать."
+
+#, fuzzy
+msgid ""
+"The nozzle used determines the best extrusion width for the interface "
+"material, depending on if the support material is the same as the object "
+"material."
+msgstr ""
+"Используемое сопло определяет лучшую ширину экструзии для материала "
+"интерфейса, в зависимости от того, является ли вспомогательный материал "
+"таким же, как материал объекта."
+
+#, fuzzy
+msgid "The number of Extruders on this printer"
+msgstr "Количество экструдеров на этом принтере"
+
+#, fuzzy
+msgid ""
+"The number of extruders on the printer.  For a single-nozzle, multiple-feed "
+"printer, use the number of extruder motors."
+msgstr ""
+"Количество экструдеров на принтере.  Для одноузкого принтера с несколькими "
+"кормами используйте количество экструдерных двигателей."
+
+msgid ""
+"The number of interface layers to place on top of the raft (only if raft and "
+"support are enabled)"
+msgstr ""
+"Количество слоёв удаляемых поддержек поверх подложки (только если подложка и "
+"поддержка включены)"
+
+#, fuzzy
+msgid ""
+"The number of layers before inserting the 'N Layers' G-code (0 disables)"
+msgstr "Количество слоев перед вставкой G-кода 'N Layers' (0 отключений)"
+
+msgid ""
+"The number of path loops around the perimeter.  Fractional values will "
+"periodically insert an extra loop for added bond strength."
+msgstr ""
+"Число витков пути по периметру. Дробные значения сделают периодическую(через "
+"один) вставку дополнительного витка для увеличения прочности."
+
+#, fuzzy
+msgid ""
+"The origin is at the center of the bed.  This is true of some Cartesian "
+"printers and most (all?) Delta printers"
+msgstr ""
+"Происхождение находится в центре кровати.  Это относится и к некоторым "
+"декартовским принтерам и большинству (все?) Дельта принтеры"
+
+#, fuzzy
+msgid "The percentage must be in the range 1%% to 100%%."
+msgstr "Процент должен быть в диапазоне от 1%% до 100%%."
+
+msgid "The print bed is round"
+msgstr "Круглый стол под печать"
+
+msgid ""
+"The thickness of each slice ('ply') of plastic extruded (minimum). This "
+"should be <= Extrusion Width"
+msgstr ""
+"Толщина каждого слоя (минимум). Она должна быть <= Extrusion Width (в % от "
+"Ширины экструзии)"
+
+msgid ""
+"The warm-up time can be\n"
+"approximated: Time ~= a * T^2\n"
+"Pick a temperature between\n"
+"the main and keep-warm."
+msgstr ""
+"Время прогрева может быть\n"
+"приблизительно: Time ~= a * T^2\n"
+"Выберите температуру между\n"
+"рабочей и удержания."
+
+msgid "There is already a Material named '%s'"
+msgstr "Уже есть материал под названием '%s'"
+
+msgid "There is already a Printer named '%s'"
+msgstr "Уже есть принтер под названием '%s'"
+
+msgid "There is already a Style named '%s'"
+msgstr "Аналогичное имя стиля уже имеется: '%s'"
+
+msgid "There is already a Support named '%s'"
+msgstr "Уже существует профиль поддержек под названием '%s'"
+
+msgid ""
+"There is no [Cool & Retire Old Ext] G-code defined.  Using the following:\n"
+"%s"
+msgstr ""
+"G-код [Cool & Retire Old Ext] не определен. Используя следующее:\n"
+"%s"
+
+msgid ""
+"There is no [Cool Same Ext] G-code defined.  Using the following from [Cool "
+"& Retire Old Ext]:\n"
+"%s"
+msgstr ""
+"G-код [Cool Same Ext] не определен. Используйте следующее из [Cool & Retire "
+"Old Ext]:\n"
+"%s"
+
+msgid ""
+"There is no [Prefix] G-code defined.  Using the following:\n"
+"%s"
+msgstr ""
+"G-код [Prefix] не определен. Используйте следующее:\n"
+"%s"
+
+msgid "There is no [Preheat] G-code defined.  Disabling preheat.\n"
+msgstr "G-код [Preheat] не определен. Отключение предварительного нагрева.\n"
+
+msgid ""
+"There is no [Select New Ext & Warm] G-code defined.  Using the following:\n"
+"%s"
+msgstr ""
+"G-код [Select New Ext & Warm] не определен. Используйте следующее:\n"
+"%s"
+
+msgid ""
+"There is no [Warm Same Ext] G-code defined.  Using the following from "
+"[Select New Ext & Warm]:\n"
+"%s"
+msgstr ""
+"G-код [Warm Same Ext] не определен. Используйте следующее из [Select New Ext "
+"& Warm]:\n"
+"%s"
+
+msgid ""
+"These extruder dimensions are required for Preload calculations, and must be "
+"> 0."
+msgstr ""
+"Эти размеры экструдера необходимы для расчетов предварительного натяга и "
+"должны быть> 0."
+
+msgid "These ooze measurements must be > 0."
+msgstr "Эти измерения ooze должны быть > 0."
+
+#, fuzzy
 msgid "Theta"
-msgstr "Угол"
+msgstr "Theta"
 
-#. Tooltip for 'Theta'
-msgid "Rotate the part around the vertical axis<LF>(Set degrees directly or use buttons)"
-msgstr "Вращение модели вокруг вертикальной оси <LF>Угол задается вводом значения или кнопками"
+msgid "Thick [mm]"
+msgstr "Толщина (мм)"
 
-#. Widget
+msgid "Thickness of the Lower layer of the raft"
+msgstr "Высота нижнего слоя подложки"
+
+msgid "Thickness of the Upper layer of the raft"
+msgstr "Высота верхнего слоя подложки"
+
+msgid "This G-code is appended to the end of the G-code output"
+msgstr "Этот код будет добавлен в конце сгенерированного G-кода"
+
+msgid "This G-code is inserted after every N layers"
+msgstr "Этот G-код вставляется после каждого слоя N"
+
+msgid ""
+"This G-code is inserted when a new extruder is selected (and usually warmed "
+"up)"
+msgstr ""
+"Этот G-код вставляется при выборе нового экструдера (и обычно устанавливает "
+"разогрев)"
+
+msgid ""
+"This G-code is inserted when an extruder is deselected (usually set to a "
+"lower temperature for keep-warm or done)"
+msgstr ""
+"Этот G-код вставляется, когда экструдер снимается с выбора (обычно "
+"устанавливается на более низкую температуру для поддержания тепла)"
+
+msgid "This G-code is inserted when the current extruder is cooled."
+msgstr "Этот G-код вставляется при охлаждении текущего экструдера."
+
+msgid "This G-code is inserted when the current extruder is warmed."
+msgstr "Этот G-код вставляется при нагревании текущего экструдера."
+
+msgid "This G-code is prepended to the G-code output"
+msgstr "Этот код будет добавлен в начало сгенерированного G-кода"
+
+msgid "This G-code is used any time a pause it triggered"
+msgstr "Этот G-код используется в любое время, когда срабатывает пауза"
+
+msgid ""
+"This G-code will replace the token <MATL> in any G-code include, use it to "
+"provice custom per-material G-code"
+msgstr ""
+"Этот G-код заменит токен <MALE> содержащийся в любом G-коде, используйте его "
+"для создания пользовательского G-кода для каждого материала."
+
+#, fuzzy
+msgid "This allows you to use per-material tokens as desired in the G-code"
+msgstr "Это позволяет использовать токены на материал по желанию в G-коде"
+
+msgid ""
+"This controls the internal resolution used by the packing engine.  Leaving "
+"it set to 'Fast' is recommended unless the bed is nearly full.  This is "
+"reset to 'Fast' every time KISSlicer is started."
+msgstr ""
+"Это контролирует внутреннее разрешение, используемое упаковочной машиной. "
+"Установить на \"Быстрый\" рекомендуется, если рабочий стол почти полон. "
+"Значение сбрасывается на \"Быстрый\" каждый раз, когда KISSlicer стартует."
+
+msgid ""
+"This edge is on a\n"
+"degenerate tri"
+msgstr ""
+"Участок вырожд.\n"
+"полигонов"
+
+#, fuzzy
+msgid "This extruder will take over above the setpoint Z"
+msgstr "Этот экструдер возьмет верх над заданным значением Z"
+
+msgid "This is historically in [mm/min]"
+msgstr "Исторически это имеет место в «мм/мин»"
+
+msgid ""
+"This will overwrite any settings above this level.\n"
+"Are you sure?"
+msgstr ""
+"Это приведет к перезаписи любых настроек выше этого уровня.\n"
+"- Вы уверены?"
+
+msgid "Throat length of the nozzle bore (often ~ 2 * nozzle diameter)"
+msgstr "Длина горловины отверстия сопла (часто ~ 2 * диаметр сопла)"
+
+msgid "Time in minutes it took to reach that setpoint"
+msgstr "Время в минутах потребовалось, чтобы достичь этой точки"
+
+msgid "To EXT"
+msgstr "Продолжающий"
+
+msgid ""
+"To calculate the cost, you\n"
+"will need to print out one\n"
+"object and weigh it.\n"
+"(raft and all)"
+msgstr ""
+"Чтобы рассчитать стоимость,\n"
+"нужно распечатать один\n"
+"объект и взвесить его.\n"
+"+(рафт и поддержки)"
+
+#, fuzzy
+msgid ""
+"Tokens will be replaced with their current value:\n"
+"=================================================\n"
+"<EXT+n> - Extruder, 0-indexed\n"
+"<X/Y/Z/E> - current position\n"
+"<MAXZTD> - Max Z To Date\n"
+"<%> - Approximate percentage done\n"
+"<NEXTX/Y> - the next position\n"
+"<TOPZ> - Z at the top of the print\n"
+"<DESTRING> - Destring [mm] of the current material\n"
+"<BED> - Bed temp for material on the bed\n"
+"<BOX> - min box temp of all materials used\n"
+"<TEMP> - Temp [C] of  extruder\n"
+"<WARM1..12> - The keep warm temp of a specific extruder\n"
+"<MAIN1..12> - The main extrusion temp of a specific extruder\n"
+"<LAYER> - current layer number\\n<TELAPSED> - time elapsed in hr:mn:ss "
+"format\n"
+"<TREMAIN> - time remaining in hr:mn:ss format\n"
+"<TTOTAL> - total estimated time in hr:mn:ss format\n"
+"<MATL> - material specific Token (string replace only, no equations "
+"evaluated here)\n"
+"<ACCEL> - Machine acceleration\n"
+"<PRIMEX/Y> - the position of the center of the prime pillar or purge block\n"
+"<TUNINGVAL> - If using the tuning wizard for custom purpose"
+msgstr ""
+"Токены будут заменены на их текущее значение:\n"
+"=================================================\n"
+"<EXT+n>- Экструдер, 0-индексирован\n"
+"<X>- текущая позиция\n"
+"<MAXZTD>- Макс Z - На сегодняшний день\n"
+"<% > - Приблизительный процент сделано\n"
+"<NEXTX>- следующая позиция\n"
+"<TOPZ>- Z в верхней части печати\n"
+"<DESTRING>- Дестринг (мм) текущего материала\n"
+"<BED>- Температура стола для материала на столе\n"
+"<BOX>- мин окно темп всех материалов, используемых\n"
+"<TEMP>- Температура экструдера\n"
+"<WARM1..12>- Держать теплый темп конкретного экструдера\n"
+"<MAIN1..12>- Основная температура экструзии конкретного экструдера\n"
+"<LAYER>- текущий номер слоя<TELAPSED> - время, прошедшее в формате hr:mn:ss\n"
+"<TREMAIN>- время, оставшееся в формате hr:mn:ss\n"
+"<TTOTAL>- общее сметное время в формате hr:mn:ss\n"
+"<MATL>- конкретный маркер материала (только замена строки, здесь не "
+"вычисляются уравнения)\n"
+"<ACCEL>- Машинное ускорение\n"
+"<PRIMEX>- положение центра главного столба или блока очистки\n"
+"<TUNINGVAL>- При использовании мастера настройки для пользовательских целей"
+
+msgid "Top"
+msgstr "Нависание во внутрь"
+
+msgid "Total physical RAM in the system"
+msgstr "Общая физическая оперативная память в системе"
+
+msgid "Transform Mesh"
+msgstr "Ориентация и преобразования модели"
+
+msgid "Translate Tooltips Only"
+msgstr "Перевод только всплывающих подсказок"
+
+msgid "Travel"
+msgstr "Траектория переходов"
+
+msgid "Travel/Ironing Path"
+msgstr "Показывать траектории перемещения и глажки"
+
+msgid "Triangle Errors"
+msgstr "Ошибки триангуляции"
+
 msgid "Trigger [mm]"
-msgstr "дистанция [мм]"
+msgstr "Мин. порог (мм)"
 
-#. Tooltip for 'Trigger [mm]'
-msgid "Any jump > this threshold will force a destring on 5D"
-msgstr "Любое перемещение больше этого значения будет осуществляться через откат подачи"
+msgid "Trim Top of Mesh at Z"
+msgstr "Ограничить расчёт G-кода по Z до указанного значения (мм)"
 
-#. Widget
-msgid "Use Defaults"
-msgstr "Умолчания"
+msgid "Tune_Value at Z = 0 [mm]"
+msgstr "Нижняя точка по Z ( = 0 )"
 
-#. Tooltip for 'Use Defaults'
-msgid "Force any settings above the 'Settings Level' to use defaults"
-msgstr "Восстановить любые настройки выше \"Уровня настроек\" на значения по умолчанию"
+msgid "Tune_Value at Z = top"
+msgstr ""
+"Верхняя точка по Z \n"
+"(= верх модели)"
 
-#. Menu Item
-msgid "Use Unique Filenames"
-msgstr "Использовать уникальные имена"
+#, fuzzy
+msgid "Tuned Parameter"
+msgstr "Настроенный параметр"
 
-#. Widget
-msgid "Warm Time"
-msgstr "Время разогрева"
+msgid "Tuning Wizard"
+msgstr "Мастер настройки режимов для конкретного материала и принтера"
 
-#. Tooltip for 'Warm Time'
-msgid "Used to estimate extruder warming and cooling times"
-msgstr "Используется для оценки времени нагрева и охлаждения (для много головых принеров )"
+#, fuzzy
+msgid "Tuning Wizard Configuration"
+msgstr "Конфигурация мастера настройки"
 
-#. Widget
-msgid "Wipe"
-msgstr "Очистка"
+msgid "Ultra"
+msgstr "Макс."
 
-#. Tooltip for 'Wipe'
-msgid "Before moving to a new region, back-tracks over the most recent path by this distance"
-msgstr "Перед перемещением в новый регион отступаем обратно по траектории для очистки подтека пластика из горячей головы"
+msgid "Uncheck to scale Y and Z independently of X"
+msgstr "Снимите флажок, чтобы масштабировать по Y и Z независимо от X."
 
-#. Menu Item
+msgid "Uniform Scaling"
+msgstr "блокировать"
+
+#, fuzzy
+msgid "Unload[mm]"
+msgstr "Выгрузка (мм)"
+
+#, fuzzy
+msgid ""
+"Unsupported Section Tinting\n"
+"(on all path types)"
+msgstr ""
+"Неподдерживаемая секция Tinting\n"
+"(на всех типах траекторий)"
+
+#, fuzzy
+msgid "Use Alternate Method"
+msgstr "Использование альтернативного метода"
+
+msgid "Use Equations"
+msgstr "Анализатор"
+
+#, fuzzy
+msgid "Use Per-Printer Color Scheme"
+msgstr "Использование цветовой гаммы per-Printer"
+
+#, fuzzy
+msgid "Use Unique Filenames on Save"
+msgstr "Используйте уникальные имена файлов для сохранения"
+
+#, fuzzy
+msgid "Use a Raft"
+msgstr "Используйте рафт"
+
+#, fuzzy
+msgid "Use the [Ext Map] tab to map this material to an extruder for printing."
+msgstr ""
+"Используйте вкладку «Ext Map», чтобы сопоставить этот материал с экструдером "
+"для печати."
+
+#, fuzzy
+msgid ""
+"Use the extruder and loaded material settings from the relevant  KISSlicer "
+"profiles."
+msgstr ""
+"Используйте настройки экструдера и загруженного материала из соответствующих "
+"профилей KISSlicer."
+
+#, fuzzy
+msgid ""
+"Used for sequential prints, and the safe bed region for multi-material prints"
+msgstr ""
+"Используется для последовательных отпечатков, и безопасный район кровати для "
+"многопрофи материальных отпечатков"
+
+#, fuzzy
+msgid ""
+"Used to preheat an extruder before switching to it.  This is called twice, "
+"first with the extruder to be preheated, then again with the current "
+"extruder."
+msgstr ""
+"Используется для разогрева экструдера перед переходом на него.  Это "
+"называется дважды, сначала с экструдером, который будет разогрет, затем "
+"снова с текущим экструдером."
+
+#, fuzzy
+msgid ""
+"Usually leave this at 1.  You can change it to account for new gear ratios "
+"or such"
+msgstr ""
+"Обычно оставляют это на 1.  Вы можете изменить его для учета новых "
+"коэффициентов передач или таких"
+
+#, fuzzy
+msgid "Verify Custom Tokens"
+msgstr "Проверка пользовательских токенов"
+
+#, fuzzy
+msgid ""
+"Vertical Gap [mm] between the support and the object.  For now it is limited "
+"internally to be less than the finest layer thickness."
+msgstr ""
+"Вертикальный зазор между опорой и объектом.  В настоящее время она "
+"ограничена внутренне быть меньше, чем лучшие толщины слоя."
+
+msgid ""
+"Vertical Gap [mm] between the top of the raft interface and the bottom of "
+"the object."
+msgstr ""
+"Вертикальный зазор [мм] между верхней частью удаляемого слоя подложки и "
+"нижней частью объекта."
+
+msgid "ViscoElasticity"
+msgstr "Вязкоупругость"
+
+#, fuzzy
+msgid "Viscosity [Pa*s]"
+msgstr "Вязкость (Паес)"
+
+#, fuzzy
+msgid ""
+"Viscosity of the plastic at the main extrusion temperature.  ABS is ~= 1000 "
+"[Pascal*seconds]"
+msgstr ""
+"Вязкость пластика при основной температуре экструзии.  АБС составляет 1000 "
+"(Паскаль) секунд"
+
+msgid ""
+"Volume of plastic to 'Cool-Purge' right before deselecitng an extruder.  "
+"This minimizes filament stringing and is essential for some N:1 systems like "
+"the Prusa MMU."
+msgstr ""
+"Объем пластика до \"Cool-Purge\" прямо перед deselecitng экструдера. Это "
+"сводит к минимуму нить строки и имеет важное значение для некоторых N:1 "
+"систем, таких как Prusa MMU."
+
+#, fuzzy
+msgid ""
+"WARNING: Slicing may use up to %1.1f MB\n"
+"('RAM Warning' is set at %1.1f MB, system has %1.1f RAM)%s"
+msgstr ""
+"ВНИМАНИЕ: Нарезка может использовать до %1.1f МБ\n"
+"('RAM Warning' установлен на уровне %1.1f МБ, система имеет %1.1f "
+"оперативную память) %s"
+
+msgid ""
+"Wall\n"
+"  (all layers)"
+msgstr ""
+"Двойная стена вокруг модели\n"
+"  (одна на всю высоту, вторая на высоту уровня опор)"
+
+msgid ""
+"Warm\n"
+"Same\n"
+"Ext"
+msgstr ""
+"Теплый\n"
+"Такой же\n"
+"Ext"
+
+msgid "Warm-Up"
+msgstr "Разогрев"
+
+msgid "Warnings"
+msgstr "Предупреждения"
+
+msgid "Weight for an entire spool"
+msgstr "Вес всей катушки"
+
+msgid "Weight of the material on a new spool"
+msgstr ""
+"Вес материала на новой катушке (в тех же единицах, что и распечатанной "
+"детали)"
+
+#, fuzzy
+msgid ""
+"What preheat strategy should KISSlicer take with this material?\n"
+"Off = no preheating\n"
+"Safe = preheat after path\n"
+"Early = preheat before path\n"
+"Mid-Path = preheat can begin even during extrusion"
+msgstr ""
+"Какую стратегию подогрева должен принять KISSlicer с этим материалом?\n"
+"Выключить и не разогреть\n"
+"Безопасный и разогреть после пути\n"
+"Ранний - разогреть перед траекторией\n"
+"Середина пути - разогрев может начаться даже во время экструзии"
+
+#, fuzzy
+msgid "What type of firmware does this printer use?"
+msgstr "Какой тип прошивки использует этот принтер?"
+
+#, fuzzy
+msgid "What would you like the new %s Profile to be named?"
+msgstr "Как бы вы хотели, чтобы %s профиль был назван?"
+
+msgid ""
+"When a parameter is selected, the exported G-code\n"
+"will be tuned as a function of Z.  The horrible yellow\n"
+"color indicates that the exported G-code is affected.\n"
+"\n"
+"Note: The actual tuning value is available in the\n"
+"G-code using the <TUNINGVAL> token."
+msgstr ""
+"При выборе параметра, экспортируемый G-код\n"
+"будет настроена как функция от Z.\n"
+"Желтый цвет панелей указывает на то, что G-код \n"
+"затронут.\n"
+"\n"
+"Примечание: Фактическое значение настройки \n"
+"доступно в G-коде с использованием \n"
+"<TUNINGVAL> токена."
+
+msgid ""
+"When a path from one extruder sits on a path from another extruder, slow by "
+"this percentage."
+msgstr ""
+"Когда путь от одного экструдера пересекает путь другого экструдера, "
+"замедление на этот процент."
+
+#, fuzzy
+msgid ""
+"While extruding Loops, Perimeter, and Crowning set the fan to this Duty "
+"Cycle %"
+msgstr ""
+"В то время как экструдирование петли, периметр, и коронации установить "
+"вентилятор на этот цикл долга %"
+
+#, fuzzy
+msgid "While extruding everything else set the fan to this Duty Cycle %"
+msgstr ""
+"В то время как экструдирование все остальное установить вентилятор на этот "
+"долг цикла %"
+
+#, fuzzy
+msgid "Width [mm]"
+msgstr "Ширина (мм)"
+
+msgid ""
+"Width of the extruded path (nozzle dia. is a good initial value). This "
+"should be > Layer Thickness"
+msgstr ""
+"Установка ширины экструзии (диаметр сопла является хорошим начальным "
+"значением). Это должно быть > Толщины слоя (Layer Thickness). "
+
+#, fuzzy
+msgid "Width of the print bed in mm"
+msgstr "Ширина печати кровати в мм"
+
+msgid ""
+"Will make the solid skin of the model this thick (all surfaces: top, sides, "
+"bottom)"
+msgstr ""
+"Задаёт толщину сплошной внешней поверхности модели (включая все направления: "
+"верх, стороны, дно). Рекомендуется ставить кратным Ширине экструзии, в "
+"противном случае, программа будет пытаться добавить ширины ввиде опор, что "
+"сильно увеличит время печати."
+
+msgid ""
+"Winding order\n"
+"does not match"
+msgstr ""
+"Порядок укладки\n"
+"не соответствует"
+
+msgid "Wipe [mm]"
+msgstr "Протереть (мм)"
+
+msgid "WipeOffset [mm]"
+msgstr "Вытирание сопельки"
+
 msgid "Wizards"
-msgstr "Мастеры настроек"
+msgstr "Мастера настройки"
 
-#. Widget
 msgid "X"
 msgstr "X"
 
-#. Tooltip for 'X'
-msgid "Remove (all copies of) this model from the build"
-msgstr "Удалить все копии этой модели из компановки"
+#, fuzzy
+msgid "X "
+msgstr "X "
 
-#. Widget
+msgid "X => Up"
+msgstr "повернуть по оси X => вверх"
+
+#, fuzzy
+msgid "X Offset of ext 10 from ext 1"
+msgstr "X Смещение ext 10 из ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 11 from ext 1"
+msgstr "X Смещение ext 11 из ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 12 from ext 1"
+msgstr "X Смещение ext 12 из ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 2 from ext 1"
+msgstr "X Смещение ext 2 от ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 3 from ext 1"
+msgstr "X Смещение ext 3 из ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 4 from ext 1"
+msgstr "X Смещение ext 4 от ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 5 from ext 1"
+msgstr "X Смещение ext 5 от ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 6 from ext 1"
+msgstr "X Смещение ext 6 из ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 7 from ext 1"
+msgstr "X Смещение ext 7 от ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 8 from ext 1"
+msgstr "X Смещение ext 8 от ext 1"
+
+#, fuzzy
+msgid "X Offset of ext 9 from ext 1"
+msgstr "X Смещение ext 9 из ext 1"
+
+#, fuzzy
+msgid "X off 10"
+msgstr "X от 10"
+
+#, fuzzy
+msgid "X off 11"
+msgstr "X от 11"
+
+#, fuzzy
+msgid "X off 12"
+msgstr "X от 12"
+
+#, fuzzy
+msgid "X off 2"
+msgstr "X от 2"
+
+#, fuzzy
+msgid "X off 3"
+msgstr "X от 3"
+
+#, fuzzy
+msgid "X off 4"
+msgstr "X от 4"
+
+#, fuzzy
+msgid "X off 5"
+msgstr "X от 5"
+
+#, fuzzy
+msgid "X off 6"
+msgstr "X от 6"
+
+#, fuzzy
+msgid "X off 7"
+msgstr "X от 7"
+
+#, fuzzy
+msgid "X off 8"
+msgstr "X от 8"
+
+#, fuzzy
+msgid "X off 9"
+msgstr "X от 9"
+
+msgid "X placement of all packed models on the bed"
+msgstr "Перемещение всех моделей находящихся на столе по оси X"
+
+msgid "X&&Y"
+msgstr "X&&Y"
+
 msgid "X,Y Travel Speed"
-msgstr "X,Y скорость"
+msgstr "Перемещение по X,Y"
 
-#. Tooltip for 'X,Y Travel Speed'
-msgid "Speed of the head while not extruding."
-msgstr "Скорость головы при перемещениях без печати"
-
-#. Widget
 msgid "XY Accel [mm/s^2]"
-msgstr "Ускорения XY"
+msgstr "Ускор. по XY(мм/с^2)"
 
-#. Tooltip for 'XY Accel [mm/s^2]'
-msgid "Acceleration of the print-head in X & Y, used for timing estimates"
-msgstr "Ускорения по X и Y [мм/с^2], используется для рассчёта времени печати"
+msgid "XY Steps per mm"
+msgstr "XY шаг/мм"
 
-#. Widget
 msgid "Y"
 msgstr "Y"
 
-#. Widget
+#, fuzzy
+msgid "Y "
+msgstr "Y "
+
+msgid "Y => Up"
+msgstr "повернуть по оси Y => вверх"
+
+#, fuzzy
+msgid "Y Offset of ext 10 from ext 1"
+msgstr "Y Смещение ext 10 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 11 from ext 1"
+msgstr "Y Смещение ext 11 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 12 from ext 1"
+msgstr "Y Смещение ext 12 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 2 from ext 1"
+msgstr "Y Смещение ext 2 от ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 3 from ext 1"
+msgstr "Y Смещение ext 3 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 4 from ext 1"
+msgstr "Y Смещение ext 4 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 5 from ext 1"
+msgstr "Y Смещение ext 5 от ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 6 from ext 1"
+msgstr "Y Смещение ext 6 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 7 from ext 1"
+msgstr "Y Смещение ext 7 от ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 8 from ext 1"
+msgstr "Y Смещение ext 8 из ext 1"
+
+#, fuzzy
+msgid "Y Offset of ext 9 from ext 1"
+msgstr "Y Смещение ext 9 из ext 1"
+
+#, fuzzy
+msgid "Y off 10"
+msgstr "Y от 10"
+
+#, fuzzy
+msgid "Y off 11"
+msgstr "Y от 11"
+
+#, fuzzy
+msgid "Y off 12"
+msgstr "Y от 12"
+
+#, fuzzy
+msgid "Y off 2"
+msgstr "Y от 2"
+
+#, fuzzy
+msgid "Y off 3"
+msgstr "Y от 3"
+
+#, fuzzy
+msgid "Y off 4"
+msgstr "Y от 4"
+
+#, fuzzy
+msgid "Y off 5"
+msgstr "Y от 5"
+
+#, fuzzy
+msgid "Y off 6"
+msgstr "Y от 6"
+
+#, fuzzy
+msgid "Y off 7"
+msgstr "Y от 7"
+
+#, fuzzy
+msgid "Y off 8"
+msgstr "Y от 8"
+
+#, fuzzy
+msgid "Y off 9"
+msgstr "Y от 9"
+
+msgid "Y placement of all packed models on the bed"
+msgstr "Перемещение всех находящихся моделей на столе по оси Y"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "Yes, overwrite"
+msgstr "Да, перезаписать"
+
+#, fuzzy
+msgid "You can set selected sub-meshes to an extruder via the right-click menu"
+msgstr ""
+"Выбранные подсетки можно установить экструдеру с помощью меню с правой "
+"кнопкой мыши"
+
+msgid "You must have at least one printer, material, and style defined."
+msgstr "У вас должены быть определены: хотя бы один принтер, материал и стиль."
+
+msgid ""
+"You will need to weight the part, raft and all...use the same units as for "
+"the entire spool"
+msgstr ""
+"Вам нужно будет взвесить деталь, плюс плот и поддержки (необходимо "
+"использовать те же единицы, что и для всей катушки)."
+
+msgid ""
+"Young's Modulus of Elasticity of the plastic at the room temperature.  ABS "
+"is ~= 2.6e9 [Pascals]"
+msgstr ""
+"Модуль эластичности пластика при комнатной температуре.  АБС составляет "
+"2,6e9 (Паскаль)"
+
+#, fuzzy
 msgid "Z"
 msgstr "Z"
 
-#. Widget
+#, fuzzy
+msgid "Z "
+msgstr "Z "
+
+#, fuzzy
+msgid "Z Band [mm]"
+msgstr "Z группа (мм)"
+
+msgid "Z Offset [mm]"
+msgstr "Z Offset (мм)"
+
+msgid "Z Step [mm]"
+msgstr "Шаг по Z (мм)"
+
+msgid "Z gap [mm]"
+msgstr "зазор  по Z (мм)"
+
+msgid "Z-Floor [mm]"
+msgstr "Z-Floor (мм)"
+
+msgid "Z-Roof [mm]"
+msgstr "Предел высоты (мм)"
+
 msgid "Z-Settle [mm]"
-msgstr "Z-Делюфт[мм]"
+msgstr "Люфт по Z (мм)"
 
-#. Tooltip for 'Z-Settle [mm]'
-msgid "overshoot then return on Z moves (so last move is against gravity...removes slop)"
-msgstr "обратный ход после движения по  Z (убирает люфт)"
-
-#. Widget
 msgid "Z-Speed"
-msgstr "Скорость Z"
+msgstr "Скорость  по Z"
 
-#. Tooltip for 'Z-Speed'
 msgid "Z-bed / Z-head travel speed"
-msgstr "Скорость перемещения по Z (головы или кровати)"
+msgstr "Скорость перемещения головы или стола по Z "
 
-#. Widget
-msgid "Z-lift [mm]"
-msgstr "Z-Лифт [мм]"
+msgid "Z-lift[mm]"
+msgstr "Поднять по Z (мм)"
 
-#. Tooltip for 'Z-lift [mm]'
-msgid "After a destring (if enabled), before a travel, lift the head by this height."
-msgstr "После отката подачи (если включен), перед перемещением поднимаем печатную голову на эту высоту."
+msgid "ZVal"
+msgstr "ZVal"
 
-#.  Widget
-msgid "Physical<LF>RAM [MB]"
-msgstr "Физически<LF>ОЗУ [МБ]"
+#, fuzzy
+msgid "[*] N Layers"
+msgstr "[*] N Слои"
 
-#.  Tooltip for 'Physical<LF>RAM [MB]'
-msgid "Total physical RAM in the system"
-msgstr "Общее количество оперативной памяти в системе"
+#, fuzzy
+msgid "[Precision: %1.0f%%]"
+msgstr "(Точность: %1.0f%%)"
 
-#.  Widget
-msgid "RAM Warning [MB]"
-msgstr "Предупреждение ОЗУ [МБ]"
+msgid "[Steps / mm]"
+msgstr "(Шаги/мм)"
 
-#.  Tooltip for 'RAM Warning [MB]'
-msgid "If the slicing operation *might* exceed this threshold, a warning will be shown"
-msgstr "Если при работе будт превышен этот предел, будет выдано предупреждение"
+msgid "inch/min"
+msgstr "дюймов/мин"
+
+#, fuzzy
+msgid "inch/s"
+msgstr "дюйм/с"
+
+msgid "interface XY gap [mm]"
+msgstr "зазор по XY (мм)"
+
+#, fuzzy
+msgid "key window"
+msgstr "ключевое окно"
+
+msgid "mm/min"
+msgstr "мм/мин"
+
+msgid "mm/s"
+msgstr "мм/с"
+
+msgid ""
+"overshoot then return on Z moves (so last move is against gravity...removes "
+"slop), good for printers where the bed moves down (instead of head moving up)"
+msgstr ""
+"Стол вниз и возврат обратно при смене слоя, т. е. при обратном ходе стола "
+"будет выбран люфт в системе винт/гайка. По умолчанию 0"
+
+#, fuzzy
+msgid "starting box"
+msgstr "стартовая коробка"
+
+#, fuzzy
+msgid "vP [mm/s]"
+msgstr "vP (мм/с)"
+
+msgid "velDstr [mm/s]"
+msgstr "Скор. втягивания"
